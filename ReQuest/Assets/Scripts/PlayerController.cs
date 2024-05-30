@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     
     private void Start()
     {
-        _inputManager.OnCharacterMovement += Move;
+        _inputManager.CharacterMovement += Move;
     }
     
     private void Move(Vector2 move)
