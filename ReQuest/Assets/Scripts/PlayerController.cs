@@ -9,11 +9,11 @@ public class PlayerController : MonoBehaviour
     
     private void Start()
     {
-        _inputManager.CharacterMovement += Move;
+        _inputManager.CharacterMovementChanged += OnCharacterMovementChange;
     }
     
-    private void Move(Vector2 move)
+    private void OnCharacterMovementChange(Vector2 move)
     {
-        playerCreature.Move(move);
+        playerCreature.SetMovement(move);
     }
 }
