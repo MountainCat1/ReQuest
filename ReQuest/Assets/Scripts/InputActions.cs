@@ -35,6 +35,24 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pointer1"",
+                    ""type"": ""Button"",
+                    ""id"": ""7df80c99-cb0e-4c8b-bbbf-31740b7aa939"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pointer2"",
+                    ""type"": ""Button"",
+                    ""id"": ""919c3212-86c4-4cae-b193-41868fe67ab5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -92,6 +110,28 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b626e98-a86c-43a7-ab61-829b1b57b49c"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pointer1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ed93726-33be-4ae9-ada7-582e9881df1b"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pointer2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -113,6 +153,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         // CharacterControl
         m_CharacterControl = asset.FindActionMap("CharacterControl", throwIfNotFound: true);
         m_CharacterControl_Movement = m_CharacterControl.FindAction("Movement", throwIfNotFound: true);
+        m_CharacterControl_Pointer1 = m_CharacterControl.FindAction("Pointer1", throwIfNotFound: true);
+        m_CharacterControl_Pointer2 = m_CharacterControl.FindAction("Pointer2", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -175,11 +217,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_CharacterControl;
     private List<ICharacterControlActions> m_CharacterControlActionsCallbackInterfaces = new List<ICharacterControlActions>();
     private readonly InputAction m_CharacterControl_Movement;
+    private readonly InputAction m_CharacterControl_Pointer1;
+    private readonly InputAction m_CharacterControl_Pointer2;
     public struct CharacterControlActions
     {
         private @InputActions m_Wrapper;
         public CharacterControlActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_CharacterControl_Movement;
+        public InputAction @Pointer1 => m_Wrapper.m_CharacterControl_Pointer1;
+        public InputAction @Pointer2 => m_Wrapper.m_CharacterControl_Pointer2;
         public InputActionMap Get() { return m_Wrapper.m_CharacterControl; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -192,6 +238,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
+            @Pointer1.started += instance.OnPointer1;
+            @Pointer1.performed += instance.OnPointer1;
+            @Pointer1.canceled += instance.OnPointer1;
+            @Pointer2.started += instance.OnPointer2;
+            @Pointer2.performed += instance.OnPointer2;
+            @Pointer2.canceled += instance.OnPointer2;
         }
 
         private void UnregisterCallbacks(ICharacterControlActions instance)
@@ -199,6 +251,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
+            @Pointer1.started -= instance.OnPointer1;
+            @Pointer1.performed -= instance.OnPointer1;
+            @Pointer1.canceled -= instance.OnPointer1;
+            @Pointer2.started -= instance.OnPointer2;
+            @Pointer2.performed -= instance.OnPointer2;
+            @Pointer2.canceled -= instance.OnPointer2;
         }
 
         public void RemoveCallbacks(ICharacterControlActions instance)
@@ -228,5 +286,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     public interface ICharacterControlActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnPointer1(InputAction.CallbackContext context);
+        void OnPointer2(InputAction.CallbackContext context);
     }
 }
