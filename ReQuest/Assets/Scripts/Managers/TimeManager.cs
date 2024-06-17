@@ -1,18 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using Zenject;
 
-public class TimeManager : MonoBehaviour
+public interface ITimeManager
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public event Action TimeRunOut;
+    
+    public float GameTime { get; }
+    public float GameTillEnd { get; }
+}
 
-    // Update is called once per frame
-    void Update()
+public class TimeManager : MonoBehaviour, ITimeManager
+{
+    [Inject] private IGameConfiguration _gameConfiguration;
+
+    public event Action TimeRunOut;
+    
+    public float GameTime { get; private set; }
+    public float GameTillEnd => _gameConfiguration.GameTime - GameTime;
+    
+    private bool _timeRunOut;
+
+    private void Update()
     {
+        GameTime += Time.deltaTime;
         
+        if (!_timeRunOut && GameTime >= _gameConfiguration.GameTime)
+        {
+            _timeRunOut = true;
+            TimeRunOut?.Invoke();
+        }
     }
 }
