@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 310301877}
   - component: {fileID: 310301876}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: After dot time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -822,10 +822,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.12239584
-    y: 0.013888889
-    width: 0.7552084
-    height: 0.9722222
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -2528,7 +2528,7 @@ GameObject:
   - component: {fileID: 1591453396}
   - component: {fileID: 1591453395}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Before dot time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
