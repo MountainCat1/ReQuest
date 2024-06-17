@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -13,6 +14,7 @@ public class Creature : MonoBehaviour
     public float Drag { get; private set; }
 
     [field: SerializeField] public float Speed { get; private set; }
+    [field: SerializeField] public Weapon DefaultWeapon { get; private set; }
     [SerializeField] private ModifiableValue health;
 
     public IReadonlyModifiableValue Health => health;
@@ -69,4 +71,29 @@ public class Creature : MonoBehaviour
         var change = Vector2.MoveTowards(_rigidbody2D.velocity, _moveDirection * Speed, Drag * Time.fixedDeltaTime);
         _rigidbody2D.velocity = change;
     }
+
+    public ICollection<Creature> GetAllVisibleCreatures()
+    {
+        return FindObjectsOfType<Creature>();
+    }
+    
+    public Attitude GetAttitudeTowards(Creature other)
+    {
+        if(other == this)
+            return Attitude.Friendly;
+        
+        return Attitude.Hostile;
+    }
+
+    public void Damage(float damage)
+    {
+        health.CurrentValue -= damage;
+    }
+}
+
+public enum Attitude
+{
+    Friendly,
+    Neutral,
+    Hostile
 }

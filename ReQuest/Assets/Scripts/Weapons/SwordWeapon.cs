@@ -6,11 +6,10 @@ public class SwordWeapon : Weapon
     [SerializeField] private Transform swordParent;
     [SerializeField] private Collider2D swordCollider;
     [SerializeField] private GameObject swordVisual;
-    [SerializeField] private float attackSpeed = 1f;
     [SerializeField] private float attackAngle = 90f;
+    [SerializeField] private float swingSpeed = 90f;
 
     private Coroutine _attackCoroutine;
-
 
     private void Awake()
     {
@@ -43,7 +42,7 @@ public class SwordWeapon : Weapon
         var t = 0f;
         while (t < 1)
         {
-            t += Time.deltaTime * attackSpeed / attackAngle;
+            t += Time.deltaTime * swingSpeed / attackAngle;
             swordParent.rotation = Quaternion.Lerp(startRotation, targetRotation, t);
             yield return null;
         }

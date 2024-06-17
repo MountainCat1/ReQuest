@@ -752,6 +752,53 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!1 &553266400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 553266401}
+  - component: {fileID: 553266402}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &553266401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553266400}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1803717175}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &553266402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553266400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7919982440834809a12f8ebed8a16d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Range>k__BackingField: 1
+  <AttackSpeed>k__BackingField: 1
+  <Damage>k__BackingField: 1
 --- !u!1 &641864389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2653,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Drag>k__BackingField: 200
   <Speed>k__BackingField: 5
+  <DefaultWeapon>k__BackingField: {fileID: 0}
+  health:
+    maxValue: 25
 --- !u!1 &1723944722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,11 +2818,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29aa46510e3f44fab28630937cf37cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Range>k__BackingField: 1
+  <AttackSpeed>k__BackingField: 1
+  <Damage>k__BackingField: 10
   swordParent: {fileID: 1754964100}
   swordCollider: {fileID: 644360803}
   swordVisual: {fileID: 644360801}
-  attackSpeed: 540
   attackAngle: 90
+  swingSpeed: 360
 --- !u!1 &1758414986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,6 +2896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803717175}
   - component: {fileID: 1803717174}
+  - component: {fileID: 1803717176}
   - component: {fileID: 1803717173}
   - component: {fileID: 1803717172}
   m_Layer: 0
@@ -2927,7 +2981,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Drag>k__BackingField: 200
-  <Speed>k__BackingField: 0
+  <Speed>k__BackingField: 10
+  <DefaultWeapon>k__BackingField: {fileID: 553266402}
+  health:
+    maxValue: 10
 --- !u!4 &1803717175
 Transform:
   m_ObjectHideFlags: 0
@@ -2942,8 +2999,21 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 641864390}
+  - {fileID: 553266401}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1803717176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803717171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a7f990348b4946baab3c16b7d2f0d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1962604787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3123,6 +3193,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Drag>k__BackingField: 200
   <Speed>k__BackingField: 0
+  <DefaultWeapon>k__BackingField: {fileID: 0}
+  health:
+    maxValue: 0
 --- !u!4 &2006210719
 Transform:
   m_ObjectHideFlags: 0
