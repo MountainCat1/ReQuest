@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="Add Time Manager GameObject to SampleScene&#10;&#10;A Time Manager GameObject has been added to the SampleScene. This GameObject, along with its properties and Transform, is visible in the scene and ready for configuration. The necessary connections and components have been set up for this GameObject.">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ConfigurationInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ConfigurationInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameConfiguration.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameTimeDisplayUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameTimeDisplayUI.cs.meta" afterDir="false" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FloatAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ModifiableValue.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ReadonlyModifiableValue.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ReadonlyModifiableValue.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TimeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TimeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +19,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Tilemaps/Default Palette.prefab" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -103,7 +101,8 @@
       <updated>1717232265763</updated>
       <workItem from="1717232268220" duration="309000" />
       <workItem from="1717342960957" duration="3332000" />
-      <workItem from="1718619478557" duration="1321000" />
+      <workItem from="1718619478557" duration="1917000" />
+      <workItem from="1718645195653" duration="1854000" />
     </task>
     <task id="LOCAL-00001" summary="move to URP">
       <option name="closed" value="true" />
@@ -137,7 +136,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718619509453</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add TimeManager GameObject and Game Configuration assets&#10;&#10;A TimeManager GameObject has been added to the Unity game scene along with associated script modifications. Also, the ConfigurationInstaller and GameConfiguration assets have been introduced. Further, text elements for displaying game time have been included as part of the UI.">
+      <option name="closed" value="true" />
+      <created>1718620833450</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718620833450</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update component names and view settings">
+      <option name="closed" value="true" />
+      <created>1718620859338</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718620859338</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +175,8 @@
     <MESSAGE value="add basics for sword weapon and its attack" />
     <MESSAGE value="work work" />
     <MESSAGE value="Add Time Manager GameObject to SampleScene&#10;&#10;A Time Manager GameObject has been added to the SampleScene. This GameObject, along with its properties and Transform, is visible in the scene and ready for configuration. The necessary connections and components have been set up for this GameObject." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Time Manager GameObject to SampleScene&#10;&#10;A Time Manager GameObject has been added to the SampleScene. This GameObject, along with its properties and Transform, is visible in the scene and ready for configuration. The necessary connections and components have been set up for this GameObject." />
+    <MESSAGE value="Add TimeManager GameObject and Game Configuration assets&#10;&#10;A TimeManager GameObject has been added to the Unity game scene along with associated script modifications. Also, the ConfigurationInstaller and GameConfiguration assets have been introduced. Further, text elements for displaying game time have been included as part of the UI." />
+    <MESSAGE value="Update component names and view settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update component names and view settings" />
   </component>
 </project>
