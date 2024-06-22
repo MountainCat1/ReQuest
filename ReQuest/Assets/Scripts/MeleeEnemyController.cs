@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Linq;
 using UnityEngine;
+using Zenject;
 
 public class MeleeEnemyController : CreatureController
 {
     private Creature _target;
 
+    [Inject] private IPathfinding _pathfinding;
+    
     private void Update()
     {
         if(!_target)
