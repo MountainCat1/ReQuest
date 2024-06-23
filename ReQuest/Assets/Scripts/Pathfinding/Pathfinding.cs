@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 interface IPathfinding
 {
     List<Node> FindPath(Vector3 startPos, Vector3 targetPos);
+    
+    bool IsClearPath(Vector2 a, Vector2 b);
 }
 
 [RequireComponent(typeof(GridGenerator))]
@@ -65,6 +68,25 @@ public class Pathfinding : MonoBehaviour, IPathfinding
         // Path not found
         return new List<Node>();
     }
+
+    public bool IsClearPath(Vector2 a, Vector2 b)
+    {
+        // Calculate the direction from point a to point b
+        Vector2 direction = b - a;
+        float distance = direction.magnitude;
+
+        // Perform the Raycast
+        RaycastHit2D hit = Physics2D.Raycast(a, direction, distance, _grid.unwalkableMask);
+        if (hit.collider != null)
+        {
+            // If a collider is hit on the specified layer, return false
+            return false;
+        }
+
+        // If no collider is hit on the specified layer, return true
+        return true;
+    }
+
 
     List<Node> RetracePath(Node startNode, Node endNode)
     {

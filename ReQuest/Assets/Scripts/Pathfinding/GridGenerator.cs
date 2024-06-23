@@ -8,14 +8,11 @@ public class GridGenerator : MonoBehaviour
     public LayerMask unwalkableMask;
     public Vector2 gridWorldSize;
     public float nodeRadius;
-    public Tilemap tilemap;
 
     Node[,] grid;
     float nodeDiameter;
     int gridSizeX, gridSizeY;
     
-    public List<Node> path;
-
     void Awake()
     {
         nodeDiameter = nodeRadius * 2;
@@ -66,9 +63,25 @@ public class GridGenerator : MonoBehaviour
                 int checkX = node.gridX + x;
                 int checkY = node.gridY + y;
 
+                // Check if the node is within the grid
                 if (checkX >= 0 && checkX < gridSizeX && checkY >= 0 && checkY < gridSizeY)
                 {
-                    neighbours.Add(grid[checkX, checkY]);
+                    // If the neighbour is diagonal
+                    if (Mathf.Abs(x) == 1 && Mathf.Abs(y) == 1)
+                    {
+                        // Check if the horizontal and vertical neighbours are walkable
+                        Node horizontalNeighbour = grid[node.gridX + x, node.gridY];
+                        Node verticalNeighbour = grid[node.gridX, node.gridY + y];
+
+                        if (horizontalNeighbour.walkable && verticalNeighbour.walkable)
+                        {
+                            neighbours.Add(grid[checkX, checkY]);
+                        }
+                    }
+                    else
+                    {
+                        neighbours.Add(grid[checkX, checkY]);
+                    }
                 }
             }
         }
@@ -85,15 +98,6 @@ public class GridGenerator : MonoBehaviour
             foreach (Node n in grid)
             {
                 Gizmos.color = (n.walkable) ? Color.white : Color.red;
-                Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
-            }
-        }
-        
-        if (path != null)
-        {
-            foreach (Node n in path)
-            {
-                Gizmos.color = Color.black;
                 Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
             }
         }
