@@ -23,14 +23,14 @@ public class MeleeEnemyController : CreatureController
 
         if (Vector2.Distance(Creature.transform.position, _target.transform.position) < Creature.DefaultWeapon.Range)
         {
-            InvokeAttack(Creature, _target);
+            PerformAttack(Creature, _target);
             return;
         }
 
         PerformMovementTowardsTarget(_target);
     }
 
-    private void InvokeAttack(Creature creature, Creature target)
+    private void PerformAttack(Creature creature, Creature target)
     {
         creature.DefaultWeapon.Attack(new AttackContext()
         {
