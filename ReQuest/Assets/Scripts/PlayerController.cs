@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCharacterAttack(AttackContext ctx)
     {
-        playerWeapon.Attack(ctx);
+        playerWeapon.ContiniousAttack(ctx);
     }
 
     private void OnCharacterMovementChange(Vector2 move)

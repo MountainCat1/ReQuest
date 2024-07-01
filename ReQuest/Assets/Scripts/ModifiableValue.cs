@@ -4,14 +4,18 @@ using UnityEngine;
 [System.Serializable]
 public class ModifiableValue : IReadonlyModifiableValue
 {
+    // Events
     public event Action ValueChanged;
-    
+
+    // Serialized Private Variables
+    [SerializeField] private float maxValue;
+
+    // Private Variables
     private float? _baseValue = null;
     private float _currentValue;
     private float _minValue = 0;
-    
-    [SerializeField] private float maxValue;
 
+    // Properties
     public float BaseValue
     {
         get { return _baseValue ?? maxValue; }
@@ -25,7 +29,12 @@ public class ModifiableValue : IReadonlyModifiableValue
     public float CurrentValue
     {
         get => _currentValue;
-        set => _currentValue = value;
+        set
+        {
+            _currentValue = value;
+            UpdateCurrentValue();
+            ValueChanged?.Invoke();
+        }
     }
 
     public float MinValue
@@ -48,7 +57,7 @@ public class ModifiableValue : IReadonlyModifiableValue
         }
     }
 
-
+    // Public Methods
     public ModifiableValue(float baseValue, float minValue, float maxValue)
     {
         this._baseValue = baseValue;
@@ -57,6 +66,7 @@ public class ModifiableValue : IReadonlyModifiableValue
         UpdateCurrentValue();
     }
 
+    // Private Methods
     private void UpdateCurrentValue()
     {
         _currentValue = Mathf.Clamp(_currentValue, _minValue, maxValue);

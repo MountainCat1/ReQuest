@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
 
 public class MeleeEnemyController : CreatureController
@@ -9,8 +10,15 @@ public class MeleeEnemyController : CreatureController
 
     [Inject] private IPathfinding _pathfinding;
 
+    [SerializeField] private bool moveOnAttackCooldown = false;
+
     private void Update()
     {
+        Creature.SetMovement(Vector2.zero);
+        
+        if(Creature.DefaultWeapon.OnCooldown && !moveOnAttackCooldown)
+            return;
+        
         if (!_target)
         {
             _target = GetNewTarget();
@@ -32,7 +40,7 @@ public class MeleeEnemyController : CreatureController
 
     private void PerformAttack(Creature creature, Creature target)
     {
-        creature.DefaultWeapon.Attack(new AttackContext()
+        creature.DefaultWeapon.ContiniousAttack(new AttackContext()
         {
             Direction = (target.transform.position - creature.transform.position).normalized,
             Target = target

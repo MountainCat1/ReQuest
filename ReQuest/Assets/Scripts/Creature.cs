@@ -13,22 +13,28 @@ public class Creature : MonoBehaviour
     [field: SerializeField]
     public float Drag { get; private set; }
 
-    [field: SerializeField] public float Speed { get; private set; }
-    [field: SerializeField] public Weapon DefaultWeapon { get; private set; }
-    [SerializeField] private ModifiableValue health;
+    [field: SerializeField]
+    public float Speed { get; private set; }
+
+    [field: SerializeField]
+    public Weapon DefaultWeapon { get; private set; }
+
+    [SerializeField]
+    private ModifiableValue health;
 
     public IReadonlyModifiableValue Health => health;
 
     private Transform _rootTransform;
     private Rigidbody2D _rigidbody2D;
     private Vector2 _moveDirection;
-
+    private Vector2 _momentum;
+    private const float MomentumLoss = 2f;
 
     private void Awake()
     {
         _rootTransform = transform;
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        
+
         health.ValueChanged += OnHealthChanged;
         health.CurrentValue = health.MaxValue;
     }
@@ -66,7 +72,11 @@ public class Creature : MonoBehaviour
 
     private void UpdateVelocity()
     {
-        var change = Vector2.MoveTowards(_rigidbody2D.velocity, _moveDirection * Speed, Drag * Time.fixedDeltaTime);
+        _momentum -= _momentum * (MomentumLoss * Time.fixedDeltaTime);
+        if (_momentum.magnitude < 0.1f)
+            _momentum = Vector2.zero;
+
+        var change = Vector2.MoveTowards(_rigidbody2D.velocity, _moveDirection * Speed + _momentum, Drag * Time.fixedDeltaTime);
         _rigidbody2D.velocity = change;
     }
 
@@ -74,18 +84,31 @@ public class Creature : MonoBehaviour
     {
         return FindObjectsOfType<Creature>();
     }
-    
+
     public Attitude GetAttitudeTowards(Creature other)
     {
-        if(other == this)
-            return Attitude.Friendly;
-        
-        return Attitude.Hostile;
+        return other == this ? Attitude.Friendly : Attitude.Hostile;
     }
 
     public void Damage(float damage)
     {
         health.CurrentValue -= damage;
+    }
+
+    public void Damage(float damage, Vector2 push)
+    {
+        health.CurrentValue -= damage;
+        Push(push);
+    }
+
+    private void Push(Vector2 push)
+    {
+        _momentum = push;
+    }
+
+    public static bool IsCreature(Component go)
+    {
+        return go.CompareTag("Player") || go.CompareTag("Creature");
     }
 }
 

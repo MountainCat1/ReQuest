@@ -1,7 +1,7 @@
 ﻿public class TouchWeapon : Weapon
 {
-    public override void Attack(AttackContext ctx)
+    protected override void Attack(AttackContext ctx)
     {
-        ctx.Target.Damage(Damage);
+        ctx.Target.Damage(Damage, CalculatePushForce(ctx.Target));
     }
 }

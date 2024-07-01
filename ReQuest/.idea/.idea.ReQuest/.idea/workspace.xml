@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthbarUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthbarUI.cs.meta" afterDir="false" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="commit missing metadata file HealthbarUI.cs.meta">
+      <change afterPath="$PROJECT_DIR$/Assets/ColliderEventProducer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeleeEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeleeEnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifiableValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifiableValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/SwordWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/SwordWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/TouchWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/TouchWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +24,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4050fa1eeb154fde8043e8b1694bf86220a00/a3/f4b39d78/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/MeleeEnemyController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/MeleeEnemyController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Pathfinding/GridGenerator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Pathfinding/Pathfinding.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Creature.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/UI/HealthbarUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/UI/HealthbarUI.cs.meta" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -108,7 +115,7 @@
       <workItem from="1719109922754" duration="2445000" />
       <workItem from="1719156913337" duration="2181000" />
       <workItem from="1719684340402" duration="646000" />
-      <workItem from="1719863792445" duration="736000" />
+      <workItem from="1719863792445" duration="4538000" />
     </task>
     <task id="LOCAL-00001" summary="move to URP">
       <option name="closed" value="true" />
@@ -198,7 +205,31 @@
       <option name="project" value="LOCAL" />
       <updated>1719112246229</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add healthbar">
+      <option name="closed" value="true" />
+      <created>1719864773255</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719864773255</updated>
+    </task>
+    <task id="LOCAL-00013" summary="renamed HealthbarUI.cs to HealthBarUI.cs">
+      <option name="closed" value="true" />
+      <created>1719864798773</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719864798773</updated>
+    </task>
+    <task id="LOCAL-00014" summary="commit missing metadata file HealthbarUI.cs.meta">
+      <option name="closed" value="true" />
+      <created>1719864812072</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719864812072</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +259,9 @@
     <MESSAGE value="add pathfinding" />
     <MESSAGE value="add pathfinding to MeleeEnemyController.cs" />
     <MESSAGE value="refactor in MeleeEnemyController.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor in MeleeEnemyController.cs" />
+    <MESSAGE value="Add healthbar" />
+    <MESSAGE value="renamed HealthbarUI.cs to HealthBarUI.cs" />
+    <MESSAGE value="commit missing metadata file HealthbarUI.cs.meta" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit missing metadata file HealthbarUI.cs.meta" />
   </component>
 </project>
