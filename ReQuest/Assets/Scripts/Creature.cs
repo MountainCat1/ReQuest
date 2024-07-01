@@ -28,11 +28,9 @@ public class Creature : MonoBehaviour
     {
         _rootTransform = transform;
         _rigidbody2D = GetComponent<Rigidbody2D>();
-    }
-
-    protected void Start()
-    {
+        
         health.ValueChanged += OnHealthChanged;
+        health.CurrentValue = health.MaxValue;
     }
 
     protected virtual void OnHealthChanged()
