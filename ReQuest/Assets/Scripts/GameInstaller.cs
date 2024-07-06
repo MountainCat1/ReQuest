@@ -1,3 +1,4 @@
+using Managers;
 using Zenject;
 
 public class GameInstaller : MonoInstaller<GameInstaller>
@@ -8,5 +9,7 @@ public class GameInstaller : MonoInstaller<GameInstaller>
         Container.Bind<IInputMapper>().To<InputMapper>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<ITimeManager>().To<TimeManager>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<IPathfinding>().To<Pathfinding>().FromComponentsInHierarchy().AsSingle();
+        Container.Bind<IPlayerCharacterProvider>().To<PlayerCharacterProvider>().FromComponentsInHierarchy().AsSingle();
+        Container.Bind<IDialogManager>().To<IDialogManager>().FromComponentsInHierarchy().AsSingle();
     }
 }
