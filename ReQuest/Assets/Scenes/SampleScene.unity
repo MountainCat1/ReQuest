@@ -1376,6 +1376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogText: {fileID: 80490871}
+  dialogPanel: {fileID: 1510571189}
 --- !u!1 &618375504
 GameObject:
   m_ObjectHideFlags: 0

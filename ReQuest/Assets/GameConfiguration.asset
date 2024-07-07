@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: GameConfiguration
   m_EditorClassIdentifier: 
   <GameTime>k__BackingField: 300
+  <TypingSpeed>k__BackingField: 20
