@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedc2028c2ee4bfb98c2f1f8facd40dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogData: {fileID: 11400000, guid: a117da3f7224843428ccc024d52fde0a, type: 2}
+  dialogData: {fileID: 11400000, guid: edb21b5b11a1dcf4e93b0faff49ca63c, type: 2}
 --- !u!1 &261616504
 GameObject:
   m_ObjectHideFlags: 0

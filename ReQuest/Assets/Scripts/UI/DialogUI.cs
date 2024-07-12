@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -54,17 +52,4 @@ public class DialogUI : MonoBehaviour
         dialogPanel.SetActive(true);
         _dialogPanelShown = true;
     }
-}
-
-
-[CreateAssetMenu(fileName = "DialogData", menuName = "Dialog Data")]
-public class DialogData : ScriptableObject
-{
-    [field: SerializeField] public List<DialogSentence> Sentences { get; set; }
-}
-
-[System.Serializable]
-public struct DialogSentence
-{
-    [field: SerializeField] public string Text { get; set; }
 }

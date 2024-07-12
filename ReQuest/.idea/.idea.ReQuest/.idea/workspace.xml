@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameConfiguration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameConfiguration.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/DialogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/DialogManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DialogUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DialogUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ConfigurationInstaller.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ConfigurationInstaller.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameConfiguration.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameConfiguration.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Magic Escape Room.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Magic Escape Room.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +25,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4050fa1eeb154fde8043e8b1694bf86220a00/a3/f4b39d78/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Creature.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/UI/HealthbarUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/UI/HealthbarUI.cs.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Managers/DialogManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -84,10 +87,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2600">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="2600" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -113,7 +116,8 @@
       <workItem from="1719684340402" duration="646000" />
       <workItem from="1719863792445" duration="4661000" />
       <workItem from="1720294369414" duration="2523000" />
-      <workItem from="1720358295695" duration="1651000" />
+      <workItem from="1720358295695" duration="2152000" />
+      <workItem from="1720696381315" duration="1507000" />
     </task>
     <task id="LOCAL-00001" summary="move to URP">
       <option name="closed" value="true" />
@@ -251,7 +255,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720296743888</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add dialog panel appear and disappear">
+      <option name="closed" value="true" />
+      <created>1720360179731</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720360179731</updated>
+    </task>
+    <task id="LOCAL-00019" summary="rename object SampleScene.unity">
+      <option name="closed" value="true" />
+      <created>1720360294396</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1720360294396</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +307,8 @@
     <MESSAGE value="add template scripts" />
     <MESSAGE value="added simple combat with damage and pushing mechanics" />
     <MESSAGE value="add basic dialog system (only a start x))" />
-    <option name="LAST_COMMIT_MESSAGE" value="add basic dialog system (only a start x))" />
+    <MESSAGE value="add dialog panel appear and disappear" />
+    <MESSAGE value="rename object SampleScene.unity" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename object SampleScene.unity" />
   </component>
 </project>
