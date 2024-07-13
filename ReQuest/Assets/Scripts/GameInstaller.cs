@@ -11,6 +11,6 @@ public class GameInstaller : MonoInstaller<GameInstaller>
         Container.Bind<IPathfinding>().To<Pathfinding>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<IPlayerCharacterProvider>().To<PlayerCharacterProvider>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<IDialogManager>().To<DialogManager>().FromComponentsInHierarchy().AsSingle();
-        Container.Bind<ISoundPlayer>().To<SoundPlayer>().FromInstance(new SoundPlayer()).AsSingle();
+        Container.Bind<ISoundPlayer>().To<SoundPlayer>().AsSingle().NonLazy();
     }
 }

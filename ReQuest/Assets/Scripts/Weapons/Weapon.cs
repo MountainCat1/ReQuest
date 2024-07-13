@@ -1,12 +1,17 @@
 using System;
+using Managers;
 using UnityEngine;
+using Zenject;
 
 public abstract class Weapon : MonoBehaviour
 {
+    [Inject] private ISoundPlayer _soundPlayer;
+    
     [field: SerializeField] public float Range { get; set; }
     [field: SerializeField] public float AttackSpeed { get; set; }
     [field: SerializeField] public float Damage { get; set; }
     [field: SerializeField] public float PushFactor { get; set; }
+    [field: SerializeField] public AudioClip HitSound { get; set; }
     
     private DateTime _lastAttackTime;
 
@@ -27,6 +32,11 @@ public abstract class Weapon : MonoBehaviour
     }
 
     protected abstract void Attack(AttackContext ctx);
+    protected virtual void OnHit(Creature target)
+    {
+        if (HitSound != null)
+            _soundPlayer.PlaySound(HitSound, transform.position);
+    }
     
     protected Vector2 CalculatePushForce(Creature target)
     {

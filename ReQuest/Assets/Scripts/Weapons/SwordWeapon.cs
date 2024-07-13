@@ -34,9 +34,10 @@ public class SwordWeapon : Weapon
         _attackCoroutine = StartCoroutine(AttackRoutine(ctx));
     }
 
-    private void OnSwordHit(Creature creature)
+    protected override void OnHit(Creature creature)
     {
         creature.Damage(Damage, CalculatePushForce(creature));
+        base.OnHit(creature);
     }
 
     private IEnumerator AttackRoutine(AttackContext ctx)
@@ -72,6 +73,6 @@ public class SwordWeapon : Weapon
             return;
         
         _hitCreatures.Add(creature);
-        OnSwordHit(creature);
+        OnHit(creature);
     }
 }
