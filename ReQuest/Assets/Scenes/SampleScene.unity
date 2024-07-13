@@ -551,6 +551,50 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &180435209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180435210}
+  - component: {fileID: 180435211}
+  m_Layer: 0
+  m_Name: TeamManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &180435210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180435209}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 189072971}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180435211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180435209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13677c48cad544ff944428d1c198b7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &189072968
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +679,7 @@ Transform:
   - {fileID: 1474763654}
   - {fileID: 1053414201}
   - {fileID: 517215726}
+  - {fileID: 180435210}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &243541041
@@ -1670,10 +1715,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.12239584
-    y: 0.013888889
-    width: 0.7552084
-    height: 0.9722222
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -2580,6 +2625,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 330855350}
   health:
     maxValue: 10
+  team: 4
 --- !u!4 &833534742
 Transform:
   m_ObjectHideFlags: 0
@@ -3836,6 +3882,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 568349588}
   health:
     maxValue: 10
+  team: 4
 --- !u!4 &1185184140
 Transform:
   m_ObjectHideFlags: 0
@@ -6157,7 +6204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0010372609}
+  m_AnchoredPosition: {x: 0, y: 0.000065044725}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1354768156
@@ -6899,6 +6946,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 0}
   health:
     maxValue: 25
+  team: 1
 --- !u!1 &1646314296
 GameObject:
   m_ObjectHideFlags: 0
@@ -7371,6 +7419,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 553266402}
   health:
     maxValue: 10
+  team: 4
 --- !u!4 &1803717175
 Transform:
   m_ObjectHideFlags: 0
@@ -7485,7 +7534,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 490438705}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999978
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7794,6 +7843,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 0}
   health:
     maxValue: 5
+  team: 0
 --- !u!4 &2006210719
 Transform:
   m_ObjectHideFlags: 0

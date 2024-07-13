@@ -1,31 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
+using Managers;
 using UnityEngine;
+using Zenject;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Creature : MonoBehaviour
 {
+    // Events
     public event Action Death;
 
-    public Rigidbody2D Rigidbody2D => _rigidbody2D;
+    // Injected Dependencies (using Zenject)
+    [Inject] private ITeamManager _teamManager;
 
+    // Public Variables
+    public Rigidbody2D Rigidbody2D => _rigidbody2D;
+    public Inventory Inventory { get; } = new();
+    public IReadonlyModifiableValue Health => health;
+
+    // Serialized Private Variables
     [field: Header("Movement")]
-    [field: SerializeField] public float Drag { get; private set; }
+    [field: SerializeField]
+    public float Drag { get; private set; }
+
     [field: SerializeField] public float Speed { get; private set; }
     [field: SerializeField] public Weapon DefaultWeapon { get; private set; }
 
-    [SerializeField] private ModifiableValue health;
-    
-    public Inventory Inventory { get; } = new();
+    [field: Header("Stats")] [SerializeField]
+    private ModifiableValue health;
 
-    public IReadonlyModifiableValue Health => health;
+    [SerializeField] private Teams team;
 
+    // Private Variables
     private Transform _rootTransform;
     private Rigidbody2D _rigidbody2D;
     private Vector2 _moveDirection;
     private Vector2 _momentum;
     private const float MomentumLoss = 2f;
 
+    // Properties
+
+    // Unity Callbacks
     private void Awake()
     {
         _rootTransform = transform;
@@ -35,10 +50,65 @@ public class Creature : MonoBehaviour
         health.CurrentValue = health.MaxValue;
     }
 
-    protected virtual void OnHealthChanged()
+    private void FixedUpdate()
     {
-        if (health.CurrentValue <= health.MinValue)
-            InvokeDeath();
+        UpdateVelocity();
+    }
+
+
+    // Public Methods
+    public void SetMovement(Vector2 direction)
+    {
+        _moveDirection = direction;
+    }
+
+    public ICollection<Creature> GetAllVisibleCreatures()
+    {
+        return FindObjectsOfType<Creature>();
+    }
+
+    public Attitude GetAttitudeTowards(Creature other)
+    {
+        if(other == null)
+            throw new ArgumentNullException(nameof(other));
+        
+        if(other == this)
+            return Attitude.Friendly;
+        
+        return _teamManager.GetAttitude(team, other.team);
+    }
+
+    public void Damage(float damage)
+    {
+        health.CurrentValue -= damage;
+    }
+
+    public void Damage(float damage, Vector2 push)
+    {
+        health.CurrentValue -= damage;
+        Push(push);
+    }
+
+
+    // Virtual Methods
+
+    // Abstract Methods
+
+    // Private Methods
+    private void UpdateVelocity()
+    {
+        _momentum -= _momentum * (MomentumLoss * Time.fixedDeltaTime);
+        if (_momentum.magnitude < 0.1f)
+            _momentum = Vector2.zero;
+
+        var change = Vector2.MoveTowards(_rigidbody2D.velocity, _moveDirection * Speed + _momentum,
+            Drag * Time.fixedDeltaTime);
+        _rigidbody2D.velocity = change;
+    }
+
+    private void Push(Vector2 push)
+    {
+        _momentum = push;
     }
 
     private void InvokeDeath()
@@ -56,61 +126,17 @@ public class Creature : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void SetMovement(Vector2 direction)
-    {
-        _moveDirection = direction;
-    }
-
-    private void FixedUpdate()
-    {
-        UpdateVelocity();
-    }
-
-    private void UpdateVelocity()
-    {
-        _momentum -= _momentum * (MomentumLoss * Time.fixedDeltaTime);
-        if (_momentum.magnitude < 0.1f)
-            _momentum = Vector2.zero;
-
-        var change = Vector2.MoveTowards(_rigidbody2D.velocity, _moveDirection * Speed + _momentum, Drag * Time.fixedDeltaTime);
-        _rigidbody2D.velocity = change;
-    }
-
-    public ICollection<Creature> GetAllVisibleCreatures()
-    {
-        return FindObjectsOfType<Creature>();
-    }
-
-    public Attitude GetAttitudeTowards(Creature other)
-    {
-        return other == this ? Attitude.Friendly : Attitude.Hostile;
-    }
-
-    public void Damage(float damage)
-    {
-        health.CurrentValue -= damage;
-    }
-
-    public void Damage(float damage, Vector2 push)
-    {
-        health.CurrentValue -= damage;
-        Push(push);
-    }
-
-    private void Push(Vector2 push)
-    {
-        _momentum = push;
-    }
-
     public static bool IsCreature(Component go)
     {
         return go.CompareTag("Player") || go.CompareTag("Creature");
     }
-}
 
-public enum Attitude
-{
-    Friendly,
-    Neutral,
-    Hostile
+
+    // Event Handlers
+
+    protected virtual void OnHealthChanged()
+    {
+        if (health.CurrentValue <= health.MinValue)
+            InvokeDeath();
+    }
 }

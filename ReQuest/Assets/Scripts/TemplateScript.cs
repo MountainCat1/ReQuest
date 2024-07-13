@@ -1,5 +1,9 @@
 ﻿public class TemplateScript
 {
+    // Events
+
+    // Injected Dependencies (using Zenject)
+
     // Public Constants
 
     // Static Variables and Methods
@@ -8,13 +12,9 @@
 
     // Serialized Private Variables
 
-    // Injected Dependencies (using Zenject)
-
     // Private Variables
 
     // Properties
-
-    // Events
 
     // Unity Callbacks
 

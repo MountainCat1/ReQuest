@@ -12,5 +12,6 @@ public class GameInstaller : MonoInstaller<GameInstaller>
         Container.Bind<IPlayerCharacterProvider>().To<PlayerCharacterProvider>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<IDialogManager>().To<DialogManager>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<ISoundPlayer>().To<SoundPlayer>().AsSingle().NonLazy();
+        Container.Bind<ITeamManager>().To<TeamManager>().FromComponentsInHierarchy().AsSingle();
     }
 }
