@@ -1,5 +1,4 @@
-﻿using System;
-using Managers;
+﻿using Managers;
 using UnityEngine;
 using Zenject;
 
@@ -18,6 +17,7 @@ namespace UI
         {
             _creature = _playerCharacterProvider.Get();
             _creature.Inventory.OnChange += UpdateInventory;
+            UpdateInventory();
         }
 
         private void UpdateInventory()

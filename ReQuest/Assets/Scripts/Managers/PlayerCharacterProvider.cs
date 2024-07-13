@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using Zenject;
 
 namespace Managers
 {
@@ -12,7 +13,8 @@ namespace Managers
     {
         private PlayerCharacter _playerCharacter;
 
-        private void Awake()
+        [Inject]
+        private void Construct()
         {
             _playerCharacter = FindObjectOfType<PlayerCharacter>() ?? throw new NullReferenceException("PlayerCharacter not found");
         }
