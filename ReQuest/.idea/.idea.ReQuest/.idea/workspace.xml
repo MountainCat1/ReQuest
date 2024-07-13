@@ -4,17 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add simple inventory">
+      <change afterPath="$PROJECT_DIR$/Assets/CRTFilter/Settings/Backup.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CRTFilter/Settings/Backup.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Dialog.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Dialog/FitstDialog.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Dialog/FitstDialog.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InventoryItem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDisplay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDisplay.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryEntryDisplay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryEntryDisplay.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ConfigurationInstaller.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ConfigurationInstaller.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameConfiguration.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameConfiguration.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Magic Escape Room.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Magic Escape Room.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map/8c9cfa26abfee488c85f1582747f6a02.userdata" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map/8c9cfa26abfee488c85f1582747f6a02.userdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map/8c9cfa26abfee488c85f1582747f6a02.userdata" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map/8c9cfa26abfee488c85f1582747f6a02.userdata" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/DialogData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/DialogData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/TestDialog.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/TestDialog.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerCharacterProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PlayerCharacterProvider.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +43,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Managers/DialogManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -118,6 +133,8 @@
       <workItem from="1720294369414" duration="2523000" />
       <workItem from="1720358295695" duration="2152000" />
       <workItem from="1720696381315" duration="1507000" />
+      <workItem from="1720802695513" duration="2340000" />
+      <workItem from="1720868026986" duration="1651000" />
     </task>
     <task id="LOCAL-00001" summary="move to URP">
       <option name="closed" value="true" />
@@ -271,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720360294396</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add helper methods, sound manager, sound player, fix serialization of dialogs">
+      <option name="closed" value="true" />
+      <created>1720803703197</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1720803703197</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +334,8 @@
     <MESSAGE value="add basic dialog system (only a start x))" />
     <MESSAGE value="add dialog panel appear and disappear" />
     <MESSAGE value="rename object SampleScene.unity" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename object SampleScene.unity" />
+    <MESSAGE value="add helper methods, sound manager, sound player, fix serialization of dialogs" />
+    <MESSAGE value="add simple inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="add simple inventory" />
   </component>
 </project>

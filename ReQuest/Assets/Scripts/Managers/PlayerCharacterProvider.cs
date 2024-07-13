@@ -5,7 +5,7 @@ namespace Managers
 {
     public interface IPlayerCharacterProvider
     {
-        PlayerCharacter GetPlayerCharacter();
+        PlayerCharacter Get();
     }
 
     public class PlayerCharacterProvider : MonoBehaviour, IPlayerCharacterProvider
@@ -17,7 +17,7 @@ namespace Managers
             _playerCharacter = FindObjectOfType<PlayerCharacter>() ?? throw new NullReferenceException("PlayerCharacter not found");
         }
         
-        public PlayerCharacter GetPlayerCharacter()
+        public PlayerCharacter Get()
         {
             return _playerCharacter;
         }

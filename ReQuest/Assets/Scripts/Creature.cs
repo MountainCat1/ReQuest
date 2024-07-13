@@ -10,17 +10,13 @@ public class Creature : MonoBehaviour
     public Rigidbody2D Rigidbody2D => _rigidbody2D;
 
     [field: Header("Movement")]
-    [field: SerializeField]
-    public float Drag { get; private set; }
+    [field: SerializeField] public float Drag { get; private set; }
+    [field: SerializeField] public float Speed { get; private set; }
+    [field: SerializeField] public Weapon DefaultWeapon { get; private set; }
 
-    [field: SerializeField]
-    public float Speed { get; private set; }
-
-    [field: SerializeField]
-    public Weapon DefaultWeapon { get; private set; }
-
-    [SerializeField]
-    private ModifiableValue health;
+    [SerializeField] private ModifiableValue health;
+    
+    public Inventory Inventory { get; } = new();
 
     public IReadonlyModifiableValue Health => health;
 
