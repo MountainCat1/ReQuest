@@ -681,6 +681,8 @@ Transform:
   - {fileID: 517215726}
   - {fileID: 180435210}
   - {fileID: 1835272061}
+  - {fileID: 1900863082}
+  - {fileID: 854763237}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &243541041
@@ -1716,10 +1718,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.12239584
+    y: 0.013888889
+    width: 0.7552084
+    height: 0.9722222
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -2626,6 +2628,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 330855350}
   health:
     maxValue: 10
+  <XpAmount>k__BackingField: 10
   team: 4
 --- !u!4 &833534742
 Transform:
@@ -2644,6 +2647,37 @@ Transform:
   - {fileID: 330855351}
   - {fileID: 905538064}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &854763236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 854763237}
+  m_Layer: 0
+  m_Name: Creature Event Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &854763237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854763236}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 189072971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862030982
 GameObject:
@@ -3783,7 +3817,6 @@ GameObject:
   - component: {fileID: 1162741407}
   - component: {fileID: 1162741406}
   - component: {fileID: 1162741405}
-  - component: {fileID: 1162741404}
   m_Layer: 5
   m_Name: Popups
   m_TagString: Untagged
@@ -3810,20 +3843,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1162741404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162741402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e33194ca3049edb46e2322d7340673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryEntryDisplayPrefab: {fileID: 5457684874858622327, guid: 6a3ae24d173dbfe4f9c9c56416b42c04, type: 3}
-  inventoryParent: {fileID: 0}
 --- !u!114 &1162741405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3999,6 +4018,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 568349588}
   health:
     maxValue: 10
+  <XpAmount>k__BackingField: 10
   team: 4
 --- !u!4 &1185184140
 Transform:
@@ -6321,7 +6341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00006160728}
+  m_AnchoredPosition: {x: 0, y: -0.00002734997}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1354768156
@@ -7064,6 +7084,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 0}
   health:
     maxValue: 25
+  <XpAmount>k__BackingField: 0
   team: 1
 --- !u!1 &1646314296
 GameObject:
@@ -7537,6 +7558,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 553266402}
   health:
     maxValue: 10
+  <XpAmount>k__BackingField: 10
   team: 4
 --- !u!4 &1803717175
 Transform:
@@ -7700,7 +7722,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 490438705}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9988785
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7827,6 +7849,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1900863081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1900863082}
+  - component: {fileID: 1900863083}
+  m_Layer: 0
+  m_Name: Creature Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1900863082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900863081}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 189072971}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1900863083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900863081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b29e085dca402e87b56eff517d7a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1962604787
 GameObject:
   m_ObjectHideFlags: 0
@@ -8009,6 +8075,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 0}
   health:
     maxValue: 5
+  <XpAmount>k__BackingField: 0
   team: 0
 --- !u!4 &2006210719
 Transform:

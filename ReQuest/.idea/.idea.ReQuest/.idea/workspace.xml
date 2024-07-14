@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="change bindings for skipping dialogs">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PopupManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PopupManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PopupDescriptor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PopupDescriptor.cs.meta" afterDir="false" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="refactor of dealing damage logic">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CreatureEventManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CreatureEventManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CreatureManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CreatureManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/InputMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/InputMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/SwordWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/SwordWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/TouchWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/TouchWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +27,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4050fa1eeb154fde8043e8b1694bf86220a00/a3/f4b39d78/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Creature.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Managers/DialogManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@9.0.3/IK/Runtime/Solver2DMenuAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -86,10 +93,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10228">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="10228" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -119,7 +126,7 @@
       <workItem from="1720696381315" duration="1507000" />
       <workItem from="1720802695513" duration="2340000" />
       <workItem from="1720868026986" duration="6290000" />
-      <workItem from="1720962070095" duration="1106000" />
+      <workItem from="1720962070095" duration="4872000" />
     </task>
     <task id="LOCAL-00001" summary="move to URP">
       <option name="closed" value="true" />
@@ -337,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720962600990</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add floating texts">
+      <option name="closed" value="true" />
+      <created>1720963331842</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1720963331842</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,8 +371,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="work work" />
-    <MESSAGE value="Add Time Manager GameObject to SampleScene&#10;&#10;A Time Manager GameObject has been added to the SampleScene. This GameObject, along with its properties and Transform, is visible in the scene and ready for configuration. The necessary connections and components have been set up for this GameObject." />
     <MESSAGE value="Add TimeManager GameObject and Game Configuration assets&#10;&#10;A TimeManager GameObject has been added to the Unity game scene along with associated script modifications. Also, the ConfigurationInstaller and GameConfiguration assets have been introduced. Further, text elements for displaying game time have been included as part of the UI." />
     <MESSAGE value="Update component names and view settings" />
     <MESSAGE value="Add FloatAttribute, ModifiableValue classes and implement creature health" />
@@ -381,6 +394,27 @@
     <MESSAGE value="add teams" />
     <MESSAGE value="put nature tilemap on to a walls mask" />
     <MESSAGE value="change bindings for skipping dialogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="change bindings for skipping dialogs" />
+    <MESSAGE value="add floating texts" />
+    <MESSAGE value="refactor of dealing damage logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor of dealing damage logic" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Weapons/SwordWeapon.cs</url>
+          <line>77</line>
+          <properties documentPath="C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest\Assets\Scripts\Weapons\SwordWeapon.cs" containingFunctionPresentation="Method 'OnSwordCollisionStay'">
+            <startOffsets>
+              <option value="2463" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2491" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

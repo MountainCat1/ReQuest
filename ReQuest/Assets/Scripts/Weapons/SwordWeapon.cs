@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class SwordWeapon : Weapon
     
     private Coroutine _attackCoroutine;
     private List<Creature> _hitCreatures = new List<Creature>();
+    private AttackContext? _attackContext;
 
     private void Awake()
     {
@@ -34,14 +36,14 @@ public class SwordWeapon : Weapon
         _attackCoroutine = StartCoroutine(AttackRoutine(ctx));
     }
 
-    protected override void OnHit(Creature creature)
+    protected override void OnHit(Creature creature, AttackContext attackCtx)
     {
-        creature.Damage(Damage, CalculatePushForce(creature));
-        base.OnHit(creature);
+        base.OnHit(creature, attackCtx);
     }
 
     private IEnumerator AttackRoutine(AttackContext ctx)
     {
+        _attackContext = ctx;
         swordCollider.enabled = true;
         swordVisual.SetActive(true);
         _hitCreatures.Clear();
@@ -58,6 +60,7 @@ public class SwordWeapon : Weapon
             yield return null;
         }
 
+        _attackContext = null;
         swordCollider.enabled = false;
         swordVisual.SetActive(false);
         _hitCreatures.Clear();
@@ -73,6 +76,6 @@ public class SwordWeapon : Weapon
             return;
         
         _hitCreatures.Add(creature);
-        OnHit(creature);
+        OnHit(creature, _attackContext ?? throw new NullReferenceException("Attack context is null!"));
     }
 }

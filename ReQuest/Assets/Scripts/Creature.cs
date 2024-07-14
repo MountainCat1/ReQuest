@@ -26,8 +26,10 @@ public class Creature : MonoBehaviour
     [field: SerializeField] public float Speed { get; private set; }
     [field: SerializeField] public Weapon DefaultWeapon { get; private set; }
 
-    [field: Header("Stats")] [SerializeField]
+    [field: Header("Stats")] [field: SerializeField]
     private ModifiableValue health;
+
+    [field: SerializeField] public float XpAmount { get; private set; }
 
     [SerializeField] private Teams team;
 
@@ -37,6 +39,7 @@ public class Creature : MonoBehaviour
     private Vector2 _moveDirection;
     private Vector2 _momentum;
     private const float MomentumLoss = 2f;
+    private Creature _lastAttackedBy = null;
 
     // Properties
 
@@ -69,26 +72,23 @@ public class Creature : MonoBehaviour
 
     public Attitude GetAttitudeTowards(Creature other)
     {
-        if(other == null)
+        if (other == null)
             throw new ArgumentNullException(nameof(other));
-        
-        if(other == this)
+
+        if (other == this)
             return Attitude.Friendly;
-        
+
         return _teamManager.GetAttitude(team, other.team);
     }
 
-    public void Damage(float damage)
+    public void Damage(HitContext ctx)
     {
-        health.CurrentValue -= damage;
+        health.CurrentValue -= ctx.Damage;
+        _lastAttackedBy = ctx.Attacker;
+        
+        if (ctx.PushForce.magnitude > 0)
+            Push(ctx.PushForce);
     }
-
-    public void Damage(float damage, Vector2 push)
-    {
-        health.CurrentValue -= damage;
-        Push(push);
-    }
-
 
     // Virtual Methods
 

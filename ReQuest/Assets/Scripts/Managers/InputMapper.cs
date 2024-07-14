@@ -28,7 +28,8 @@ public class InputMapper : MonoBehaviour, IInputMapper
         var direction = (pointerRealPosition - playerCharacter.transform.position).normalized;
         var attackContext = new AttackContext
         {
-            Direction = direction
+            Attacker = playerCharacter,
+            Direction = direction,
         };
         
         OnPlayerCharacterAttack?.Invoke(attackContext);

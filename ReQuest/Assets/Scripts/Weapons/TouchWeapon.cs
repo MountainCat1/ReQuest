@@ -1,10 +1,12 @@
-﻿using UnityEngine;
-
-public class TouchWeapon : Weapon
+﻿public class TouchWeapon : Weapon
 {
     protected override void Attack(AttackContext ctx)
     {
-        ctx.Target.Damage(Damage, CalculatePushForce(ctx.Target));
-        OnHit(ctx.Target);
+        OnHit(ctx.Target, ctx);
+    }
+
+    protected override void OnHit(Creature target, AttackContext attackCtx)
+    {
+        base.OnHit(target, attackCtx);
     }
 }
