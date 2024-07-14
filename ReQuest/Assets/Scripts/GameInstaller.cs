@@ -13,5 +13,6 @@ public class GameInstaller : MonoInstaller<GameInstaller>
         Container.Bind<IDialogManager>().To<DialogManager>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<ISoundPlayer>().To<SoundPlayer>().AsSingle().NonLazy();
         Container.Bind<ITeamManager>().To<TeamManager>().FromComponentsInHierarchy().AsSingle();
+        Container.Bind<IPopupManager>().To<PopupManager>().FromComponentsInHierarchy().AsSingle();
     }
 }
