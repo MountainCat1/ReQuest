@@ -12,6 +12,7 @@ public interface IInputManager
     event Action<Vector2> Pointer1Pressed;
     event Action<Vector2> Pointer2Pressed;
     event Action OnConfirm;
+    event Action OnSkip;
 }
 
 public class InputManager : MonoBehaviour, IInputManager
@@ -22,6 +23,7 @@ public class InputManager : MonoBehaviour, IInputManager
     public event Action<Vector2> Pointer1Pressed;
     public event Action<Vector2> Pointer2Pressed;
     public event Action OnConfirm;
+    public event Action OnSkip;
 
     [SerializeField] private int uiLayer = 5;
 
@@ -40,6 +42,8 @@ public class InputManager : MonoBehaviour, IInputManager
         _inputActions.CharacterControl.Pointer2.performed += Pointer2OnPerformed;
 
         _inputActions.UI.Confirm.performed += _ => OnConfirm?.Invoke();
+        
+        _inputActions.UI.Skip.performed += _ => OnSkip?.Invoke();
     }
 
     private void Update()

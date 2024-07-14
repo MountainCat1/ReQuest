@@ -25,10 +25,10 @@ namespace Managers
 
         void Start()
         {
-            _inputManager.OnConfirm += OnConfirm;
+            _inputManager.OnSkip += NextDialog;
         }
 
-        private void OnConfirm()
+        private void NextDialog()
         {
             if (_currentDialogData == null)
                 return;
