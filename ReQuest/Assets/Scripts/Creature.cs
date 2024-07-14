@@ -8,7 +8,7 @@ using Zenject;
 public class Creature : MonoBehaviour
 {
     // Events
-    public event Action Death;
+    public event Action<DeathContext> Death;
 
     // Injected Dependencies (using Zenject)
     [Inject] private ITeamManager _teamManager;
@@ -26,20 +26,21 @@ public class Creature : MonoBehaviour
     [field: SerializeField] public float Speed { get; private set; }
     [field: SerializeField] public Weapon DefaultWeapon { get; private set; }
 
-    [field: Header("Stats")] [field: SerializeField]
-    private ModifiableValue health;
-
-    [field: SerializeField] public float XpAmount { get; private set; }
-
-    [SerializeField] private Teams team;
+    [field: Header("Stats")] 
+    [field: SerializeField] private ModifiableValue health;
+    [field: SerializeField] public int XpAmount { get; private set; }
+    [field: SerializeField] private Teams team;
 
     // Private Variables
+    private readonly LevelSystem _levelSystem = new();
+
     private Transform _rootTransform;
     private Rigidbody2D _rigidbody2D;
     private Vector2 _moveDirection;
     private Vector2 _momentum;
-    private const float MomentumLoss = 2f;
     private Creature _lastAttackedBy = null;
+    
+    private const float MomentumLoss = 2f;
 
     // Properties
 
@@ -85,7 +86,7 @@ public class Creature : MonoBehaviour
     {
         health.CurrentValue -= ctx.Damage;
         _lastAttackedBy = ctx.Attacker;
-        
+
         if (ctx.PushForce.magnitude > 0)
             Push(ctx.PushForce);
     }
@@ -113,9 +114,15 @@ public class Creature : MonoBehaviour
 
     private void InvokeDeath()
     {
+        var deathContext = new DeathContext()
+        {
+            Killer = _lastAttackedBy,
+            Creature = this
+        };
+
         try
         {
-            Death?.Invoke();
+            Death?.Invoke(deathContext);
         }
         catch (Exception e)
         {
@@ -139,4 +146,15 @@ public class Creature : MonoBehaviour
         if (health.CurrentValue <= health.MinValue)
             InvokeDeath();
     }
+
+    public void AwardXp(int amount)
+    {
+        _levelSystem.AddXp(amount);
+    }
+}
+
+public struct DeathContext
+{
+    public Creature Killer { get; set; }
+    public Creature Creature { get; set; }
 }

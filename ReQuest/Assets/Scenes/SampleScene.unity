@@ -2628,7 +2628,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 330855350}
   health:
     maxValue: 10
-  <XpAmount>k__BackingField: 10
+  <XpAmount>k__BackingField: 7
   team: 4
 --- !u!4 &833534742
 Transform:
@@ -2657,6 +2657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 854763237}
+  - component: {fileID: 854763238}
   m_Layer: 0
   m_Name: Creature Event Manager
   m_TagString: Untagged
@@ -2679,6 +2680,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 189072971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &854763238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854763236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bdd2db1375c4327b6646d077b3c2249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &862030982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,7 +3831,7 @@ GameObject:
   - component: {fileID: 1162741406}
   - component: {fileID: 1162741405}
   m_Layer: 5
-  m_Name: Popups
+  m_Name: Popups Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3832,11 +3845,11 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162741402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1441601665}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4018,7 +4031,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 568349588}
   health:
     maxValue: 10
-  <XpAmount>k__BackingField: 10
+  <XpAmount>k__BackingField: 7
   team: 4
 --- !u!4 &1185184140
 Transform:
@@ -6341,7 +6354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00002734997}
+  m_AnchoredPosition: {x: 0, y: 0.000026707008}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1354768156
@@ -6403,7 +6416,6 @@ Transform:
   - {fileID: 1723944726}
   - {fileID: 564015318}
   - {fileID: 2057036727}
-  - {fileID: 1162741403}
   m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1474763653
@@ -7390,7 +7402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Range>k__BackingField: 1
   <AttackSpeed>k__BackingField: 1
-  <Damage>k__BackingField: 2
+  <Damage>k__BackingField: 5
   <PushFactor>k__BackingField: 40
   <HitSound>k__BackingField: {fileID: 8300000, guid: 8c96ac97b9e3c9a4ca94d1c7a7823530, type: 3}
   swordParent: {fileID: 1754964100}
@@ -7558,7 +7570,7 @@ MonoBehaviour:
   <DefaultWeapon>k__BackingField: {fileID: 553266402}
   health:
     maxValue: 10
-  <XpAmount>k__BackingField: 10
+  <XpAmount>k__BackingField: 7
   team: 4
 --- !u!4 &1803717175
 Transform:
@@ -7722,7 +7734,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 490438705}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9988785
+  m_Size: 0.99173975
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8582,3 +8594,4 @@ SceneRoots:
   - {fileID: 1185184140}
   - {fileID: 2006210719}
   - {fileID: 429873560}
+  - {fileID: 1162741403}
