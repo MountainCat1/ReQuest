@@ -15,6 +15,9 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
+        if(_hasFired && fireOnce)
+            return;
+        
         var player = _playerProvider.Get();
         
         if (Vector3.Distance(player.transform.position, transform.position) <= range)
