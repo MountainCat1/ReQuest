@@ -107,6 +107,7 @@ public class MeleeEnemyController : CreatureController
     {
         var targets = Creature.GetAllVisibleCreatures()
             .Where(x => Creature.GetAttitudeTowards(x) == Attitude.Hostile)
+            .Where(x => CanSee(x))
             .ToList();
 
         // Get closest target
