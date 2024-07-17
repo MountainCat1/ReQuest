@@ -68,7 +68,7 @@ public class SwordWeapon : Weapon
     
     private void OnSwordCollisionStay(Collider2D collision)
     {
-        if(!Creature.IsCreature(collision))
+        if(!Creature.IsCreature(collision.gameObject))
             return;
         
         var creature = collision.GetComponent<Creature>();

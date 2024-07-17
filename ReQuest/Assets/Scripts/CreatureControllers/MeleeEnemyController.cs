@@ -15,7 +15,7 @@ public class MeleeEnemyController : CreatureController
     {
         Creature.SetMovement(Vector2.zero);
         
-        if(Creature.DefaultWeapon.OnCooldown && !moveOnAttackCooldown)
+        if(Creature.Weapon.OnCooldown && !moveOnAttackCooldown)
             return;
         
         if (!_target)
@@ -28,7 +28,7 @@ public class MeleeEnemyController : CreatureController
             }
         }
 
-        if (Vector2.Distance(Creature.transform.position, _target.transform.position) < Creature.DefaultWeapon.Range)
+        if (Vector2.Distance(Creature.transform.position, _target.transform.position) < Creature.Weapon.Range)
         {
             PerformAttack(Creature, _target);
             return;
@@ -39,7 +39,7 @@ public class MeleeEnemyController : CreatureController
 
     private void PerformAttack(Creature creature, Creature target)
     {
-        creature.DefaultWeapon.ContiniousAttack(new AttackContext()
+        creature.Weapon.ContiniousAttack(new AttackContext()
         {
             Direction = (target.transform.position - creature.transform.position).normalized,
             Target = target

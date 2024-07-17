@@ -7,9 +7,11 @@ namespace UI
     public class InventoryDisplay : MonoBehaviour
     {
         [Inject] IPlayerCharacterProvider _playerCharacterProvider;
-
+        [Inject] private DiContainer _container;
+        
         [SerializeField] private InventoryEntryDisplay inventoryEntryDisplayPrefab;
         [SerializeField] private Transform inventoryParent;
+        
         
         private Creature _creature;
         
@@ -30,6 +32,7 @@ namespace UI
             foreach (var item in _creature.Inventory.Items)
             {
                 var entry = Instantiate(inventoryEntryDisplayPrefab, inventoryParent);
+                _container.Inject(entry);
                 entry.Initialize(item);
             }                        
         }

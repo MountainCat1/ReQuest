@@ -12,22 +12,25 @@ public class Creature : MonoBehaviour
 
     // Injected Dependencies (using Zenject)
     [Inject] private ITeamManager _teamManager;
+    [Inject] private DiContainer _diContainer;
 
     // Public Variables
     public Rigidbody2D Rigidbody2D => _rigidbody2D;
     public Inventory Inventory { get; } = new();
     public IReadonlyModifiableValue Health => health;
+    public ILevelSystem LevelSystem => _levelSystem;
 
     // Serialized Private Variables
     [field: Header("Movement")]
-    [field: SerializeField]
-    public float Drag { get; private set; }
+    [field: SerializeField] public float Drag { get; private set; }
 
     [field: SerializeField] public float Speed { get; private set; }
-    [field: SerializeField] public Weapon DefaultWeapon { get; private set; }
+
+    [field: SerializeField] public Weapon Weapon { get; private set; }
 
     [field: Header("Stats")] 
     [field: SerializeField] private ModifiableValue health;
+
     [field: SerializeField] public int XpAmount { get; private set; }
     [field: SerializeField] private Teams team;
 
@@ -39,7 +42,7 @@ public class Creature : MonoBehaviour
     private Vector2 _moveDirection;
     private Vector2 _momentum;
     private Creature _lastAttackedBy = null;
-    
+
     private const float MomentumLoss = 2f;
 
     // Properties
@@ -91,6 +94,26 @@ public class Creature : MonoBehaviour
             Push(ctx.PushForce);
     }
 
+    public static bool IsCreature(GameObject go)
+    {
+        return go.CompareTag("Player") || go.CompareTag("Creature");
+    }
+
+    public void SetWeapon(WeaponItem weaponItem)
+    {
+        if (Weapon)
+            Destroy(Weapon.gameObject);
+
+        var instantiatedWeapon = _diContainer.InstantiatePrefab(
+            weaponItem.WeaponPrefab.gameObject,
+            transform.position,
+            Quaternion.identity,
+            _rootTransform
+        );
+        
+        Weapon = instantiatedWeapon.GetComponent<Weapon>();
+    }
+
     // Virtual Methods
 
     // Abstract Methods
@@ -131,11 +154,6 @@ public class Creature : MonoBehaviour
         }
 
         Destroy(gameObject);
-    }
-
-    public static bool IsCreature(Component go)
-    {
-        return go.CompareTag("Player") || go.CompareTag("Creature");
     }
 
 
