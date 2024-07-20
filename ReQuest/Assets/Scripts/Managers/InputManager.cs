@@ -11,6 +11,7 @@ public interface IInputManager
     event Action<Vector2> CharacterMovementChanged;
     event Action<Vector2> Pointer1Pressed;
     event Action<Vector2> Pointer2Pressed;
+    public event Action<Vector2> Pointer1Hold;
     event Action OnConfirm;
     event Action OnSkip;
 }
@@ -22,6 +23,7 @@ public class InputManager : MonoBehaviour, IInputManager
     public event Action<Vector2> CharacterMovementChanged;
     public event Action<Vector2> Pointer1Pressed;
     public event Action<Vector2> Pointer2Pressed;
+    public event Action<Vector2> Pointer1Hold;
     public event Action OnConfirm;
     public event Action OnSkip;
 
@@ -42,7 +44,7 @@ public class InputManager : MonoBehaviour, IInputManager
         _inputActions.CharacterControl.Pointer2.performed += Pointer2OnPerformed;
 
         _inputActions.UI.Confirm.performed += _ => OnConfirm?.Invoke();
-        
+
         _inputActions.UI.Skip.performed += _ => OnSkip?.Invoke();
     }
 
@@ -51,6 +53,11 @@ public class InputManager : MonoBehaviour, IInputManager
         var movement = _inputActions.CharacterControl.Movement.ReadValue<Vector2>();
         if (movement.magnitude > 0)
             CharacterMovement?.Invoke(movement);
+
+        if (_inputActions.CharacterControl.Pointer1.IsPressed())
+        {
+            Pointer1Hold?.Invoke(Mouse.current.position.ReadValue());
+        }
     }
 
     private void FixedUpdate()

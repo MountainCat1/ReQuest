@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="refactor - moved ColliderEventProducer.cs" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/InputManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +16,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4050fa1eeb154fde8043e8b1694bf86220a00/a3/f4b39d78/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Fonts/DePixelKlein SDF.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
@@ -116,7 +120,8 @@
       <workItem from="1721152153436" duration="52000" />
       <workItem from="1721223841953" duration="2206000" />
       <workItem from="1721240438122" duration="2331000" />
-      <workItem from="1721482539054" duration="855000" />
+      <workItem from="1721482539054" duration="2298000" />
+      <workItem from="1721517902852" duration="661000" />
     </task>
     <task id="LOCAL-00001" summary="move to URP">
       <option name="closed" value="true" />
@@ -398,7 +403,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721482800787</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="add DePixelKlein SDF.asset font">
+      <option name="closed" value="true" />
+      <created>1721484073836</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1721484073836</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +430,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactor in MeleeEnemyController.cs" />
     <MESSAGE value="Add healthbar" />
     <MESSAGE value="renamed HealthbarUI.cs to HealthBarUI.cs" />
     <MESSAGE value="commit missing metadata file HealthbarUI.cs.meta" />
@@ -442,6 +454,7 @@
     <MESSAGE value="added simple level display, added item using system" />
     <MESSAGE value="add pixelart font" />
     <MESSAGE value="refactor - moved ColliderEventProducer.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor - moved ColliderEventProducer.cs" />
+    <MESSAGE value="add DePixelKlein SDF.asset font" />
+    <option name="LAST_COMMIT_MESSAGE" value="add DePixelKlein SDF.asset font" />
   </component>
 </project>

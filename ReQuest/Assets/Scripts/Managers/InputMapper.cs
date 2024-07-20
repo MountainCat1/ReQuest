@@ -17,7 +17,7 @@ public class InputMapper : MonoBehaviour, IInputMapper
     [Inject]
     private void Construct()
     {
-        _inputManager.Pointer1Pressed += OnCharacterAttack;
+        _inputManager.Pointer1Hold += OnCharacterAttack;
         _camera = Camera.main;
     }
 
