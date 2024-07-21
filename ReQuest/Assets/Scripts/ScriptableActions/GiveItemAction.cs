@@ -8,9 +8,9 @@ namespace ScriptableActions
     {
         [Inject] IPlayerCharacterProvider _playerProvider;
         
-        [SerializeField] private InventoryItem item;
+        [SerializeField] private ItemBehaviour item;
         
-        public override void Execute()
+        public override void Execute() 
         {
             base.Execute();
 

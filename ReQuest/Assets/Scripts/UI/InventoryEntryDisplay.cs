@@ -13,10 +13,10 @@ namespace UI
         [SerializeField] private Image icon;
         [SerializeField] private TextMeshProUGUI name;
         
-        private InventoryItem _item;
+        private ItemBehaviour _item;
         
         
-        public void Initialize(InventoryItem item)
+        public void Initialize(ItemBehaviour item)
         {
             icon.sprite = item.Icon;
             name.text = item.Name;
@@ -25,10 +25,7 @@ namespace UI
 
         public void UseItem()
         {
-            _item.Use(new IteamUseContext()
-            {
-                Creature = _playerProvider.Get()
-            });
+            _playerProvider.Get().UseItem(_item);
         }
     }
 }

@@ -220,6 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29aa46510e3f44fab28630937cf37cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Icon>k__BackingField: {fileID: 0}
+  <Name>k__BackingField: 
+  <ItemPrefab>k__BackingField: {fileID: 0}
   <Range>k__BackingField: 1
   <AttackSpeed>k__BackingField: 1
   <Damage>k__BackingField: 5

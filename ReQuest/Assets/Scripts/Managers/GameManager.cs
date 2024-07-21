@@ -8,7 +8,7 @@ namespace Managers
     {
         [Inject] IPlayerCharacterProvider _playerCharacterProvider;
         
-        [SerializeField] private List<InventoryItem> startingItems;
+        [SerializeField] private List<ItemBehaviour> startingItems;
         
         private void Start()
         {

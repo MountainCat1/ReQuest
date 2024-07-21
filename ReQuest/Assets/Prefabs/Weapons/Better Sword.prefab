@@ -220,6 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29aa46510e3f44fab28630937cf37cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Icon>k__BackingField: {fileID: 21300000, guid: 52890bcd826b68f4cbc47ab4600d36a3, type: 3}
+  <Name>k__BackingField: Better Sword
+  <ItemPrefab>k__BackingField: {fileID: 0}
   <Range>k__BackingField: 1
   <AttackSpeed>k__BackingField: 3
   <Damage>k__BackingField: 4

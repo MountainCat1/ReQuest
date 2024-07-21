@@ -3,7 +3,7 @@ using Managers;
 using UnityEngine;
 using Zenject;
 
-public abstract class Weapon : MonoBehaviour
+public abstract class Weapon : ItemBehaviour
 {
     [Inject] private ISoundPlayer _soundPlayer;
 
@@ -54,6 +54,13 @@ public abstract class Weapon : MonoBehaviour
         var direction = (target.transform.position - transform.position).normalized;
         var pushForce = direction * (PushFactor * (Damage / target.Health.MaxValue));
         return pushForce;
+    }
+
+    public override void Use(ItemUseContext ctx)
+    {
+        base.Use(ctx);
+        
+        ctx.Creature.StartUsingWeapon(this);
     }
 }
 

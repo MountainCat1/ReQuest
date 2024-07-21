@@ -16,7 +16,7 @@ public class Creature : MonoBehaviour
 
     // Public Variables
     public Rigidbody2D Rigidbody2D => _rigidbody2D;
-    public Inventory Inventory { get; } = new();
+    public Inventory Inventory { get; private set; }
     public IReadonlyModifiableValue Health => health;
     public ILevelSystem LevelSystem => _levelSystem;
 
@@ -55,6 +55,10 @@ public class Creature : MonoBehaviour
 
         health.ValueChanged += OnHealthChanged;
         health.CurrentValue = health.MaxValue;
+        
+        
+        Inventory = new Inventory(_rootTransform);
+        _diContainer.Inject(Inventory);
     }
 
     private void FixedUpdate()
@@ -98,22 +102,26 @@ public class Creature : MonoBehaviour
     {
         return go.CompareTag("Player") || go.CompareTag("Creature");
     }
-
-    public void SetWeapon(WeaponItem weaponItem)
+    
+    public void StartUsingWeapon(Weapon weaponItem)
     {
-        if (Weapon)
-            Destroy(Weapon.gameObject);
-
-        var instantiatedWeapon = _diContainer.InstantiatePrefab(
-            weaponItem.WeaponPrefab.gameObject,
-            transform.position,
-            Quaternion.identity,
-            _rootTransform
-        );
-        
-        Weapon = instantiatedWeapon.GetComponent<Weapon>();
+        Weapon = weaponItem;
     }
-
+    
+    public void UseItem(ItemBehaviour item)
+    {
+        item.Use(new ItemUseContext()
+        {
+            Creature = this
+        });
+    }
+    
+    public void AwardXp(int amount)
+    {
+        _levelSystem.AddXp(amount);
+    }
+    
+    
     // Virtual Methods
 
     // Abstract Methods
@@ -163,11 +171,6 @@ public class Creature : MonoBehaviour
     {
         if (health.CurrentValue <= health.MinValue)
             InvokeDeath();
-    }
-
-    public void AwardXp(int amount)
-    {
-        _levelSystem.AddXp(amount);
     }
 }
 

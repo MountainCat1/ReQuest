@@ -1,22 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Transactions;
+using UnityEngine;
+using Zenject;
 
 public class Inventory
 {
     public Action OnChange { get; set; }
 
-    public IReadOnlyList<InventoryItem> Items => _items;
-    private readonly List<InventoryItem> _items = new();
+    [Inject] private DiContainer _diContainer;
+    
+    public IReadOnlyList<ItemBehaviour> Items => _items;
+    private readonly List<ItemBehaviour> _items = new();
 
-    public void AddItem(InventoryItem item)
+    private Transform _transform;
+    
+    public Inventory(Transform rootTransform)
     {
-        _items.Add(item);
+        _transform = rootTransform;
+    }    
+    
+    public void AddItem(ItemBehaviour itemPrefab)
+    {
+        var instantiateItem = _diContainer.InstantiatePrefab(
+            itemPrefab,
+            _transform.position,
+            Quaternion.identity,
+            _transform
+        );
+        var itemScript = instantiateItem.GetComponent<ItemBehaviour>();
+        _items.Add(itemScript);
+        
         OnChange?.Invoke();
     }
 
-    public void RemoveItem(InventoryItem item)
-    {
-        _items.Remove(item);
-        OnChange?.Invoke();
-    }
+    // public void RemoveItem(InventoryItem item)
+    // {
+    //     _items.Remove(item);
+    //     OnChange?.Invoke();
+    // }
 }
