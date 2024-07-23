@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="fix not getting xp when killing creatures with range weapon" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add some tress in SampleScene.unity">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +17,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/28/98b2570e/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/UI/InventoryDisplay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Weapons/ProjectileWeapon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Weapons/SwordWeapon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Weapons/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
@@ -123,7 +127,7 @@
       <workItem from="1721482539054" duration="2298000" />
       <workItem from="1721517902852" duration="5043000" />
       <workItem from="1721565897807" duration="3159000" />
-      <workItem from="1721769285100" duration="1378000" />
+      <workItem from="1721769285100" duration="1798000" />
     </task>
     <task id="LOCAL-00001" summary="move to URP">
       <option name="closed" value="true" />
@@ -453,7 +457,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721770656523</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1721770854245</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1721770854245</updated>
+    </task>
+    <task id="LOCAL-00043" summary="add some tress in SampleScene.unity">
+      <option name="closed" value="true" />
+      <created>1721771107066</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1721771107066</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,8 +492,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add basic dialog system (only a start x))" />
-    <MESSAGE value="add dialog panel appear and disappear" />
     <MESSAGE value="rename object SampleScene.unity" />
     <MESSAGE value="add helper methods, sound manager, sound player, fix serialization of dialogs" />
     <MESSAGE value="add simple inventory" />
@@ -497,7 +515,9 @@
     <MESSAGE value="add bandit sprites" />
     <MESSAGE value=" Mega refactor of inventory " />
     <MESSAGE value="fix not getting xp when killing creatures with range weapon" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix not getting xp when killing creatures with range weapon" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="add some tress in SampleScene.unity" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some tress in SampleScene.unity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
