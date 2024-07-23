@@ -8,13 +8,12 @@ namespace UI
     {
         [Inject] IPlayerCharacterProvider _playerCharacterProvider;
         [Inject] private DiContainer _container;
-        
+
         [SerializeField] private InventoryEntryDisplay inventoryEntryDisplayPrefab;
         [SerializeField] private Transform inventoryParent;
         
-        
         private Creature _creature;
-        
+
         private void Start()
         {
             _creature = _playerCharacterProvider.Get();
@@ -34,7 +33,7 @@ namespace UI
                 var entry = Instantiate(inventoryEntryDisplayPrefab, inventoryParent);
                 _container.Inject(entry);
                 entry.Initialize(item);
-            }                        
+            }
         }
     }
 }

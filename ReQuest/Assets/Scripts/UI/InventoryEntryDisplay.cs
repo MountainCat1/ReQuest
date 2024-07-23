@@ -15,7 +15,6 @@ namespace UI
         
         private ItemBehaviour _item;
         
-        
         public void Initialize(ItemBehaviour item)
         {
             icon.sprite = item.Icon;
