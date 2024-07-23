@@ -5,22 +5,31 @@ namespace Weapons
 {
     public class Projectile : MonoBehaviour
     {
-        public event Action<Creature, Vector2> Hit;
+        public event Action<Creature, AttackContext> Hit;
 
         [SerializeField] private ColliderEventProducer colliderEventProducer;
 
-        public float Speed { get; set; }
-        public float Damage { get; set; }
-
-        private Vector2 _direction;
+        public float Speed { get; private set; }
+        public float Damage { get; private set; }
+        
         private bool _isLaunched = false;
-        private Creature _attacker;
-
+        private bool _initialized = false;
+        private AttackContext _attackContext;
+        
+        public void Initialize(float speed, float damage)
+        {
+            Speed = speed;
+            Damage = damage;
+            
+            _initialized = true;
+        }
 
         public void Launch(AttackContext ctx)
         {
-            _direction = ctx.Direction;
-            _attacker = ctx.Attacker;
+            if(!_initialized)
+                throw new Exception("Projectile not initialized");
+
+            _attackContext = ctx;
 
             colliderEventProducer.TriggerEnter += OnProjectileCollision;
 
@@ -32,20 +41,20 @@ namespace Weapons
             if (Creature.IsCreature(other.gameObject) == false)
                 return;
 
-            var creature = other.GetComponent<Creature>();
+            var hitCreature = other.GetComponent<Creature>();
 
-            if (creature == null)
+            if (hitCreature == null)
             {
                 Debug.LogError("Projectile hit something that is not a creature");
                 return;
             }
 
-            if (creature == _attacker)
+            if (hitCreature == _attackContext.Attacker)
                 return;
 
             try
             {
-                Hit?.Invoke(creature, _direction);
+                Hit?.Invoke(hitCreature, _attackContext);
             }
             catch (Exception e)
             {
@@ -60,7 +69,7 @@ namespace Weapons
             if (!_isLaunched)
                 return;
 
-            transform.position += (Vector3)(_direction * (Speed * Time.deltaTime));
+            transform.position += (Vector3)(_attackContext.Direction * (Speed * Time.deltaTime));
         }
     }
 }
