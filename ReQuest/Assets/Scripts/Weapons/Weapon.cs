@@ -20,6 +20,7 @@ public abstract class Weapon : ItemBehaviour
     public void PerformAttack(AttackContext ctx)
     {
         _lastAttackTime = DateTime.Now;
+        
         Attack(ctx);
     }
 
@@ -33,18 +34,10 @@ public abstract class Weapon : ItemBehaviour
 
     protected abstract void Attack(AttackContext ctx);
 
-    protected virtual void OnHit(Creature target, AttackContext attackCtx)
+    protected virtual void OnHit(Creature target, HitContext hitContext)
     {
         if (target != null)
         {
-            var hitContext = new HitContext()
-            {
-                Attacker = attackCtx.Attacker,
-                Target = attackCtx.Target,
-                Damage = Damage,
-                PushForce = CalculatePushForce(target)
-            };
-
             target.Damage(hitContext);
         }
 
@@ -81,4 +74,19 @@ public struct HitContext
     public Creature Target { get; set; }
     public float Damage { get; set; }
     public Vector2 PushForce { get; set; }
+
+    public void ValidateAndLog()
+    {
+        if (Attacker == null)
+            Debug.LogError("Attacker is null");
+
+        if (Target == null)
+            Debug.LogError("Target is null");
+
+        if (Damage <= 0)
+            Debug.LogError("Damage is less than or equal to 0");
+
+        if (PushForce == Vector2.zero)
+            Debug.LogError("PushForce is zero");
+    }
 }

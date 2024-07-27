@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using JetBrains.Annotations;
+using UnityEngine;
 using Zenject;
 
 namespace Managers
@@ -28,6 +30,14 @@ namespace Managers
         // Event Handlers
         private void OnCreatureDeath(DeathContext ctx)
         {
+            if (ctx.Killer == null)
+            {
+                Debug.LogWarning("Killer is null in DeathContext");
+                return;
+            }
+            if(ctx.Creature == null)
+                throw new NullReferenceException("Creature is null in DeathContext");
+            
             var creature = ctx.Creature;
             var killer = ctx.Killer;
 

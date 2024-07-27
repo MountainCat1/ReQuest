@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using CreatureControllers;
+﻿using CreatureControllers;
 using UnityEngine;
-using Zenject;
 
 public class MeleeEnemyController : AiController
 {
@@ -41,7 +38,8 @@ public class MeleeEnemyController : AiController
         creature.Weapon.ContiniousAttack(new AttackContext()
         {
             Direction = (target.transform.position - creature.transform.position).normalized,
-            Target = target
+            Target = target,
+            Attacker = creature
         });
     }
 }

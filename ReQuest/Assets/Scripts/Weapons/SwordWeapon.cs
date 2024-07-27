@@ -36,9 +36,9 @@ public class SwordWeapon : Weapon
         _attackCoroutine = StartCoroutine(AttackRoutine(ctx));
     }
 
-    protected override void OnHit(Creature creature, AttackContext attackCtx)
+    protected override void OnHit(Creature creature, HitContext hitContext)
     {
-        base.OnHit(creature, attackCtx);
+        base.OnHit(creature, hitContext);
     }
 
     private IEnumerator AttackRoutine(AttackContext ctx)
@@ -76,6 +76,15 @@ public class SwordWeapon : Weapon
             return;
         
         _hitCreatures.Add(creature);
-        OnHit(creature, _attackContext ?? throw new NullReferenceException("Attack context is null!"));
+        
+        var hit = new HitContext()
+        {
+            Attacker = _attackContext?.Attacker,
+            Target = creature,
+            Damage = Damage,
+            PushForce = creature ? CalculatePushForce(creature) : Vector2.zero
+        };
+        
+        OnHit(creature, hit);
     }
 }

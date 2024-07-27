@@ -28,9 +28,17 @@ namespace Weapons
             projectile.Launch(ctx);
         }
 
-        private void OnProjectileHit(Creature hitCreature, AttackContext ctx)
+        private void OnProjectileHit(Creature hitCreature, AttackContext attackCtx)
         {
-            OnHit(hitCreature, ctx);
+            var hitCtx = new HitContext()
+            {
+                Attacker = attackCtx.Attacker,
+                Damage = Damage,
+                PushForce = hitCreature ? CalculatePushForce(hitCreature) : Vector2.zero,
+                Target = hitCreature
+            };
+            
+            OnHit(hitCreature, hitCtx);
         }
     }
 }

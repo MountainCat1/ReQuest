@@ -40,7 +40,6 @@ namespace Weapons
 
         private void OnProjectileCollision(Collider2D other)
         {
-            Debug.Log(other.gameObject);
             if (CollisionUtility.IsObstacle(other.gameObject))
             {
                 Hit?.Invoke(null, _attackContext);

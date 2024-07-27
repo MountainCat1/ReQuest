@@ -91,6 +91,8 @@ public class Creature : MonoBehaviour
 
     public void Damage(HitContext ctx)
     {
+        ctx.ValidateAndLog();
+        
         health.CurrentValue -= ctx.Damage;
         _lastAttackedBy = ctx.Attacker;
 
