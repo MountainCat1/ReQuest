@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using Zenject;
 
@@ -12,18 +13,8 @@ namespace CreatureControllers
         protected void PerformMovementTowardsTarget(Creature target)
         {
             float radius = Creature.GetComponent<CircleCollider2D>().radius;
-            Vector3 creaturePosition = Creature.transform.position;
-
-            List<Vector3> cornerPoints = GetCornerPoints(creaturePosition, radius);
-
-            bool pathClear = true;
-            foreach (Vector3 corner in cornerPoints)
-            {
-                Debug.DrawLine(corner, target.transform.position, Color.blue);
-                if (!_pathfinding.IsClearPath(corner, target.transform.position))
-                    pathClear = false;
-            }
-
+           
+            var pathClear = PathClear(target, radius);
             if (pathClear)
             {
                 MoveStraightToTarget(target);
@@ -32,7 +23,24 @@ namespace CreatureControllers
 
             MoveViaPathfinding(target);
         }
-        
+
+        protected bool PathClear(Creature target, float radius)
+        {
+            Vector3 creaturePosition = Creature.transform.position;
+            List<Vector3> cornerPoints = GetCornerPoints(creaturePosition, radius);
+
+            bool pathClear = true;
+            foreach (Vector3 corner in cornerPoints)
+            {
+                if (!_pathfinding.IsClearPath(corner, target.transform.position))
+                    pathClear = false;
+
+                Debug.DrawLine(corner, target.transform.position, Color.blue);
+            }
+
+            return pathClear;
+        }
+
         private void MoveViaPathfinding(Creature target)
         {
             var path = _pathfinding.FindPath(Creature.transform.position, target.transform.position);
@@ -80,6 +88,11 @@ namespace CreatureControllers
                 .FirstOrDefault();
 
             return target;
+        }
+
+        protected bool IsInRange(Creature creature, float rane)
+        {
+            return Vector2.Distance(Creature.transform.position, creature.transform.position) < rane;
         }
     }
 }

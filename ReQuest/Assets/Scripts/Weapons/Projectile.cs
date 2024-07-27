@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using Utilities;
 
 namespace Weapons
 {
@@ -8,7 +9,7 @@ namespace Weapons
         public event Action<Creature, AttackContext> Hit;
 
         [SerializeField] private ColliderEventProducer colliderEventProducer;
-
+        
         public float Speed { get; private set; }
         public float Damage { get; private set; }
         
@@ -23,6 +24,7 @@ namespace Weapons
             
             _initialized = true;
         }
+        
 
         public void Launch(AttackContext ctx)
         {
@@ -38,6 +40,14 @@ namespace Weapons
 
         private void OnProjectileCollision(Collider2D other)
         {
+            Debug.Log(other.gameObject);
+            if (CollisionUtility.IsObstacle(other.gameObject))
+            {
+                Hit?.Invoke(null, _attackContext);
+                Destroy(gameObject);
+                return;
+            }
+            
             if (Creature.IsCreature(other.gameObject) == false)
                 return;
 

@@ -35,16 +35,19 @@ public abstract class Weapon : ItemBehaviour
 
     protected virtual void OnHit(Creature target, AttackContext attackCtx)
     {
-        var hitContext = new HitContext()
+        if (target != null)
         {
-            Attacker = attackCtx.Attacker,
-            Target = attackCtx.Target,
-            Damage = Damage,
-            PushForce = CalculatePushForce(target)
-        };
-        
-        target.Damage(hitContext);
-        
+            var hitContext = new HitContext()
+            {
+                Attacker = attackCtx.Attacker,
+                Target = attackCtx.Target,
+                Damage = Damage,
+                PushForce = CalculatePushForce(target)
+            };
+
+            target.Damage(hitContext);
+        }
+
         if (HitSound != null)
             _soundPlayer.PlaySound(HitSound, transform.position);
     }
@@ -59,7 +62,7 @@ public abstract class Weapon : ItemBehaviour
     public override void Use(ItemUseContext ctx)
     {
         base.Use(ctx);
-        
+
         ctx.Creature.StartUsingWeapon(this);
     }
 }

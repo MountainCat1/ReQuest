@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [System.Serializable]
-public class ModifiableValue : IReadonlyModifiableValue
+public class RangedValue : IReadonlyRangedValue
 {
     // Events
     public event Action ValueChanged;
@@ -58,7 +58,7 @@ public class ModifiableValue : IReadonlyModifiableValue
     }
 
     // Public Methods
-    public ModifiableValue(float baseValue, float minValue, float maxValue)
+    public RangedValue(float baseValue, float minValue, float maxValue)
     {
         this._baseValue = baseValue;
         this._minValue = minValue;

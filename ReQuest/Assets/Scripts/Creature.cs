@@ -17,7 +17,7 @@ public class Creature : MonoBehaviour
     // Public Variables
     public Rigidbody2D Rigidbody2D => _rigidbody2D;
     public Inventory Inventory { get; private set; }
-    public IReadonlyModifiableValue Health => health;
+    public IReadonlyRangedValue Health => health;
     public ILevelSystem LevelSystem => _levelSystem;
 
     // Serialized Private Variables
@@ -29,7 +29,7 @@ public class Creature : MonoBehaviour
     [field: SerializeField] public Weapon Weapon { get; private set; }
 
     [field: Header("Stats")] 
-    [field: SerializeField] private ModifiableValue health;
+    [field: SerializeField] private RangedValue health;
 
     [field: SerializeField] public int XpAmount { get; private set; }
     [field: SerializeField] private Teams team;
