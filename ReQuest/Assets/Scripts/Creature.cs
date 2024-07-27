@@ -101,6 +101,11 @@ public class Creature : MonoBehaviour
             Push(ctx.PushForce);
     }
 
+    public void Heal(int healAmount)
+    {
+        health.CurrentValue += healAmount;
+    }
+    
     public static bool IsCreature(GameObject go)
     {
         return go.CompareTag("Player") || go.CompareTag("Creature");

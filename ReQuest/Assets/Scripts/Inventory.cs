@@ -39,4 +39,9 @@ public class Inventory
     //     _items.Remove(item);
     //     OnChange?.Invoke();
     // }
+    public void RemoveItem(ItemBehaviour item)
+    {
+        _items.Remove(item);
+        OnChange?.Invoke();
+    }
 }

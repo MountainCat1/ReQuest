@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="refactor - moving files around" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="refactor - moved files around">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Items/HealthPotion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Items/HealthPotion.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,15 +134,7 @@
       <workItem from="1721840959848" duration="1546000" />
       <workItem from="1722083232767" duration="3719000" />
       <workItem from="1722093953209" duration="1479000" />
-      <workItem from="1722095477467" duration="302000" />
-    </task>
-    <task id="LOCAL-00002" summary="add basics for sword weapon and its attack">
-      <option name="closed" value="true" />
-      <created>1717345778038</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1717345778038</updated>
+      <workItem from="1722095477467" duration="788000" />
     </task>
     <task id="LOCAL-00003" summary="work work">
       <option name="closed" value="true" />
@@ -522,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722095780943</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="refactor - moved files around">
+      <option name="closed" value="true" />
+      <created>1722095910099</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1722095910100</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +547,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add teams" />
     <MESSAGE value="put nature tilemap on to a walls mask" />
     <MESSAGE value="change bindings for skipping dialogs" />
     <MESSAGE value="add floating texts" />
@@ -566,6 +571,7 @@
     <MESSAGE value="refactor, changed how sound are being played on hit" />
     <MESSAGE value="refactor - created Items directory" />
     <MESSAGE value="refactor - moving files around" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor - moving files around" />
+    <MESSAGE value="refactor - moved files around" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor - moved files around" />
   </component>
 </project>
