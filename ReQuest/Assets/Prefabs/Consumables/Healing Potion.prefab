@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d556b0f1cb04648b37e809e0b9a232f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Icon>k__BackingField: {fileID: 21300000, guid: cbec4a71fe0fdee4894e57e8f03f8e39, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 971b247708e07d042b65c2fb500bf37d, type: 3}
   <Name>k__BackingField: Healing Potion
   healAmount: 5
