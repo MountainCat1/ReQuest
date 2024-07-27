@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add simple consumable items">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +15,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/28/98b2570e/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Prefabs/Consumables/Healing Potion.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Creature.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Creature.cs" root0="SKIP_HIGHLIGHTING" />
@@ -131,15 +130,7 @@
       <workItem from="1721840959848" duration="1546000" />
       <workItem from="1722083232767" duration="3719000" />
       <workItem from="1722093953209" duration="1479000" />
-      <workItem from="1722095477467" duration="1766000" />
-    </task>
-    <task id="LOCAL-00004" summary="Add Time Manager GameObject to SampleScene&#10;&#10;A Time Manager GameObject has been added to the SampleScene. This GameObject, along with its properties and Transform, is visible in the scene and ready for configuration. The necessary connections and components have been set up for this GameObject.">
-      <option name="closed" value="true" />
-      <created>1718619509453</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1718619509453</updated>
+      <workItem from="1722095477467" duration="2312000" />
     </task>
     <task id="LOCAL-00005" summary="Add TimeManager GameObject and Game Configuration assets&#10;&#10;A TimeManager GameObject has been added to the Unity game scene along with associated script modifications. Also, the ConfigurationInstaller and GameConfiguration assets have been introduced. Further, text elements for displaying game time have been included as part of the UI.">
       <option name="closed" value="true" />
@@ -525,7 +516,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722096333572</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="add health potion sprite">
+      <option name="closed" value="true" />
+      <created>1722099348219</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1722099348219</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +543,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="change bindings for skipping dialogs" />
     <MESSAGE value="add floating texts" />
     <MESSAGE value="refactor of dealing damage logic" />
     <MESSAGE value="add xp gain and floating texts" />
@@ -569,6 +567,7 @@
     <MESSAGE value="refactor - moving files around" />
     <MESSAGE value="refactor - moved files around" />
     <MESSAGE value="add simple consumable items" />
-    <option name="LAST_COMMIT_MESSAGE" value="add simple consumable items" />
+    <MESSAGE value="add health potion sprite" />
+    <option name="LAST_COMMIT_MESSAGE" value="add health potion sprite" />
   </component>
 </project>

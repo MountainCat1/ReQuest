@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Sentences>k__BackingField:
   - <Text>k__BackingField: 'Hello there! What brings you here? '
-  - <Text>k__BackingField: Hm..? I suppose you're not a talktive type...
+  - <Text>k__BackingField: Hm..? I suppose you're not a talkative type...
   - <Text>k__BackingField: I guess I will share some information with ya!
-  - <Text>k__BackingField: East of here there are kobolds, those nasty pests always
+  - <Text>k__BackingField: East of here there are kobolds. Those nasty pests always
       have something of value if you are interested.
-  - <Text>k__BackingField: You can head west and you will arrive in the Ironvile
-      - a small mining town.
-  - <Text>k__BackingField: South? I would not go south. Bandits are patroling those
+  - <Text>k__BackingField: You can head west, and you will arrive in Ironvile - a
+      small mining town.
+  - <Text>k__BackingField: South? I would not go south. Bandits are patrolling those
       roads, so I would stay away.
   - <Text>k__BackingField: That's all I have to say. So... don't bother me.
   - <Text>k__BackingField: Except if you have some good beverage... I would love
-      some good beverage.
+      a good beverage.
