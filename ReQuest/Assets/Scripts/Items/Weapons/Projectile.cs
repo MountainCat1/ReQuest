@@ -2,7 +2,7 @@
 using UnityEngine;
 using Utilities;
 
-namespace Weapons
+namespace Items.Weapons
 {
     public class Projectile : MonoBehaviour
     {

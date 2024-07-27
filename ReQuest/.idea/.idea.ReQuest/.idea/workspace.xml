@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Items.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemUseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemUseContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemUseContext.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemUseContext.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/GiveItemAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/GiveItemAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryEntryDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryEntryDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" afterDir="false" />
-    </list>
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="refactor - moving files around" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,8 +16,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Weapons/ProjectileWeapon.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Weapons/TouchWeapon.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Creature.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Managers/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/ScriptableActions/GiveItemAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/UI/InventoryEntryDisplay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@9.0.3/IK/Runtime/Solver2DMenuAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.spriteshape@9.0.2/Runtime/SpriteShapeGenerator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -138,14 +128,7 @@
       <workItem from="1721840959848" duration="1546000" />
       <workItem from="1722083232767" duration="3719000" />
       <workItem from="1722093953209" duration="1479000" />
-    </task>
-    <task id="LOCAL-00001" summary="move to URP">
-      <option name="closed" value="true" />
-      <created>1717232533764</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1717232533764</updated>
+      <workItem from="1722095477467" duration="302000" />
     </task>
     <task id="LOCAL-00002" summary="add basics for sword weapon and its attack">
       <option name="closed" value="true" />
@@ -523,7 +506,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722095393477</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="refactor - created Items directory">
+      <option name="closed" value="true" />
+      <created>1722095592634</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1722095592634</updated>
+    </task>
+    <task id="LOCAL-00050" summary="refactor - moving files around">
+      <option name="closed" value="true" />
+      <created>1722095780942</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1722095780943</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,8 +541,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add inventory dispaly" />
-    <MESSAGE value="add sounds to weapons" />
     <MESSAGE value="add teams" />
     <MESSAGE value="put nature tilemap on to a walls mask" />
     <MESSAGE value="change bindings for skipping dialogs" />
@@ -567,6 +564,8 @@
     <MESSAGE value="refactor ai creature controllers" />
     <MESSAGE value="add basic range enemy" />
     <MESSAGE value="refactor, changed how sound are being played on hit" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor, changed how sound are being played on hit" />
+    <MESSAGE value="refactor - created Items directory" />
+    <MESSAGE value="refactor - moving files around" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor - moving files around" />
   </component>
 </project>
