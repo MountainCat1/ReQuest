@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-interface IPathfinding
+public interface IPathfinding
 {
     List<Node> FindPath(Vector3 startPos, Vector3 targetPos);
     
