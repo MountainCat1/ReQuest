@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add simple road to the map">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/AiController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,9 +22,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Prefabs/Bandit Fighter.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/CreatureControllers/AiController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/CreatureControllers/AiController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/CreatureControllers/AiController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@9.0.3/IK/Runtime/Solver2DMenuAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -134,14 +136,7 @@
       <workItem from="1722095477467" duration="2312000" />
       <workItem from="1722117638504" duration="616000" />
       <workItem from="1722170198289" duration="4274000" />
-    </task>
-    <task id="LOCAL-00009" summary="add pathfinding">
-      <option name="closed" value="true" />
-      <created>1719093416654</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1719093416654</updated>
+      <workItem from="1722189734291" duration="1014000" />
     </task>
     <task id="LOCAL-00010" summary="add pathfinding to MeleeEnemyController.cs">
       <option name="closed" value="true" />
@@ -527,7 +522,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722174523601</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="add simple road to the map">
+      <option name="closed" value="true" />
+      <created>1722189975408</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1722189975408</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +549,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactor, made bare bone sight feature for creatures" />
     <MESSAGE value="add pickup item" />
     <MESSAGE value="added simple level display, added item using system" />
     <MESSAGE value="add pixelart font" />
@@ -571,7 +573,8 @@
     <MESSAGE value="fix typos" />
     <MESSAGE value="add sight range for creatures, add bandit fighter prefab, add bandit team" />
     <MESSAGE value="added memory to enemies" />
-    <option name="LAST_COMMIT_MESSAGE" value="added memory to enemies" />
+    <MESSAGE value="add simple road to the map" />
+    <option name="LAST_COMMIT_MESSAGE" value="add simple road to the map" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -588,6 +591,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/CreatureControllers/MeleeEnemyController.cs</url>
+          <line>11</line>
+          <properties documentPath="C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest\Assets\Scripts\CreatureControllers\MeleeEnemyController.cs" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="234" />
+            </startOffsets>
+            <endOffsets>
+              <option value="269" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

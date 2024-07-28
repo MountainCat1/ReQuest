@@ -44,6 +44,7 @@ namespace CreatureControllers
         {
             return _memorizedCreatures
                 .Select(x => x.Key)
+                .Where(x => x) // Filter out null creatures, is it even necessary??? idk...
                 .ToList();
         }
 
@@ -91,6 +92,9 @@ namespace CreatureControllers
             foreach (var key in keys)
             {
                 if ((DateTime.Now - _memorizedCreatures[key]).TotalSeconds > MemoryTime)
+                    _memorizedCreatures.Remove(key);
+                
+                if (!key)
                     _memorizedCreatures.Remove(key);
             }
 
