@@ -77,7 +77,7 @@ namespace CreatureControllers
 
         protected Creature GetNewTarget()
         {
-            var targets = Creature.GetAllVisibleCreatures()
+            var targets = Creature.GetAllSimulatedCreatures()
                 .Where(x => Creature.GetAttitudeTowards(x) == Attitude.Hostile)
                 .Where(x => CanSee(x))
                 .ToList();

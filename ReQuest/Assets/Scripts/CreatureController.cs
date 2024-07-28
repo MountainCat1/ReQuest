@@ -15,9 +15,8 @@ public class CreatureController : MonoBehaviour
         var distance = Vector2.Distance(transform.position, target.transform.position); 
         
         // If the target is too far away, we can't see it
-        if (distance > 100f)
+        if (distance > Creature.SightRange)
             return false;
-
 
         var layerMask = LayerMask.GetMask("Walls");
         var hit = Physics2D.Raycast(

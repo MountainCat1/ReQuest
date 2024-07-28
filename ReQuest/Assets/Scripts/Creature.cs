@@ -31,7 +31,7 @@ public class Creature : MonoBehaviour
 
     [field: Header("Stats")] 
     [field: SerializeField] private RangedValue health;
-
+    [field: SerializeField] public float SightRange { get; private set; } = 13f;
     [field: SerializeField] public int XpAmount { get; private set; }
     [field: SerializeField] private Teams team;
 
@@ -57,7 +57,6 @@ public class Creature : MonoBehaviour
         health.ValueChanged += OnHealthChanged;
         health.CurrentValue = health.MaxValue;
         
-        
         Inventory = new Inventory(_rootTransform);
         _diContainer.Inject(Inventory);
     }
@@ -74,7 +73,7 @@ public class Creature : MonoBehaviour
         _moveDirection = direction;
     }
 
-    public ICollection<Creature> GetAllVisibleCreatures()
+    public static ICollection<Creature> GetAllSimulatedCreatures()
     {
         return FindObjectsOfType<Creature>();
     }

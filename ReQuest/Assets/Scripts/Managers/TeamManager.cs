@@ -7,7 +7,8 @@ public enum Teams
     Player,
     Kingdom,
     Villagers,
-    Kobolds
+    Kobolds,
+    Bandits
 }
 
 public enum Attitude
@@ -38,6 +39,7 @@ namespace Managers
 
         // Private Variables
         private readonly Dictionary<Teams, Dictionary<Teams, Attitude>> _relations = new();
+        
         // Properties
 
         // Events
@@ -60,11 +62,18 @@ namespace Managers
             
             // Villagers
             AddRelation(Teams.Villagers, Teams.Player, Attitude.Friendly);
+            AddRelation(Teams.Villagers, Teams.Kingdom, Attitude.Friendly);
+            
+            // Bandits
+            AddRelation(Teams.Bandits, Teams.Player, Attitude.Hostile);
+            AddRelation(Teams.Bandits, Teams.Kingdom, Attitude.Hostile);
+            AddRelation(Teams.Bandits, Teams.Villagers, Attitude.Hostile);
             
             // Kobolds
             AddRelation(Teams.Kobolds, Teams.Player, Attitude.Hostile);
             AddRelation(Teams.Kobolds, Teams.Kingdom, Attitude.Hostile);
             AddRelation(Teams.Kobolds, Teams.Villagers, Attitude.Hostile);
+            AddRelation(Teams.Kobolds, Teams.Bandits, Attitude.Hostile);
         }
 
 
