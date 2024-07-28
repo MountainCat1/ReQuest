@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add sight range for creatures, add bandit fighter prefab, add bandit team">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/AiController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CreatureManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CreatureManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="added memory to enemies" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,15 +133,7 @@
       <workItem from="1722093953209" duration="1479000" />
       <workItem from="1722095477467" duration="2312000" />
       <workItem from="1722117638504" duration="616000" />
-      <workItem from="1722170198289" duration="3861000" />
-    </task>
-    <task id="LOCAL-00007" summary="Add FloatAttribute, ModifiableValue classes and implement creature health">
-      <option name="closed" value="true" />
-      <created>1718647501325</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1718647501325</updated>
+      <workItem from="1722170198289" duration="4207000" />
     </task>
     <task id="LOCAL-00008" summary="Add Weapon properties and CreatureController classes">
       <option name="closed" value="true" />
@@ -532,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722171155510</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="added memory to enemies">
+      <option name="closed" value="true" />
+      <created>1722174204154</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1722174204154</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +546,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add xp gain and floating texts" />
     <MESSAGE value="refactor, made bare bone sight feature for creatures" />
     <MESSAGE value="add pickup item" />
     <MESSAGE value="added simple level display, added item using system" />
@@ -576,7 +570,8 @@
     <MESSAGE value="add health potion sprite" />
     <MESSAGE value="fix typos" />
     <MESSAGE value="add sight range for creatures, add bandit fighter prefab, add bandit team" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sight range for creatures, add bandit fighter prefab, add bandit team" />
+    <MESSAGE value="added memory to enemies" />
+    <option name="LAST_COMMIT_MESSAGE" value="added memory to enemies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -593,19 +588,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/CreatureControllers/AiController.cs</url>
-          <line>93</line>
-          <properties documentPath="C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest\Assets\Scripts\CreatureControllers\AiController.cs" containingFunctionPresentation="Method 'UpdateMemory'">
-            <startOffsets>
-              <option value="2772" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2804" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
