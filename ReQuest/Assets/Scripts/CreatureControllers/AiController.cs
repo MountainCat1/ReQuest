@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting.FullSerializer;
+using Managers;
 using UnityEngine;
 using Zenject;
 
@@ -8,42 +9,52 @@ namespace CreatureControllers
 {
     public class AiController : CreatureController
     {
-        [Inject] protected IPathfinding _pathfinding;
-
-        protected void PerformMovementTowardsTarget(Creature target)
+        // Events
+        protected void Start()
         {
-            float radius = Creature.GetComponent<CircleCollider2D>().radius;
-           
-            var pathClear = PathClear(target, radius);
-            if (pathClear)
-            {
-                MoveStraightToTarget(target);
-                return;
-            }
-
-            MoveViaPathfinding(target);
+            Creature.Hit += OnHit;
         }
 
-        protected bool PathClear(Creature target, float radius)
+        // Injected Dependencies (using Zenject)
+        [Inject] protected IPathfinding Pathfinding;
+        [Inject] protected ICreatureManager CreatureManager;
+
+        // Public Constants
+        private const double MemoryTime = 20;
+
+        // Static Variables and Methods
+
+        // Public Variables
+
+        // Serialized Private Variables
+
+        // Private Variables
+        private Dictionary<Creature, DateTime> _memorizedCreatures = new();
+
+        // Properties
+
+        // Unity Callbacks
+        private void FixedUpdate()
         {
-            Vector3 creaturePosition = Creature.transform.position;
-            List<Vector3> cornerPoints = GetCornerPoints(creaturePosition, radius);
-
-            bool pathClear = true;
-            foreach (Vector3 corner in cornerPoints)
-            {
-                if (!_pathfinding.IsClearPath(corner, target.transform.position))
-                    pathClear = false;
-
-                Debug.DrawLine(corner, target.transform.position, Color.blue);
-            }
-
-            return pathClear;
+            UpdateMemory();
         }
 
+        // Public Methods
+        public ICollection<Creature> GetMemorizedCreatures()
+        {
+            return _memorizedCreatures
+                .Select(x => x.Key)
+                .ToList();
+        }
+
+        // Virtual Methods
+
+        // Abstract Methods
+
+        // Private Methods
         private void MoveViaPathfinding(Creature target)
         {
-            var path = _pathfinding.FindPath(Creature.transform.position, target.transform.position);
+            var path = Pathfinding.FindPath(Creature.transform.position, target.transform.position);
             if (path.Count == 0)
             {
                 return;
@@ -61,7 +72,7 @@ namespace CreatureControllers
             Creature.SetMovement(direction);
             Debug.DrawLine(Creature.transform.position, target.transform.position, Color.green);
         }
-        
+
         private List<Vector3> GetCornerPoints(Vector3 center, float radius)
         {
             List<Vector3> cornerPoints = new List<Vector3>
@@ -74,12 +85,69 @@ namespace CreatureControllers
             return cornerPoints;
         }
 
+        private void UpdateMemory()
+        {
+            var keys = _memorizedCreatures.Keys.ToList();
+            foreach (var key in keys)
+            {
+                if ((DateTime.Now - _memorizedCreatures[key]).TotalSeconds > MemoryTime)
+                    _memorizedCreatures.Remove(key);
+            }
+
+            CreatureManager.GetCreatures()
+                .Where(CanSee)
+                .ToList()
+                .ForEach(Memorize);
+        }
+
+        private void Memorize(Creature creature)
+        {
+            _memorizedCreatures[creature] = DateTime.Now;
+        }
+
+        // Event Handlers
+        private void OnHit(HitContext ctx)
+        {
+            Memorize(ctx.Attacker);
+        }
+
+        // Helper Methods
+        protected bool PathClear(Creature target, float radius)
+        {
+            Vector3 creaturePosition = Creature.transform.position;
+            List<Vector3> cornerPoints = GetCornerPoints(creaturePosition, radius);
+
+            bool pathClear = true;
+            foreach (Vector3 corner in cornerPoints)
+            {
+                if (!Pathfinding.IsClearPath(corner, target.transform.position))
+                    pathClear = false;
+
+                Debug.DrawLine(corner, target.transform.position, Color.blue);
+            }
+
+            return pathClear;
+        }
+
+        protected void PerformMovementTowardsTarget(Creature target)
+        {
+            float radius = Creature.GetComponent<CircleCollider2D>().radius;
+
+            var pathClear = PathClear(target, radius);
+            if (pathClear)
+            {
+                MoveStraightToTarget(target);
+                return;
+            }
+
+            MoveViaPathfinding(target);
+        }
 
         protected Creature GetNewTarget()
         {
-            var targets = Creature.GetAllSimulatedCreatures()
+            var targets = GetMemorizedCreatures()
                 .Where(x => Creature.GetAttitudeTowards(x) == Attitude.Hostile)
-                .Where(x => CanSee(x))
+                // .Where(x => CanSee(x))
                 .ToList();
 
             // Get closest target
@@ -90,9 +158,9 @@ namespace CreatureControllers
             return target;
         }
 
-        protected bool IsInRange(Creature creature, float rane)
+        protected bool IsInRange(Creature creature, float range)
         {
-            return Vector2.Distance(Creature.transform.position, creature.transform.position) < rane;
+            return Vector2.Distance(Creature.transform.position, creature.transform.position) < range;
         }
     }
 }

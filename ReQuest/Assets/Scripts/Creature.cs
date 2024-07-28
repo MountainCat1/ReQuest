@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Items;
 using Managers;
 using UnityEngine;
@@ -10,10 +11,12 @@ public class Creature : MonoBehaviour
 {
     // Events
     public event Action<DeathContext> Death;
+    public event Action<HitContext> Hit;
 
     // Injected Dependencies (using Zenject)
     [Inject] private ITeamManager _teamManager;
     [Inject] private DiContainer _diContainer;
+    [Inject] private ICreatureManager _creatureManager;
 
     // Public Variables
     public Rigidbody2D Rigidbody2D => _rigidbody2D;
@@ -43,7 +46,7 @@ public class Creature : MonoBehaviour
     private Vector2 _moveDirection;
     private Vector2 _momentum;
     private Creature _lastAttackedBy = null;
-
+    
     private const float MomentumLoss = 2f;
 
     // Properties
@@ -66,16 +69,10 @@ public class Creature : MonoBehaviour
         UpdateVelocity();
     }
 
-
     // Public Methods
     public void SetMovement(Vector2 direction)
     {
         _moveDirection = direction;
-    }
-
-    public static ICollection<Creature> GetAllSimulatedCreatures()
-    {
-        return FindObjectsOfType<Creature>();
     }
 
     public Attitude GetAttitudeTowards(Creature other)
@@ -98,6 +95,8 @@ public class Creature : MonoBehaviour
 
         if (ctx.PushForce.magnitude > 0)
             Push(ctx.PushForce);
+        
+        Hit?.Invoke(ctx);
     }
 
     public void Heal(int healAmount)
@@ -170,7 +169,7 @@ public class Creature : MonoBehaviour
 
         Destroy(gameObject);
     }
-
+    
 
     // Event Handlers
 
