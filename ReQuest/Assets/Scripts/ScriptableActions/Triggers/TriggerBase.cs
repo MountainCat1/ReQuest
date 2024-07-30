@@ -7,6 +7,7 @@ namespace Triggers
     {
         [field: SerializeField] public List<ScriptableAction> Actions { get; private set; }
         [field: SerializeField] public bool FireOnce { get; private set; } = true;
+        protected bool CanRun => !(FireOnce && HasFired);
         
         protected bool HasFired { get; private set; }
         

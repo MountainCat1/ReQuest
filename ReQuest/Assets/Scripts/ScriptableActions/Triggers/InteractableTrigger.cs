@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Triggers
 {
-    public class InteractableTriggerBase : TriggerBase
+    public class InteractableTrigger : TriggerBase
     {
         [SerializeField] private float range = 1.5f;
     
@@ -13,6 +13,9 @@ namespace Triggers
 
         private void Update()
         {
+            if(!CanRun)
+                return;
+            
             var player = _playerProvider.Get();
 
             if (Vector3.Distance(player.transform.position, transform.position) <= range)
