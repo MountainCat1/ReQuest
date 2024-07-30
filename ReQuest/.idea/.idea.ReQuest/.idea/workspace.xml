@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="refactor of triggers for scriptable actions">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/SetEnableAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/SetEnableAction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/SetParentAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/SetParentAction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/CreatureKillerTrigger.cs" afterDir="false" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/CreatureKillerdTriggerBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/CreatureKillerTrigger.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTriggerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTriggerBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/TriggerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/TriggerBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,10 +87,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="20264">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="20264" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -147,15 +137,8 @@
       <workItem from="1722170198289" duration="4274000" />
       <workItem from="1722189734291" duration="1430000" />
       <workItem from="1722349235232" duration="188000" />
-      <workItem from="1722349470730" duration="2221000" />
-    </task>
-    <task id="LOCAL-00012" summary="Add healthbar">
-      <option name="closed" value="true" />
-      <created>1719864773255</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1719864773255</updated>
+      <workItem from="1722349470730" duration="2382000" />
+      <workItem from="1722380784790" duration="395000" />
     </task>
     <task id="LOCAL-00013" summary="renamed HealthbarUI.cs to HealthBarUI.cs">
       <option name="closed" value="true" />
@@ -541,7 +524,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722350202595</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="add item drop to kobolds, refactor main scene">
+      <option name="closed" value="true" />
+      <created>1722351817381</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1722351817381</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +551,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add pixelart font" />
     <MESSAGE value="refactor - moved ColliderEventProducer.cs" />
     <MESSAGE value="add DePixelKlein SDF.asset font" />
     <MESSAGE value="make so that attack works when you just hold a right mouse button" />
@@ -585,7 +575,8 @@
     <MESSAGE value="add simple road to the map" />
     <MESSAGE value="fix for potential null reference exception in AiController.cs" />
     <MESSAGE value="refactor of triggers for scriptable actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor of triggers for scriptable actions" />
+    <MESSAGE value="add item drop to kobolds, refactor main scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="add item drop to kobolds, refactor main scene" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
