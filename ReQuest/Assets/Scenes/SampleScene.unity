@@ -1610,11 +1610,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d57a899f95750a4f9aff5379caf4674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireOnce: 1
-  range: 1.5
-  actions:
+  <Actions>k__BackingField:
   - {fileID: 137020280}
   - {fileID: 137020279}
+  <FireOnce>k__BackingField: 1
+  range: 1.5
 --- !u!4 &137020282
 Transform:
   m_ObjectHideFlags: 0
@@ -1954,10 +1954,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d57a899f95750a4f9aff5379caf4674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireOnce: 1
-  range: 1.5
-  actions:
+  <Actions>k__BackingField:
   - {fileID: 245781560}
+  <FireOnce>k__BackingField: 1
+  range: 1.5
 --- !u!114 &245781560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2369,11 +2369,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d57a899f95750a4f9aff5379caf4674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireOnce: 1
-  range: 1.5
-  actions:
+  <Actions>k__BackingField:
   - {fileID: 464246989}
   - {fileID: 464246991}
+  <FireOnce>k__BackingField: 1
+  range: 1.5
 --- !u!4 &464246988
 Transform:
   m_ObjectHideFlags: 0
@@ -3238,11 +3238,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d57a899f95750a4f9aff5379caf4674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireOnce: 1
-  range: 1.5
-  actions:
+  <Actions>k__BackingField:
   - {fileID: 745747805}
   - {fileID: 745747804}
+  <FireOnce>k__BackingField: 1
+  range: 1.5
 --- !u!4 &745747807
 Transform:
   m_ObjectHideFlags: 0
