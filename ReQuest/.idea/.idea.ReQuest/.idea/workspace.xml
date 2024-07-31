@@ -19,7 +19,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/CRTFilter/Settings/ExampleUniversalRPSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" root0="FORCE_HIGHLIGHTING" />
@@ -59,6 +59,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\ReQuest.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest\Builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.6f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest&quot; -debugCodeOptimization" />
@@ -137,14 +145,7 @@
       <workItem from="1722349235232" duration="188000" />
       <workItem from="1722349470730" duration="2382000" />
       <workItem from="1722380784791" duration="2600000" />
-    </task>
-    <task id="LOCAL-00015" summary="add template scripts">
-      <option name="closed" value="true" />
-      <created>1719868494235</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1719868494235</updated>
+      <workItem from="1722430356802" duration="37000" />
     </task>
     <task id="LOCAL-00016" summary="added simple combat with damage and pushing mechanics">
       <option name="closed" value="true" />
@@ -530,7 +531,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722383469033</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="expand map">
+      <option name="closed" value="true" />
+      <created>1722430383981</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1722430383981</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +558,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="make so that attack works when you just hold a right mouse button" />
     <MESSAGE value="fixes in UI" />
     <MESSAGE value="add bandit sprites" />
     <MESSAGE value=" Mega refactor of inventory " />
@@ -574,7 +582,8 @@
     <MESSAGE value="add item drop to kobolds, refactor main scene" />
     <MESSAGE value="improve pickup mechanics" />
     <MESSAGE value="add point buy system and characteristics" />
-    <option name="LAST_COMMIT_MESSAGE" value="add point buy system and characteristics" />
+    <MESSAGE value="expand map" />
+    <option name="LAST_COMMIT_MESSAGE" value="expand map" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
