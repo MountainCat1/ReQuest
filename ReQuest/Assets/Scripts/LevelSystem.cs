@@ -11,6 +11,17 @@ public enum Characteristics
     Constitution
 }
 
+public static class CharacteristicsConsts {
+    public const float SpeedAdditiveMultiplierPerDexterity = 0.2f;
+    public const float AttackSpeedAdditiveMultiplierPerDexterity = 0.1f;
+    
+    public const float MaxHealthPerConstitution = 10f;
+    public const float DragReductionPerConstitution = 0.1f;
+    
+    public const float DamageAdditiveMultiplierPerStrength = 0.4f;
+    public const float PushForceAdditiveMultiplierPerStrength = 0.4f;
+}
+
 public interface ILevelSystem
 {
     event Action ChangedXp;
@@ -20,6 +31,7 @@ public interface ILevelSystem
     public float LevelProgress { get; }
     public int PointsToUse { get; }
     void UpgradeCharacteristic(Characteristics characteristic);
+    Dictionary<Characteristics, int> CharacteristicsLevels { get; }
 }
 
 public class LevelSystem : ILevelSystem
@@ -35,13 +47,13 @@ public class LevelSystem : ILevelSystem
     public int PointsToUse { get; private set; }
 
     public int Xp { get; private set; }
-    
-    public Dictionary<Characteristics, int> CharacteristicsLevels = new()
+
+    public Dictionary<Characteristics, int> CharacteristicsLevels { get; } = new()
     {
-        {Characteristics.Strength, 0},
-        {Characteristics.Dexterity, 0},
-        {Characteristics.Intelligence, 0},
-        {Characteristics.Constitution, 0}
+        { Characteristics.Strength, 0 },
+        { Characteristics.Dexterity, 0 },
+        { Characteristics.Intelligence, 0 },
+        { Characteristics.Constitution, 0 }
     };
 
     public void AddXp(int xp)
@@ -82,7 +94,7 @@ public class LevelSystem : ILevelSystem
     
     private int[] LevelThresholds = new int[]
     {
-        0, 16, 32, 64
+        0, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096
     };
     
     private float GetLevelProgress()

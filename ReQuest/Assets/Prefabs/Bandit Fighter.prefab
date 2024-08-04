@@ -346,8 +346,8 @@ MonoBehaviour:
   <Icon>k__BackingField: {fileID: 0}
   <Name>k__BackingField: 
   <Range>k__BackingField: 1
-  <AttackSpeed>k__BackingField: 1
-  <Damage>k__BackingField: 3
+  <BaseAttackSpeed>k__BackingField: 1
+  <BaseDamage>k__BackingField: 4
   <PushFactor>k__BackingField: 100
   <HitSound>k__BackingField: {fileID: 8300000, guid: 8c96ac97b9e3c9a4ca94d1c7a7823530, type: 3}
 --- !u!1 &5004219223825742914
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Drag>k__BackingField: 200
-  <Speed>k__BackingField: 3.5
+  <BaseSpeed>k__BackingField: 4
   <Weapon>k__BackingField: {fileID: 4481128317355272645}
   health:
     maxValue: 25

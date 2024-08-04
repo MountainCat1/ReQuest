@@ -11,9 +11,6 @@ public class MeleeEnemyController : AiController
     {
         Creature.SetMovement(Vector2.zero);
         
-        if(Creature.Weapon.OnCooldown && !moveOnAttackCooldown)
-            return;
-        
         if (!_target)
         {
             _target = GetNewTarget();
@@ -24,22 +21,27 @@ public class MeleeEnemyController : AiController
             }
         }
 
+        var attackContext = new AttackContext()
+        {
+            Direction = (_target.transform.position - Creature.transform.position).normalized,
+            Target = _target,
+            Attacker = Creature
+        };
+                
+        if(Creature.Weapon.GetOnCooldown(attackContext) && !moveOnAttackCooldown)
+            return;
+
         if (Vector2.Distance(Creature.transform.position, _target.transform.position) < Creature.Weapon.Range)
         {
-            PerformAttack(Creature, _target);
+            PerformAttack(attackContext);
             return;
         }
 
         PerformMovementTowardsTarget(_target);
     }
 
-    private void PerformAttack(Creature creature, Creature target)
+    private void PerformAttack(AttackContext ctx)
     {
-        creature.Weapon.ContiniousAttack(new AttackContext()
-        {
-            Direction = (target.transform.position - creature.transform.position).normalized,
-            Target = target,
-            Attacker = creature
-        });
+        Creature.Weapon.ContiniousAttack(ctx);
     }
 }

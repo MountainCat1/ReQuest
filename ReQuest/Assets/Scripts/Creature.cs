@@ -27,16 +27,16 @@ public class Creature : MonoBehaviour
     // Serialized Private Variables
     [field: Header("Movement")]
     [field: SerializeField] public float Drag { get; private set; }
-
-    [field: SerializeField] public float Speed { get; private set; }
-
+    [field: SerializeField] public float BaseSpeed { get; private set; }
     [field: SerializeField] public Weapon Weapon { get; private set; }
 
     [field: Header("Stats")] 
+
     [field: SerializeField] private RangedValue health;
     [field: SerializeField] public float SightRange { get; private set; } = 13f;
     [field: SerializeField] public int XpAmount { get; private set; }
     [field: SerializeField] private Teams team;
+    public float Speed => GetSpeed();
 
     // Private Variables
     private readonly LevelSystem _levelSystem = new();
@@ -93,8 +93,8 @@ public class Creature : MonoBehaviour
         health.CurrentValue -= ctx.Damage;
         _lastAttackedBy = ctx.Attacker;
 
-        if (ctx.PushForce.magnitude > 0)
-            Push(ctx.PushForce);
+        if (ctx.Push.magnitude > 0)
+            Push(ctx.Push);
         
         Hit?.Invoke(ctx);
     }
@@ -133,6 +133,11 @@ public class Creature : MonoBehaviour
     // Abstract Methods
 
     // Private Methods
+    private float GetSpeed()
+    {
+        return BaseSpeed + _levelSystem.CharacteristicsLevels[Characteristics.Dexterity] * CharacteristicsConsts.SpeedAdditiveMultiplierPerDexterity;
+    }
+    
     private void UpdateVelocity()
     {
         _momentum -= _momentum * (MomentumLoss * Time.fixedDeltaTime);

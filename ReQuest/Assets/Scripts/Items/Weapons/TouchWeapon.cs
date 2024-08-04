@@ -7,9 +7,9 @@ public class TouchWeapon : Weapon
         var hitCtx = new HitContext()
         {
             Attacker = ctx.Attacker,
-            Damage = Damage,
-            PushForce = ctx.Target ? CalculatePushForce(ctx.Target) : Vector2.zero,
-            Target = ctx.Target
+            Damage = CalculateDamage(ctx),
+            Target = ctx.Target,
+            PushFactor = PushFactor
         }; 
         
         OnHit(ctx.Target, hitCtx);

@@ -81,8 +81,8 @@ public class SwordWeapon : Weapon
         {
             Attacker = _attackContext?.Attacker,
             Target = creature,
-            Damage = Damage,
-            PushForce = creature ? CalculatePushForce(creature) : Vector2.zero
+            Damage = CalculateDamage(_attackContext ?? throw new NullReferenceException()),
+            PushFactor = PushFactor
         };
         
         OnHit(creature, hit);

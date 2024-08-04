@@ -222,10 +222,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 0}
   <Name>k__BackingField: 
-  <ItemPrefab>k__BackingField: {fileID: 0}
   <Range>k__BackingField: 1
-  <AttackSpeed>k__BackingField: 1
-  <Damage>k__BackingField: 5
+  <BaseAttackSpeed>k__BackingField: 0
+  <BaseDamage>k__BackingField: 6
   <PushFactor>k__BackingField: 40
   <HitSound>k__BackingField: {fileID: 8300000, guid: 8c96ac97b9e3c9a4ca94d1c7a7823530, type: 3}
   swordParent: {fileID: 2347472549521635511}

@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Drag>k__BackingField: 200
-  <Speed>k__BackingField: 3.5
+  <BaseSpeed>k__BackingField: 5
   <Weapon>k__BackingField: {fileID: 9103062310577139143}
   health:
     maxValue: 25
