@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bandit Fighter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bandit Fighter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bandit Ranger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bandit Ranger.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Kobold.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Kobold.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Better Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Better Sword.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Bow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Bow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Weapon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Weapon.prefab" afterDir="false" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="refactored weapon, attack, hit logic">
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/MeleeEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/MeleeEnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/RangeEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/RangeEnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Weapons/ProjectileWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Weapons/ProjectileWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Weapons/SwordWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Weapons/SwordWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Weapons/TouchWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Weapons/TouchWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +21,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Prefabs/Kobold.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Prefabs/Weapons/Bow.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Prefabs/Bandit Fighter.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Creature.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@9.0.3/IK/Runtime/Solver2DMenuAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -167,15 +151,7 @@
       <workItem from="1722430356802" duration="37000" />
       <workItem from="1722523263160" duration="2991000" />
       <workItem from="1722651019983" duration="69000" />
-      <workItem from="1722770918950" duration="927000" />
-    </task>
-    <task id="LOCAL-00016" summary="added simple combat with damage and pushing mechanics">
-      <option name="closed" value="true" />
-      <created>1719868512457</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1719868512457</updated>
+      <workItem from="1722770918950" duration="1599000" />
     </task>
     <task id="LOCAL-00017" summary="add basic dialog system (only a start x))">
       <option name="closed" value="true" />
@@ -561,7 +537,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722430383981</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="refactored weapon, attack, hit logic">
+      <option name="closed" value="true" />
+      <created>1722771980851</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1722771980851</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,7 +564,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fixes in UI" />
     <MESSAGE value="add bandit sprites" />
     <MESSAGE value=" Mega refactor of inventory " />
     <MESSAGE value="fix not getting xp when killing creatures with range weapon" />
@@ -605,7 +588,8 @@
     <MESSAGE value="improve pickup mechanics" />
     <MESSAGE value="add point buy system and characteristics" />
     <MESSAGE value="expand map" />
-    <option name="LAST_COMMIT_MESSAGE" value="expand map" />
+    <MESSAGE value="refactored weapon, attack, hit logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored weapon, attack, hit logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
