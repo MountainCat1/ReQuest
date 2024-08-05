@@ -7,6 +7,11 @@ namespace Items
         [field: SerializeField] public Sprite Icon { get; set; }
         [field: SerializeField] public string Name { get; set; }
 
+        public string GetIdentifier()
+        {
+            return $"{Name}";
+        }
+        
         public virtual void Use(ItemUseContext ctx)
         {
             var creature = ctx.Creature;

@@ -4,8 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="refactored weapon, attack, hit logic">
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/ConditionBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/ConditionBase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/PlayerHasItemCondition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/PlayerHasItemCondition.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/RemovePlayerItemAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/RemovePlayerItemAction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/RunObjectAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/RunObjectAction.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Consumables/Healing Potion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Consumables/Healing Potion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Consumables/Healing Potion.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Consumables/Healing Potion.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ItemBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ItemBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/TriggerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/TriggerBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +36,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/2d/0f61db32/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Prefabs/Bandit Fighter.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/RemovePlayerItemAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@9.0.3/IK/Runtime/Solver2DMenuAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.spriteshape@9.0.2/Runtime/SpriteShapeGenerator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -96,10 +110,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22368">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="22368" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -151,15 +165,8 @@
       <workItem from="1722430356802" duration="37000" />
       <workItem from="1722523263160" duration="2991000" />
       <workItem from="1722651019983" duration="69000" />
-      <workItem from="1722770918950" duration="1599000" />
-    </task>
-    <task id="LOCAL-00017" summary="add basic dialog system (only a start x))">
-      <option name="closed" value="true" />
-      <created>1720296743888</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1720296743888</updated>
+      <workItem from="1722770918950" duration="3031000" />
+      <workItem from="1722880101868" duration="2317000" />
     </task>
     <task id="LOCAL-00018" summary="add dialog panel appear and disappear">
       <option name="closed" value="true" />
@@ -545,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722771980851</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="removed debug items, add potion pickup in secret location">
+      <option name="closed" value="true" />
+      <created>1722777678149</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1722777678150</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +579,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add bandit sprites" />
     <MESSAGE value=" Mega refactor of inventory " />
     <MESSAGE value="fix not getting xp when killing creatures with range weapon" />
     <MESSAGE value="refactor" />
@@ -589,7 +603,8 @@
     <MESSAGE value="add point buy system and characteristics" />
     <MESSAGE value="expand map" />
     <MESSAGE value="refactored weapon, attack, hit logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored weapon, attack, hit logic" />
+    <MESSAGE value="removed debug items, add potion pickup in secret location" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed debug items, add potion pickup in secret location" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

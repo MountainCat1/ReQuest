@@ -44,4 +44,9 @@ public class Inventory
         _items.Remove(item);
         OnChange?.Invoke();
     }
+    
+    public ItemBehaviour GetItem(string identifier)
+    {
+        return _items.Find(x => x.GetIdentifier().Equals(identifier));
+    }
 }
