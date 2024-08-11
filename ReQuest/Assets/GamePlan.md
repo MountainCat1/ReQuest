@@ -21,12 +21,12 @@
           * To get gold you need to LOOK AT [Get gold](#get-gold)
           * He will also accept alcohol **Todo**
       * Use pickaxe to break the wall **Todo**
-        * To get a pickaxe you can find it in kobold's caves **Todo**
+        * To get a pickaxe you can find it in kobold's caves
 
 ### Get gold
 * Kill the bandit leader south of the initial location **Todo**
 * Get a loan from a merchant in Southstream village **Todo**
-* Find a hidden treasure in the forest **Todo**
+* Find a hidden treasure in the forest
 
 ### Get key
 * You can get a key from a farmer Fred, To get the key you need to get alcohol for him **Todo**
