@@ -72,7 +72,7 @@ public class Creature : MonoBehaviour
     // Public Methods
     public void SetMovement(Vector2 direction)
     {
-        _moveDirection = direction;
+        _moveDirection = direction.normalized;
     }
 
     public Attitude GetAttitudeTowards(Creature other)

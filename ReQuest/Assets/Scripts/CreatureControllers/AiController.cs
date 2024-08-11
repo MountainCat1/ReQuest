@@ -62,9 +62,15 @@ namespace CreatureControllers
             }
 
             var nextNode = path[0];
-            var direction = (nextNode.worldPosition - Creature.transform.position).normalized;
+            Vector2 direction = nextNode.worldPosition - Creature.transform.position;
             Creature.SetMovement(direction);
             Debug.DrawLine(Creature.transform.position, nextNode.worldPosition, Color.red);
+         
+            // draw path
+            for (int i = 0; i < path.Count - 1; i++)
+            {
+                Debug.DrawLine(path[i].worldPosition, path[i + 1].worldPosition, Color.red);
+            }
         }
 
         private void MoveStraightToTarget(Creature target)
@@ -140,10 +146,11 @@ namespace CreatureControllers
             var pathClear = PathClear(target, radius);
             if (pathClear)
             {
+                Debug.DrawLine(Creature.transform.position, target.transform.position, Color.yellow);
                 MoveStraightToTarget(target);
                 return;
             }
-
+            
             MoveViaPathfinding(target);
         }
 
