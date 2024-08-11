@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add pickaxe item">
       <change beforePath="$PROJECT_DIR$/Assets/GamePlan.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GamePlan.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Quest Items/Pickaxe Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Quest Items/Pickaxe Variant.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/AiController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,23 +156,7 @@
       <workItem from="1722651019983" duration="69000" />
       <workItem from="1722770918950" duration="3031000" />
       <workItem from="1722880101868" duration="3238000" />
-      <workItem from="1723404637570" duration="2211000" />
-    </task>
-    <task id="LOCAL-00019" summary="rename object SampleScene.unity">
-      <option name="closed" value="true" />
-      <created>1720360294396</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1720360294396</updated>
-    </task>
-    <task id="LOCAL-00020" summary="add helper methods, sound manager, sound player, fix serialization of dialogs">
-      <option name="closed" value="true" />
-      <created>1720803703197</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1720803703197</updated>
+      <workItem from="1723404637570" duration="2654000" />
     </task>
     <task id="LOCAL-00021" summary="add simple inventory">
       <option name="closed" value="true" />
@@ -551,7 +534,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722882652151</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="fix normalization of direction in AiController.cs">
+      <option name="closed" value="true" />
+      <created>1723408479094</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1723408479094</updated>
+    </task>
+    <task id="LOCAL-00069" summary="add pickaxe item">
+      <option name="closed" value="true" />
+      <created>1723408488810</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1723408488810</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,8 +569,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix not getting xp when killing creatures with range weapon" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="add some tress in SampleScene.unity" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="refactor ai creature controllers" />
@@ -595,7 +592,9 @@
     <MESSAGE value="refactored weapon, attack, hit logic" />
     <MESSAGE value="removed debug items, add potion pickup in secret location" />
     <MESSAGE value="add condition system, add door to the temple" />
-    <option name="LAST_COMMIT_MESSAGE" value="add condition system, add door to the temple" />
+    <MESSAGE value="fix normalization of direction in AiController.cs" />
+    <MESSAGE value="add pickaxe item" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pickaxe item" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
