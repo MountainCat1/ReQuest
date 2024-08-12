@@ -19,7 +19,7 @@ namespace ScriptableActions.Conditions
                 Debug.LogError("Item is not set in PlayerHasItemCondition");
         }
 
-        public override bool Check()
+        protected override bool Check()
         {
             var player = _playerProvider.Get();
 

@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using ScriptableActions.Conditions;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Triggers
 {
@@ -9,10 +12,31 @@ namespace Triggers
         [field: SerializeField] public List<ScriptableAction> Actions { get; private set; }
         [field: SerializeField] public List<ConditionBase> Conditions { get; private set; }
         [field: SerializeField] public bool FireOnce { get; private set; } = true;
+        [field: SerializeField] private bool actionObject = true;
         protected bool CanRun => !(FireOnce && HasFired);
         
         protected bool HasFired { get; private set; }
-        
+
+        protected virtual void Start()
+        {
+            if (actionObject)
+            {
+                var actions = GetComponents<ScriptableAction>();
+
+                foreach (var action in actions.Where(x => !Actions.Contains(x)))
+                {
+                    Actions.Add(action);
+                }
+                
+                var conditions = GetComponents<ConditionBase>();
+                
+                foreach (var condition in conditions.Where(x => !Conditions.Contains(x)))
+                {
+                    Conditions.Add(condition);
+                }
+            }
+        }
+
         protected void RunActions()
         {
             if (FireOnce && HasFired)
@@ -33,7 +57,7 @@ namespace Triggers
         {
             foreach (var condition in Conditions)
             {
-                if (!condition.Check())
+                if (!condition.Evaluate())
                     return true;
             }
 

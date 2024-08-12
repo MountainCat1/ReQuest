@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add editor markings for locations">
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Quest Items/Pickaxe Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Quest Items/Pickaxe Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/DePixelKlein SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/DePixelKlein SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GamePlan.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GamePlan.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/ConditionBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/ConditionBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/PlayerHasItemCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/PlayerHasItemCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/TriggerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/TriggerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Tree.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +52,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.3649815&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.36374846&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -156,15 +161,8 @@
       <workItem from="1722651019983" duration="69000" />
       <workItem from="1722770918950" duration="3031000" />
       <workItem from="1722880101868" duration="3238000" />
-      <workItem from="1723404637570" duration="3075000" />
-    </task>
-    <task id="LOCAL-00023" summary="add inventory dispaly">
-      <option name="closed" value="true" />
-      <created>1720871193938</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1720871193938</updated>
+      <workItem from="1723404637570" duration="3657000" />
+      <workItem from="1723462754085" duration="1583000" />
     </task>
     <task id="LOCAL-00024" summary="add sounds to weapons">
       <option name="closed" value="true" />
@@ -550,7 +548,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723409326775</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="add editor markings for locations">
+      <option name="closed" value="true" />
+      <created>1723409357262</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1723409357262</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

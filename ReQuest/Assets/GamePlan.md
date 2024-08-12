@@ -31,8 +31,8 @@
 ### Get key
 * You can get a key from a farmer Fred, To get the key you need to get alcohol for him **Todo**
   * You can get it from kobolds in a cave **Todo**
-  * You can get it from a merchant in Ironvile **Todo**
-    * You need to get gold **Todo**
+  * You can get it from a merchant in Ironvile
+    * You need to get gold 
     * To get gold you need to LOOK AT [Get gold](#get-gold)
 * You can get pick-locking tools from the bandit's leader **Todo**
 
