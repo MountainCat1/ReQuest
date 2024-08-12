@@ -24,7 +24,7 @@
         * To get a pickaxe you can find it in kobold's caves
 
 ### Get gold
-* Kill the bandit leader south of the initial location **Todo**
+* Kill the bandit leader south of the initial location
 * Get a loan from a merchant in Southstream village **Todo**
 * Find a hidden treasure in the forest
 
@@ -34,5 +34,5 @@
   * You can get it from a merchant in Ironvile
     * You need to get gold 
     * To get gold you need to LOOK AT [Get gold](#get-gold)
-* You can get pick-locking tools from the bandit's leader **Todo**
+* You can get pick-locking tools from the bandit's leader
 
