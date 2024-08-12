@@ -29,6 +29,8 @@ namespace ScriptableActions
                 Debug.LogError("ItemBehaviour is null");
                 return;
             }
+
+            GetComponentInChildren<SpriteRenderer>().sprite = itemBehaviour.Icon;
             
             item = itemBehaviour;
         }

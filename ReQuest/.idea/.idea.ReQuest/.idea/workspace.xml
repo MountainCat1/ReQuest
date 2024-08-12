@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="enlarged pathfinding grid map generator bounds">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/DePixelKlein SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/DePixelKlein SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GamePlan.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GamePlan.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/ConditionBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/ConditionBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/PlayerHasItemCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/PlayerHasItemCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/GridGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/GridGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/PickupAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/PickupAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/TriggerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/TriggerBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Tree.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +25,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/63/31dca46f/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/ScriptableActions/Conditions/ConditionBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/RemovePlayerItemAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@9.0.3/IK/Runtime/Solver2DMenuAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -104,10 +101,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="38288">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="38288" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -162,23 +159,7 @@
       <workItem from="1722770918950" duration="3031000" />
       <workItem from="1722880101868" duration="3238000" />
       <workItem from="1723404637570" duration="3657000" />
-      <workItem from="1723462754085" duration="1583000" />
-    </task>
-    <task id="LOCAL-00024" summary="add sounds to weapons">
-      <option name="closed" value="true" />
-      <created>1720876483785</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1720876483785</updated>
-    </task>
-    <task id="LOCAL-00025" summary="add teams">
-      <option name="closed" value="true" />
-      <created>1720877690967</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1720877690967</updated>
+      <workItem from="1723462754085" duration="2194000" />
     </task>
     <task id="LOCAL-00026" summary="put nature tilemap on to a walls mask">
       <option name="closed" value="true" />
@@ -556,7 +537,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723409357262</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="add metchant selling key">
+      <option name="closed" value="true" />
+      <created>1723464431795</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1723464431795</updated>
+    </task>
+    <task id="LOCAL-00074" summary="enlarged pathfinding grid map generator bounds">
+      <option name="closed" value="true" />
+      <created>1723464653753</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1723464653753</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,8 +572,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactor ai creature controllers" />
-    <MESSAGE value="add basic range enemy" />
     <MESSAGE value="refactor, changed how sound are being played on hit" />
     <MESSAGE value="refactor - created Items directory" />
     <MESSAGE value="refactor - moving files around" />
@@ -600,7 +595,9 @@
     <MESSAGE value="add pickaxe item" />
     <MESSAGE value="add gold and hidden treasure" />
     <MESSAGE value="add editor markings for locations" />
-    <option name="LAST_COMMIT_MESSAGE" value="add editor markings for locations" />
+    <MESSAGE value="add metchant selling key" />
+    <MESSAGE value="enlarged pathfinding grid map generator bounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="enlarged pathfinding grid map generator bounds" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

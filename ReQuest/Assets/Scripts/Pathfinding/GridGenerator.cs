@@ -9,27 +9,27 @@ public class GridGenerator : MonoBehaviour
     public float nodeRadius;
 
     Node[,] grid;
-    float nodeDiameter;
-    int gridSizeX, gridSizeY;
+    float _nodeDiameter;
+    int _gridSizeX, _gridSizeY;
     
     void Awake()
     {
-        nodeDiameter = nodeRadius * 2;
-        gridSizeX = Mathf.RoundToInt(gridWorldSize.x / nodeDiameter);
-        gridSizeY = Mathf.RoundToInt(gridWorldSize.y / nodeDiameter);
+        _nodeDiameter = nodeRadius * 2;
+        _gridSizeX = Mathf.RoundToInt(gridWorldSize.x / _nodeDiameter);
+        _gridSizeY = Mathf.RoundToInt(gridWorldSize.y / _nodeDiameter);
         CreateGrid();
     }
 
     void CreateGrid()
     {
-        grid = new Node[gridSizeX, gridSizeY];
+        grid = new Node[_gridSizeX, _gridSizeY];
         Vector3 worldBottomLeft = transform.position - Vector3.right * gridWorldSize.x / 2 - Vector3.up * gridWorldSize.y / 2;
 
-        for (int x = 0; x < gridSizeX; x++)
+        for (int x = 0; x < _gridSizeX; x++)
         {
-            for (int y = 0; y < gridSizeY; y++)
+            for (int y = 0; y < _gridSizeY; y++)
             {
-                Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.up * (y * nodeDiameter + nodeRadius);
+                Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * _nodeDiameter + nodeRadius) + Vector3.up * (y * _nodeDiameter + nodeRadius);
                 bool walkable = !(Physics2D.OverlapCircle(worldPoint, nodeRadius - 0.05f, unwalkableMask)); // we subtract 0.05f to avoid overlapping with the walls
                 grid[x, y] = new Node(walkable, worldPoint, x, y);
             }
@@ -43,8 +43,8 @@ public class GridGenerator : MonoBehaviour
         percentX = Mathf.Clamp01(percentX);
         percentY = Mathf.Clamp01(percentY);
 
-        int x = Mathf.RoundToInt((gridSizeX - 1) * percentX);
-        int y = Mathf.RoundToInt((gridSizeY - 1) * percentY);
+        int x = Mathf.RoundToInt((_gridSizeX - 1) * percentX);
+        int y = Mathf.RoundToInt((_gridSizeY - 1) * percentY);
         return grid[x, y];
     }
 
@@ -63,7 +63,7 @@ public class GridGenerator : MonoBehaviour
                 int checkY = node.gridY + y;
 
                 // Check if the node is within the grid
-                if (checkX >= 0 && checkX < gridSizeX && checkY >= 0 && checkY < gridSizeY)
+                if (checkX >= 0 && checkX < _gridSizeX && checkY >= 0 && checkY < _gridSizeY)
                 {
                     // If the neighbour is diagonal
                     if (Mathf.Abs(x) == 1 && Mathf.Abs(y) == 1)
@@ -97,7 +97,7 @@ public class GridGenerator : MonoBehaviour
             foreach (Node n in grid)
             {
                 Gizmos.color = (n.walkable) ? Color.white : Color.red;
-                Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+                Gizmos.DrawCube(n.worldPosition, Vector3.one * (_nodeDiameter - .1f));
             }
         }
     }

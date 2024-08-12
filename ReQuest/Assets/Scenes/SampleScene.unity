@@ -36544,7 +36544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4805038045593491001, guid: 0d4a5f2f29f4eab4184d0bf1d81fd717, type: 3}
       propertyPath: <BaseAttackSpeed>k__BackingField
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8697040656455442351, guid: 0d4a5f2f29f4eab4184d0bf1d81fd717, type: 3}
       propertyPath: m_Name
@@ -36715,7 +36715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4502937372594623491, guid: 4f8e521a1a363364dbea31a6bdd9bd2c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.91713345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4502937372594623491, guid: 4f8e521a1a363364dbea31a6bdd9bd2c, type: 3}
       propertyPath: m_LocalRotation.w

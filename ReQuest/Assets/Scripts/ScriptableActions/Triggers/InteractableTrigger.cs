@@ -11,7 +11,7 @@ namespace Triggers
     
         [Inject] private IPlayerCharacterProvider _playerProvider;
         
-        private bool _hasInteracted;
+        private bool _hasInteracted = false;
 
         private void Update()
         {
