@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add bandit leader that drops gold">
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GamePlan.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GamePlan.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,10 +100,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="38288">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="38288" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -157,15 +158,8 @@
       <workItem from="1722770918950" duration="3031000" />
       <workItem from="1722880101868" duration="3238000" />
       <workItem from="1723404637570" duration="3657000" />
-      <workItem from="1723462754085" duration="2492000" />
-    </task>
-    <task id="LOCAL-00027" summary="change bindings for skipping dialogs">
-      <option name="closed" value="true" />
-      <created>1720962600990</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1720962600990</updated>
+      <workItem from="1723462754085" duration="2844000" />
+      <workItem from="1723683309983" duration="315000" />
     </task>
     <task id="LOCAL-00028" summary="add floating texts">
       <option name="closed" value="true" />
@@ -551,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723465261394</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="drop lockpick from bandit leader, you can use it to open a temple">
+      <option name="closed" value="true" />
+      <created>1723465535908</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1723465535908</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +572,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactor - created Items directory" />
     <MESSAGE value="refactor - moving files around" />
     <MESSAGE value="refactor - moved files around" />
     <MESSAGE value="add simple consumable items" />
@@ -595,7 +596,8 @@
     <MESSAGE value="add metchant selling key" />
     <MESSAGE value="enlarged pathfinding grid map generator bounds" />
     <MESSAGE value="add bandit leader that drops gold" />
-    <option name="LAST_COMMIT_MESSAGE" value="add bandit leader that drops gold" />
+    <MESSAGE value="drop lockpick from bandit leader, you can use it to open a temple" />
+    <option name="LAST_COMMIT_MESSAGE" value="drop lockpick from bandit leader, you can use it to open a temple" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
