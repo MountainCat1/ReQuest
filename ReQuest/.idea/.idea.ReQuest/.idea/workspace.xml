@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GamePlan.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GamePlan.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,15 +158,7 @@
       <workItem from="1722880101868" duration="3238000" />
       <workItem from="1723404637570" duration="3657000" />
       <workItem from="1723462754085" duration="2844000" />
-      <workItem from="1723683309983" duration="315000" />
-    </task>
-    <task id="LOCAL-00028" summary="add floating texts">
-      <option name="closed" value="true" />
-      <created>1720963331842</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1720963331842</updated>
+      <workItem from="1723683309983" duration="1950000" />
     </task>
     <task id="LOCAL-00029" summary="refactor of dealing damage logic">
       <option name="closed" value="true" />
@@ -553,7 +544,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723465535908</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="add southstream village">
+      <option name="closed" value="true" />
+      <created>1723684095256</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1723684095256</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +571,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactor - moving files around" />
     <MESSAGE value="refactor - moved files around" />
     <MESSAGE value="add simple consumable items" />
     <MESSAGE value="add health potion sprite" />
@@ -597,7 +595,8 @@
     <MESSAGE value="enlarged pathfinding grid map generator bounds" />
     <MESSAGE value="add bandit leader that drops gold" />
     <MESSAGE value="drop lockpick from bandit leader, you can use it to open a temple" />
-    <option name="LAST_COMMIT_MESSAGE" value="drop lockpick from bandit leader, you can use it to open a temple" />
+    <MESSAGE value="add southstream village" />
+    <option name="LAST_COMMIT_MESSAGE" value="add southstream village" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
