@@ -10,7 +10,7 @@
         * Get there through kobold caves **Todo**
         * Use a scroll of frost to freeze the water in a river **Todo** 
           * To get a scroll you need to find it in a wizard's tower **Todo**
-        * Pay in gold to a ferryman **Todo**
+        * Pay in gold to a ferryman
           * To get gold you need to LOOK AT [Get gold](#get-gold)
     * Break into necromancer's lair **Todo**
       * Use invisibility potion **Todo**
