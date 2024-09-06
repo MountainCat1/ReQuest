@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Items
 {
     public class ItemBehaviour : MonoBehaviour
     {
+        public event Action<ItemBehaviour> Used;
+        
         [field: SerializeField] public Sprite Icon { get; set; }
         [field: SerializeField] public string Name { get; set; }
 
@@ -20,6 +23,8 @@ namespace Items
                 Debug.LogError("Creature is null");
                 return;
             }
+            
+            Used?.Invoke(this);
          
             Debug.Log($"{creature} using item " + Name);
         }

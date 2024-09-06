@@ -6,11 +6,14 @@ using Zenject;
 
 public class Inventory
 {
-    public Action OnChange { get; set; }
+    public event Action OnChange;
+    public event Action<ItemBehaviour> ItemUsed;
+    
 
     [Inject] private DiContainer _diContainer;
     
     public IReadOnlyList<ItemBehaviour> Items => _items;
+
     private readonly List<ItemBehaviour> _items = new();
 
     private Transform _transform;
@@ -29,24 +32,40 @@ public class Inventory
             _transform
         );
         var itemScript = instantiateItem.GetComponent<ItemBehaviour>();
+        
         _items.Add(itemScript);
+        
+        RegisterItem(itemScript);
         
         OnChange?.Invoke();
     }
-
-    // public void RemoveItem(InventoryItem item)
-    // {
-    //     _items.Remove(item);
-    //     OnChange?.Invoke();
-    // }
+    
     public void RemoveItem(ItemBehaviour item)
     {
         _items.Remove(item);
+        
+        UnregisterItem(item);
+        
         OnChange?.Invoke();
     }
     
     public ItemBehaviour GetItem(string identifier)
     {
         return _items.Find(x => x.GetIdentifier().Equals(identifier));
+    }
+    
+    private void RegisterItem(ItemBehaviour item)
+    {
+        item.Used += HandleItemUsed;
+    }
+    
+    private void UnregisterItem(ItemBehaviour item)
+    {
+        item.Used -= HandleItemUsed;
+    }
+
+    private void HandleItemUsed(ItemBehaviour item)
+    {
+        ItemUsed?.Invoke(item);
     }
 }

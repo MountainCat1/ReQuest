@@ -1,15 +1,24 @@
 ﻿using Managers;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
 
 namespace Triggers
 {
-    [RequireComponent(typeof(Collider2D))]
     public class ColliderTrigger : TriggerBase
     {
-        [Inject] IPlayerCharacterProvider _playerProvider;
+        [SerializeField] private ColliderEventProducer colliderEventProducer;
         
-        private void OnTriggerEnter2D(Collider2D other)
+        [Inject] IPlayerCharacterProvider _playerProvider;
+
+        protected override void Start()
+        {
+            base.Start();
+            
+            colliderEventProducer.TriggerEnter += HandleTriggerEnter;
+        }
+
+        private void HandleTriggerEnter(Collider2D other)
         {
             if (!_playerProvider.IsPlayer(other))
                 return;

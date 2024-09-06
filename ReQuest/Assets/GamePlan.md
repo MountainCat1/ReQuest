@@ -8,7 +8,7 @@
     * You need to get to necromancer's lair **Todo**
       * To get to the lair you need to cross a river **Todo**
         * Get there through kobold caves **Todo**
-        * Use a scroll of frost to freeze the water in a river **Todo** 
+        * Use a scroll of frost to freeze the water in a river
           * To get a scroll you need to find it in a wizard's tower **Todo**
         * Pay in gold to a ferryman
           * To get gold you need to LOOK AT [Get gold](#get-gold)
@@ -25,11 +25,11 @@
 
 ### Get gold
 * Kill the bandit leader south of the initial location
-* Get a loan from a merchant in Southstream village **Todo**
+* Get a loan from a merchant in Southstream village
 * Find a hidden treasure in the forest
 
 ### Get key
-* You can get a key from a farmer Fred, To get the key you need to get alcohol for him **Todo**
+*   You can get a key from a farmer Fred, To get the key you need to get alcohol for him **Todo**
   * You can get it from kobolds in a cave
   * You can get it from a merchant in Ironvile
     * You need to get gold 
