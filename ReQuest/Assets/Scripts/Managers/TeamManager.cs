@@ -8,7 +8,8 @@ public enum Teams
     Kingdom,
     Villagers,
     Kobolds,
-    Bandits
+    Bandits,
+    Cultists
 }
 
 public enum Attitude
@@ -58,7 +59,7 @@ namespace Managers
             }
             
             // Player
-            AddRelation(Teams.Player, Teams.Villagers, Attitude.Friendly);
+            // Base
             
             // Villagers
             AddRelation(Teams.Villagers, Teams.Player, Attitude.Friendly);
@@ -74,6 +75,13 @@ namespace Managers
             AddRelation(Teams.Kobolds, Teams.Kingdom, Attitude.Hostile);
             AddRelation(Teams.Kobolds, Teams.Villagers, Attitude.Hostile);
             AddRelation(Teams.Kobolds, Teams.Bandits, Attitude.Hostile);
+            
+            // Cultists
+            AddRelation(Teams.Cultists, Teams.Player, Attitude.Hostile);
+            AddRelation(Teams.Cultists, Teams.Kingdom, Attitude.Hostile);
+            AddRelation(Teams.Cultists, Teams.Villagers, Attitude.Hostile);
+            AddRelation(Teams.Cultists, Teams.Bandits, Attitude.Hostile);
+            AddRelation(Teams.Cultists, Teams.Kobolds, Attitude.Hostile);
         }
 
 

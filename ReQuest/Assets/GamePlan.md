@@ -20,7 +20,7 @@
         * To get explosives you need to buy them from a merchant in Ironvile **Todo**
           * To get gold you need to LOOK AT [Get gold](#get-gold)
           * He will also accept alcohol **Todo**
-      * Use pickaxe to break the wall **Todo**
+      * Use pickaxe to break the wall
         * To get a pickaxe you can find it in kobold's caves
 
 ### Get gold

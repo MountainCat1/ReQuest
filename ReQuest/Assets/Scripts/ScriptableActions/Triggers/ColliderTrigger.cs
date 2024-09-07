@@ -1,4 +1,5 @@
-﻿using Managers;
+﻿using DefaultNamespace;
+using Managers;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
@@ -7,7 +8,7 @@ namespace Triggers
 {
     public class ColliderTrigger : TriggerBase
     {
-        [SerializeField] private ColliderEventProducer colliderEventProducer;
+        [SerializeField] private PlayerDetector playerDetector;
         
         [Inject] IPlayerCharacterProvider _playerProvider;
 
@@ -15,14 +16,11 @@ namespace Triggers
         {
             base.Start();
             
-            colliderEventProducer.TriggerEnter += HandleTriggerEnter;
+            playerDetector.OnPlayerEnter += HandleTriggerEnter;
         }
 
-        private void HandleTriggerEnter(Collider2D other)
+        private void HandleTriggerEnter()
         {
-            if (!_playerProvider.IsPlayer(other))
-                return;
-
             RunActions();
         }
     }

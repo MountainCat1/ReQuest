@@ -7,6 +7,7 @@ public enum GameFlag
     None,
     TookALoan,
     FerrymanAdvertized,
+    UsePickaxeAdvertized,
 }
 
 public interface IFlagManager
