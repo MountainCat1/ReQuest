@@ -13,7 +13,7 @@ namespace UI
         
         private void Update()
         {
-            var gameTime = _timeManager.GameTillEnd;
+            var gameTime = _timeManager.TimeTillEnd;
             var gameTimeString = gameTime.ToString("F2");
             var split = gameTimeString.Split('.');
             beforeDotText.text = split[0];

@@ -28,45 +28,47 @@ namespace Managers
         private void Initialize()
         {
             _timeManager.NewSecond += OnNewSecond;
+            _timeManager.TimeRunOut += OnTimeRunOut;
+        }
+
+        private void OnTimeRunOut()
+        {
+            CurrentPhase = 6;
+            PhaseChanged?.Invoke(CurrentPhase);
+            Debug.Log("The end...");
         }
 
         private void OnNewSecond(int seconds)
         {
-            if (seconds == firstPhaseTime)
+            if (seconds == firstPhaseTime && CurrentPhase == 0)
             {
                 CurrentPhase = 1;
                 PhaseChanged?.Invoke(CurrentPhase);
                 Debug.Log("First phase");
             }
-            else if (seconds == secondPhaseTime)
+            else if (seconds == secondPhaseTime && CurrentPhase == 1)
             {
                 CurrentPhase = 2;
                 PhaseChanged?.Invoke(CurrentPhase);
                 Debug.Log("Second phase");
             }
-            else if (seconds == thirdPhaseTime)
+            else if (seconds == thirdPhaseTime && CurrentPhase == 2)
             {
                 CurrentPhase = 3;
                 PhaseChanged?.Invoke(CurrentPhase);
                 Debug.Log("Third phase");
             }
-            else if (seconds == fourthPhaseTime)
+            else if (seconds == fourthPhaseTime && CurrentPhase == 3)
             {
                 CurrentPhase = 4;
                 PhaseChanged?.Invoke(CurrentPhase);
                 Debug.Log("Fourth phase");
             }
-            else if (seconds == fifthPhaseTime)
+            else if (seconds == fifthPhaseTime && CurrentPhase == 4)
             {
                 CurrentPhase = 5;
                 PhaseChanged?.Invoke(CurrentPhase);
                 Debug.Log("Fifth phase");
-            }
-            else if (seconds >= _timeManager.GameTime)
-            {
-                CurrentPhase = 6;
-                PhaseChanged?.Invoke(CurrentPhase);
-                Debug.Log("The end...");
             }
         }
     }

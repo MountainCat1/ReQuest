@@ -13,6 +13,11 @@ public struct CrtSettings
     public float chromaticAberration;
     public float pixelResolutionX;
     public float pixelResolutionY;
+    public float gamma;
+    public float noiseSpeed;
+    public float noiseSize;
+    public float noiseAlpha;
+    public float brightness;
 }
 
 public class CrtEffectController : MonoBehaviour
@@ -29,6 +34,7 @@ public class CrtEffectController : MonoBehaviour
     private CRTRendererFeature _crtFilter;
     
     private static readonly int PlayerDeath = Animator.StringToHash("PlayerDeath");
+    private static readonly int End = Animator.StringToHash("End");
 
     private void Start()
     {
@@ -60,41 +66,53 @@ public class CrtEffectController : MonoBehaviour
         
         if (phase == 1)
         {
-            SetLayerWeight(0.2f);
+            SetLayerWeight(0f);
         }
         if(phase == 2)
         {
-            SetLayerWeight(0.4f);
+            SetLayerWeight(0.01f);
         }
         if(phase == 3)
         {
-            SetLayerWeight(0.6f);
+            SetLayerWeight(0.03f);
         }
         if(phase == 4)
         {
-            SetLayerWeight(0.8f);
+            SetLayerWeight(0.06f);
         }
         if(phase == 5)
         {
+            SetLayerWeight(0.2f);
+        }
+        if(phase == 6)
+        {
             SetLayerWeight(1f);
+            animator.SetTrigger(End);
         }
     }
     
 
     private void Update()
     {
-        _crtFilter.blur = animatedCrtSettings.blur;
-        SetChromaticAberration(animatedCrtSettings.chromaticAberration);
-        _crtFilter.pixelResolutionX = animatedCrtSettings.pixelResolutionX;
-        _crtFilter.pixelResolutionY = animatedCrtSettings.pixelResolutionY;
+        SetSettings(animatedCrtSettings);
     }
 
     private void OnDestroy()
     {
-        _crtFilter.blur = defaultCrtSettings.blur;
-        SetChromaticAberration(defaultCrtSettings.chromaticAberration);
-        _crtFilter.pixelResolutionX = defaultCrtSettings.pixelResolutionX;
-        _crtFilter.pixelResolutionY = defaultCrtSettings.pixelResolutionY;
+       SetSettings(defaultCrtSettings);
+    }
+    
+    private void SetSettings(CrtSettings settings)
+    {
+        _crtFilter.blur = settings.blur;
+        SetChromaticAberration(settings.chromaticAberration);
+        _crtFilter.pixelResolutionX = settings.pixelResolutionX;
+        _crtFilter.pixelResolutionY = settings.pixelResolutionY;
+        _crtFilter.gamma = settings.gamma;
+        _crtFilter.noiseSize = settings.noiseSize;
+        _crtFilter.noiseSpeed = settings.noiseSpeed;
+        _crtFilter.brightness = settings.brightness;
+        _crtFilter.noiseAlpha = settings.noiseAlpha;
     }
     
     private void SetChromaticAberration(float value)

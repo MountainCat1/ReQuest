@@ -8,7 +8,7 @@ public interface ITimeManager
     public event Action<int> NewSecond;
     
     public float GameTime { get; }
-    public float GameTillEnd { get; }
+    public float TimeTillEnd { get; }
 }
 
 public class TimeManager : MonoBehaviour, ITimeManager
@@ -19,7 +19,7 @@ public class TimeManager : MonoBehaviour, ITimeManager
     public event Action<int> NewSecond;
 
     public float GameTime { get; private set; }
-    public float GameTillEnd => _gameConfiguration.GameTime - GameTime;
+    public float TimeTillEnd => _gameConfiguration.GameTime - GameTime;
     
     private bool _timeRunOut;
 
