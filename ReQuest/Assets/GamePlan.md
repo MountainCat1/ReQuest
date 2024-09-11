@@ -5,11 +5,11 @@
     * To get a key you need to LOOK AT [Get key](#get-key)
 * You need to get to the portal **Todo**
   * You need to kill a necromancer **Todo**
-    * You need to get to necromancer's lair **Todo**
-      * To get to the lair you need to cross a river **Todo**
+    * You need to get to necromancer's lair
+      * To get to the lair you need to cross a river
         * Get there through kobold caves **Todo**
         * Use a scroll of frost to freeze the water in a river
-          * To get a scroll you need to find it in a wizard's tower **Todo**
+          * To get a scroll you need to find it in a wizard's tower
         * Pay in gold to a ferryman
           * To get gold you need to LOOK AT [Get gold](#get-gold)
     * Break into necromancer's lair **Todo**

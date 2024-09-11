@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class HealthbarUI : MonoBehaviour
+    public class HealthBarUI : MonoBehaviour
     {
         [SerializeField] private Slider slider;
         [SerializeField] private Creature creature;
