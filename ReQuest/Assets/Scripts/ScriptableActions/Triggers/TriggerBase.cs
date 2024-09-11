@@ -46,7 +46,8 @@ namespace Triggers
                 return;
             
             HasFired = true;
-            
+
+            Debug.Log($"Trigger {name} fired");
             foreach (var action in Actions)
             {
                 action.Execute();

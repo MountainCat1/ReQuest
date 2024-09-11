@@ -98,7 +98,7 @@ MonoBehaviour:
   red: 1
   green: 1
   blue: 1
-  chromaticAberration: 1
-  redOffset: {x: 0.1, y: 0.1}
-  blueOffset: {x: 0, y: -0.14}
-  greenOffset: {x: -0.1, y: 0.1}
+  chromaticAberration: 0
+  redOffset: {x: 0, y: 0}
+  blueOffset: {x: 0, y: 0}
+  greenOffset: {x: -0, y: 0}
