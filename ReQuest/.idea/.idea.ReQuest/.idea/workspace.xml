@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="refactored world destruction effect, add player death effect">
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="fixes in visual of effect">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WorldDesctructionEffect/Aggresive Blur Blinking.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WorldDesctructionEffect/Aggresive Blur Blinking.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WorldDesctructionEffect/WorldDestructionAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WorldDesctructionEffect/WorldDestructionAnimator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Consumables/Healing Potion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Consumables/Healing Potion.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/PhaseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PhaseManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TimeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TimeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameTimeDisplayUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameTimeDisplayUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tilemaps/Tiles/Walls.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilemaps/Tiles/Walls.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tilemaps/Wall Tile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilemaps/Wall Tile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +30,16 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/63/31dca46f/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Animations/WorldDesctructionEffect/Aggresive Blur Blinking.anim" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/CRTFilter/Settings/ExampleCRTFilter2DRenderer.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/ScriptableObject/Dialog/Advertise_UsePickaxe.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/RemovePlayerItemAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/UI/HealthBarUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/WorldDestructionAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.3.1/Editor/PlasticSCM/Configuration/CredentialsDialog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -183,15 +181,7 @@
       <workItem from="1725656399997" duration="199000" />
       <workItem from="1725717696255" duration="1997000" />
       <workItem from="1725832093515" duration="157000" />
-      <workItem from="1726069181907" duration="12722000" />
-    </task>
-    <task id="LOCAL-00037" summary="make so that attack works when you just hold a right mouse button">
-      <option name="closed" value="true" />
-      <created>1721519483587</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1721519483587</updated>
+      <workItem from="1726069181907" duration="13969000" />
     </task>
     <task id="LOCAL-00038" summary="fixes in UI">
       <option name="closed" value="true" />
@@ -577,7 +567,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726088090813</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="fixes in visual of effect">
+      <option name="closed" value="true" />
+      <created>1726091588652</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1726091588653</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +594,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactor of triggers for scriptable actions" />
     <MESSAGE value="add item drop to kobolds, refactor main scene" />
     <MESSAGE value="improve pickup mechanics" />
     <MESSAGE value="add point buy system and characteristics" />
@@ -621,7 +618,8 @@
     <MESSAGE value="add necromancer's lair" />
     <MESSAGE value="add effects corresponding with world ending" />
     <MESSAGE value="refactored world destruction effect, add player death effect" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored world destruction effect, add player death effect" />
+    <MESSAGE value="fixes in visual of effect" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes in visual of effect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
