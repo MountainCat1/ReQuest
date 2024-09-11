@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="fixes in visual of effect">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Consumables/Healing Potion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Consumables/Healing Potion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tilemaps/Tiles/Walls.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilemaps/Tiles/Walls.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tilemaps/Wall Tile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilemaps/Wall Tile.asset" afterDir="false" />
-    </list>
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="small general fixes after testing" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +29,7 @@
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/ScriptableObject/Dialog/Advertise_UsePickaxe.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/CrtEffectController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/RemovePlayerItemAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" root0="FORCE_HIGHLIGHTING" />
@@ -181,15 +175,7 @@
       <workItem from="1725656399997" duration="199000" />
       <workItem from="1725717696255" duration="1997000" />
       <workItem from="1725832093515" duration="157000" />
-      <workItem from="1726069181907" duration="13969000" />
-    </task>
-    <task id="LOCAL-00038" summary="fixes in UI">
-      <option name="closed" value="true" />
-      <created>1721519979939</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1721519979939</updated>
+      <workItem from="1726069181907" duration="14627000" />
     </task>
     <task id="LOCAL-00039" summary="add bandit sprites">
       <option name="closed" value="true" />
@@ -575,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726091588653</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="small general fixes after testing">
+      <option name="closed" value="true" />
+      <created>1726095705907</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1726095705907</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +588,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add item drop to kobolds, refactor main scene" />
     <MESSAGE value="improve pickup mechanics" />
     <MESSAGE value="add point buy system and characteristics" />
     <MESSAGE value="expand map" />
@@ -619,7 +612,8 @@
     <MESSAGE value="add effects corresponding with world ending" />
     <MESSAGE value="refactored world destruction effect, add player death effect" />
     <MESSAGE value="fixes in visual of effect" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes in visual of effect" />
+    <MESSAGE value="small general fixes after testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="small general fixes after testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
