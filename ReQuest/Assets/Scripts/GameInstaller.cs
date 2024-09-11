@@ -16,5 +16,6 @@ public class GameInstaller : MonoInstaller<GameInstaller>
         Container.Bind<ITeamManager>().To<TeamManager>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<IPopupManager>().To<PopupManager>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<ICreatureManager>().To<CreatureManager>().FromComponentsInHierarchy().AsSingle();
+        Container.Bind<IPhaseManager>().To<PhaseManager>().FromComponentsInHierarchy().AsSingle();
     }
 }
