@@ -149,9 +149,18 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Skip"",
+                    ""name"": ""SkipDialog"",
                     ""type"": ""Button"",
                     ""id"": ""a562aabf-274e-4b86-bf7a-f0b376a34c96"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SpeedUpDialog"",
+                    ""type"": ""Button"",
+                    ""id"": ""254225e7-f56f-48ac-ac69-4b37b95381fe"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -173,22 +182,11 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""fc92bc6d-4b9e-499a-b909-b3e50b537b54"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Skip"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b9155cb6-8218-49cd-bc28-7fde011da72f"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Skip"",
+                    ""action"": ""SkipDialog"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -199,7 +197,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Skip"",
+                    ""action"": ""SkipDialog"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -210,7 +208,29 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Skip"",
+                    ""action"": ""SkipDialog"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""53488578-9166-4c08-8963-69ca23dd5705"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpeedUpDialog"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c191153d-d7df-4380-8c44-a5946a8b8a27"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpeedUpDialog"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -239,7 +259,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Confirm = m_UI.FindAction("Confirm", throwIfNotFound: true);
-        m_UI_Skip = m_UI.FindAction("Skip", throwIfNotFound: true);
+        m_UI_SkipDialog = m_UI.FindAction("SkipDialog", throwIfNotFound: true);
+        m_UI_SpeedUpDialog = m_UI.FindAction("SpeedUpDialog", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -364,13 +385,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
     private readonly InputAction m_UI_Confirm;
-    private readonly InputAction m_UI_Skip;
+    private readonly InputAction m_UI_SkipDialog;
+    private readonly InputAction m_UI_SpeedUpDialog;
     public struct UIActions
     {
         private @InputActions m_Wrapper;
         public UIActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Confirm => m_Wrapper.m_UI_Confirm;
-        public InputAction @Skip => m_Wrapper.m_UI_Skip;
+        public InputAction @SkipDialog => m_Wrapper.m_UI_SkipDialog;
+        public InputAction @SpeedUpDialog => m_Wrapper.m_UI_SpeedUpDialog;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -383,9 +406,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Confirm.started += instance.OnConfirm;
             @Confirm.performed += instance.OnConfirm;
             @Confirm.canceled += instance.OnConfirm;
-            @Skip.started += instance.OnSkip;
-            @Skip.performed += instance.OnSkip;
-            @Skip.canceled += instance.OnSkip;
+            @SkipDialog.started += instance.OnSkipDialog;
+            @SkipDialog.performed += instance.OnSkipDialog;
+            @SkipDialog.canceled += instance.OnSkipDialog;
+            @SpeedUpDialog.started += instance.OnSpeedUpDialog;
+            @SpeedUpDialog.performed += instance.OnSpeedUpDialog;
+            @SpeedUpDialog.canceled += instance.OnSpeedUpDialog;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -393,9 +419,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Confirm.started -= instance.OnConfirm;
             @Confirm.performed -= instance.OnConfirm;
             @Confirm.canceled -= instance.OnConfirm;
-            @Skip.started -= instance.OnSkip;
-            @Skip.performed -= instance.OnSkip;
-            @Skip.canceled -= instance.OnSkip;
+            @SkipDialog.started -= instance.OnSkipDialog;
+            @SkipDialog.performed -= instance.OnSkipDialog;
+            @SkipDialog.canceled -= instance.OnSkipDialog;
+            @SpeedUpDialog.started -= instance.OnSpeedUpDialog;
+            @SpeedUpDialog.performed -= instance.OnSpeedUpDialog;
+            @SpeedUpDialog.canceled -= instance.OnSpeedUpDialog;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -431,6 +460,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     public interface IUIActions
     {
         void OnConfirm(InputAction.CallbackContext context);
-        void OnSkip(InputAction.CallbackContext context);
+        void OnSkipDialog(InputAction.CallbackContext context);
+        void OnSpeedUpDialog(InputAction.CallbackContext context);
     }
 }

@@ -13,6 +13,7 @@ public interface IInputManager
     event Action<Vector2> Pointer2Pressed;
     public event Action<Vector2> Pointer1Hold;
     event Action OnConfirm;
+    event Action OnSpeedUpDialog;
     event Action OnSkip;
 }
 
@@ -25,6 +26,7 @@ public class InputManager : MonoBehaviour, IInputManager
     public event Action<Vector2> Pointer2Pressed;
     public event Action<Vector2> Pointer1Hold;
     public event Action OnConfirm;
+    public event Action OnSpeedUpDialog;
     public event Action OnSkip;
 
     [SerializeField] private int uiLayer = 5;
@@ -45,7 +47,9 @@ public class InputManager : MonoBehaviour, IInputManager
 
         _inputActions.UI.Confirm.performed += _ => OnConfirm?.Invoke();
 
-        _inputActions.UI.Skip.performed += _ => OnSkip?.Invoke();
+        _inputActions.UI.SkipDialog.performed += _ => OnSkip?.Invoke();
+        
+        _inputActions.UI.SpeedUpDialog.performed += _ => OnSpeedUpDialog?.Invoke();
     }
 
     private void Update()

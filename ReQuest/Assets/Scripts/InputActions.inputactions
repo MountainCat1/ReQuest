@@ -127,9 +127,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Skip",
+                    "name": "SkipDialog",
                     "type": "Button",
                     "id": "a562aabf-274e-4b86-bf7a-f0b376a34c96",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpeedUpDialog",
+                    "type": "Button",
+                    "id": "254225e7-f56f-48ac-ac69-4b37b95381fe",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -151,22 +160,11 @@
                 {
                     "name": "",
                     "id": "fc92bc6d-4b9e-499a-b909-b3e50b537b54",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Skip",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b9155cb6-8218-49cd-bc28-7fde011da72f",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Skip",
+                    "action": "SkipDialog",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -177,7 +175,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Skip",
+                    "action": "SkipDialog",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -188,7 +186,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Skip",
+                    "action": "SkipDialog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "53488578-9166-4c08-8963-69ca23dd5705",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpeedUpDialog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c191153d-d7df-4380-8c44-a5946a8b8a27",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpeedUpDialog",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

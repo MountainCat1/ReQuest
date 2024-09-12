@@ -25,7 +25,22 @@ namespace Managers
 
         void Start()
         {
+            _inputManager.OnSpeedUpDialog += SpeedUpDialog;
             _inputManager.OnSkip += NextDialog;
+        }
+
+        private void SpeedUpDialog()
+        {
+            if (_currentDialogData == null)
+                return;
+
+            if (!_dialogUI.Typing)
+            {
+                NextDialog();
+                return;
+            }
+           
+            _dialogUI.SpeedUp();
         }
 
         private void NextDialog()

@@ -6,11 +6,16 @@ using Zenject;
 public class DialogUI : MonoBehaviour
 {
     [Inject] private IGameConfiguration _configuration;
-    
+
     [SerializeField] private TextMeshProUGUI dialogText;
     [SerializeField] private GameObject dialogPanel;
+
+    public bool Typing { get; private set; } = false;
+
     private Coroutine _typingCoroutine;
     private bool _dialogPanelShown;
+
+    private bool _speedUp = false;
 
     private void Start()
     {
@@ -19,36 +24,51 @@ public class DialogUI : MonoBehaviour
 
     public void ShowSentence(DialogSentence sentence)
     {
-        if(_typingCoroutine != null)
+        _speedUp = false;
+
+        if (_typingCoroutine != null)
             StopCoroutine(_typingCoroutine);
-        
+
         _typingCoroutine = StartCoroutine(TypeSentenceCoroutine(sentence.Text));
     }
-    
+
     private IEnumerator TypeSentenceCoroutine(string sentence)
     {
+        Typing = true;
+        
         dialogText.text = "";
         foreach (var letter in sentence)
         {
             dialogText.text += letter;
-            yield return new WaitForSeconds(_configuration.TypingDelay);
+
+            if (_speedUp)
+                yield return new WaitForSeconds(_configuration.FastTypingDelay);
+            else
+                yield return new WaitForSeconds(_configuration.TypingDelay);
         }
+
+        Typing = false;
     }
-    
+
+    public void SpeedUp()
+    {
+        _speedUp = true;
+    }
+
     public void HideDialogPanel(bool force = false)
     {
-        if(!_dialogPanelShown && !force)
+        if (!_dialogPanelShown && !force)
             return;
-        
+
         dialogPanel.SetActive(false);
         _dialogPanelShown = false;
     }
-        
+
     public void ShowDialogPanel()
     {
-        if(_dialogPanelShown)
+        if (_dialogPanelShown)
             return;
-        
+
         dialogPanel.SetActive(true);
         _dialogPanelShown = true;
     }
