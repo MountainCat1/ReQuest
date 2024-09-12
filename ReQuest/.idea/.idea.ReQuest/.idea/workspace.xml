@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add custom behaviour to necromancer's beast">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/NecromancerController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/NecromancerController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreatureController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreatureController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/AiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/AiController.cs" afterDir="false" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="added special NecromancerController.cs">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogSentence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogSentence.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DialogUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DialogUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +28,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Creature.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/CreatureControllers/AiController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/CrtEffectController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
@@ -179,15 +176,7 @@
       <workItem from="1725717696255" duration="1997000" />
       <workItem from="1725832093515" duration="157000" />
       <workItem from="1726069181907" duration="14668000" />
-      <workItem from="1726143808147" duration="4774000" />
-    </task>
-    <task id="LOCAL-00043" summary="add some tress in SampleScene.unity">
-      <option name="closed" value="true" />
-      <created>1721771107066</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1721771107066</updated>
+      <workItem from="1726143808147" duration="5192000" />
     </task>
     <task id="LOCAL-00044" summary="workspace.xml">
       <option name="closed" value="true" />
@@ -573,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726148020592</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="added special NecromancerController.cs">
+      <option name="closed" value="true" />
+      <created>1726154062715</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1726154062715</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +589,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactored weapon, attack, hit logic" />
     <MESSAGE value="removed debug items, add potion pickup in secret location" />
     <MESSAGE value="add condition system, add door to the temple" />
     <MESSAGE value="fix normalization of direction in AiController.cs" />
@@ -617,7 +613,8 @@
     <MESSAGE value="change effect intensity in CrtEffectController.cs" />
     <MESSAGE value="add speeding up a dialog" />
     <MESSAGE value="add custom behaviour to necromancer's beast" />
-    <option name="LAST_COMMIT_MESSAGE" value="add custom behaviour to necromancer's beast" />
+    <MESSAGE value="added special NecromancerController.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added special NecromancerController.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

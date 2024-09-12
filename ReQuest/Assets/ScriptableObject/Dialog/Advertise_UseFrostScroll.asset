@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Advertise_UseFrostScroll
   m_EditorClassIdentifier: 
   <Sentences>k__BackingField:
-  - <Text>k__BackingField: What a flow! It has to the the "Northern River"
-  - <Text>k__BackingField: How could i even get on the other side?
-  - <Text>k__BackingField: I heard that there is a magical Scroll of Frost hidden
+  - <Type>k__BackingField: 1
+    <Text>k__BackingField: What a flow! It has to the the "Northern River"
+  - <Type>k__BackingField: 1
+    <Text>k__BackingField: How could i even get on the other side?
+  - <Type>k__BackingField: 1
+    <Text>k__BackingField: I heard that there is a magical Scroll of Frost hidden
       somwhere in this realm.
-  - <Text>k__BackingField: It would certainly come in handy right now!
+  - <Type>k__BackingField: 1
+    <Text>k__BackingField: It would certainly come in handy right now!

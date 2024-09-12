@@ -8107,8 +8107,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 410755664}
   m_HandleRect: {fileID: 410755663}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 0.99999934
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9367,6 +9367,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 80490871}
   dialogPanel: {fileID: 1510571189}
+  defaultDialogColor: {r: 1, g: 1, b: 1, a: 1}
+  defaultDialogFontStyle: 0
+  selfTalkColor: {r: 0.7132075, g: 0.7132075, b: 0.7132075, a: 1}
+  selfTalkFontStyle: 2
 --- !u!1 &590132410
 GameObject:
   m_ObjectHideFlags: 0
@@ -82568,7 +82572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441601664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.5, y: 34, z: -5}
+  m_LocalPosition: {x: 2.75, y: 3.25, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84091,7 +84095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632464735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.5, y: 34, z: 0}
+  m_LocalPosition: {x: 2.75, y: 3.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -85403,7 +85407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758414986}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.5, y: 34, z: 0}
+  m_LocalPosition: {x: 2.75, y: 3.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

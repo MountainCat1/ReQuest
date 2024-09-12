@@ -10,6 +10,12 @@ public class DialogUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogText;
     [SerializeField] private GameObject dialogPanel;
 
+    [SerializeField] private Color defaultDialogColor;
+    [SerializeField] private FontStyles defaultDialogFontStyle;
+    
+    [SerializeField] private Color selfTalkColor;
+    [SerializeField] private FontStyles selfTalkFontStyle;
+
     public bool Typing { get; private set; } = false;
 
     private Coroutine _typingCoroutine;
@@ -30,12 +36,23 @@ public class DialogUI : MonoBehaviour
             StopCoroutine(_typingCoroutine);
 
         _typingCoroutine = StartCoroutine(TypeSentenceCoroutine(sentence.Text));
+
+        if (sentence.Type == DialogType.Default)
+        {
+            dialogText.color = defaultDialogColor;
+            dialogText.fontStyle = defaultDialogFontStyle;
+        }
+        else
+        {
+            dialogText.color = selfTalkColor;
+            dialogText.fontStyle = selfTalkFontStyle;
+        }
     }
 
     private IEnumerator TypeSentenceCoroutine(string sentence)
     {
         Typing = true;
-        
+
         dialogText.text = "";
         foreach (var letter in sentence)
         {
