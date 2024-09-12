@@ -70,15 +70,15 @@ public class CrtEffectController : MonoBehaviour
         }
         if(phase == 2)
         {
-            SetLayerWeight(0.01f);
+            SetLayerWeight(0.005f);
         }
         if(phase == 3)
         {
-            SetLayerWeight(0.02f);
+            SetLayerWeight(0.01f);
         }
         if(phase == 4)
         {
-            SetLayerWeight(0.04f);
+            SetLayerWeight(0.02f);
         }
         if(phase == 5)
         {

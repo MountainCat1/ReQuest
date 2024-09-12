@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="small general fixes after testing" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,10 +107,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26868">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="26868" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -175,15 +175,7 @@
       <workItem from="1725656399997" duration="199000" />
       <workItem from="1725717696255" duration="1997000" />
       <workItem from="1725832093515" duration="157000" />
-      <workItem from="1726069181907" duration="14627000" />
-    </task>
-    <task id="LOCAL-00039" summary="add bandit sprites">
-      <option name="closed" value="true" />
-      <created>1721522992166</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1721522992166</updated>
+      <workItem from="1726069181907" duration="14668000" />
     </task>
     <task id="LOCAL-00040" summary="🔥🔥🔥 Mega refactor of inventory 🔥🔥🔥">
       <option name="closed" value="true" />
@@ -569,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726095705907</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="small general fixes after testing">
+      <option name="closed" value="true" />
+      <created>1726095730365</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1726095730365</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
