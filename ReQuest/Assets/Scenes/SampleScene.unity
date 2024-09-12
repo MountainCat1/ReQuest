@@ -8107,8 +8107,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 410755664}
   m_HandleRect: {fileID: 410755663}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.99999934
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -34823,6 +34823,91 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8164853883584555957, guid: 8ef8cd97ea1ec6d4faedea5619bad8db, type: 3}
   m_PrefabInstance: {fileID: 1098483530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1102297848
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2095643384}
+    m_Modifications:
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6713032
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.54178613
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0066696424
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323567518762138716, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 1684352978020791826, guid: 02d81b6d3a138144ea991ae373c295f7, type: 3}
+    - target: {fileID: 4323567518762138716, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: <Icon>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323567518762138716, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: <Name>k__BackingField
+      value: Necromancer's Range Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486080911648741203, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+      propertyPath: m_Name
+      value: Necromancer's Projectile Weapon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+--- !u!4 &1102297849 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1851784293872263644, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+  m_PrefabInstance: {fileID: 1102297848}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1102297850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4323567518762138716, guid: 9b5f957f2f1557248aa7d2cf56ab83be, type: 3}
+  m_PrefabInstance: {fileID: 1102297848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca397cf322654a1ab3b77d020f528931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1156758856
 GameObject:
   m_ObjectHideFlags: 0
@@ -77482,7 +77567,7 @@ RectTransform:
   m_Children:
   - {fileID: 865081100}
   m_Father: {fileID: 2095643384}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -82483,7 +82568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441601664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.25, y: 33, z: -5}
+  m_LocalPosition: {x: 95.5, y: 34, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84006,7 +84091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632464735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.25, y: 33, z: 0}
+  m_LocalPosition: {x: 95.5, y: 34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -85318,7 +85403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758414986}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.25, y: 33, z: 0}
+  m_LocalPosition: {x: 95.5, y: 34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -88010,7 +88095,7 @@ GameObject:
   - component: {fileID: 2095643388}
   - component: {fileID: 2095643387}
   - component: {fileID: 2095643386}
-  - component: {fileID: 2095643385}
+  - component: {fileID: 2095643389}
   m_Layer: 0
   m_Name: Necromancer
   m_TagString: Creature
@@ -88031,24 +88116,12 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1341359182}
-  - {fileID: 2135207499}
   - {fileID: 1346581918}
+  - {fileID: 2135207499}
+  - {fileID: 1102297849}
   m_Father: {fileID: 902747947}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2095643385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095643383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9a7f990348b4946baab3c16b7d2f0d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveOnAttackCooldown: 0
 --- !u!114 &2095643386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88106,6 +88179,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2095643389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095643383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9998f43f1e4e9baba537bbcb7e3285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveOnAttackCooldown: 0
+  wanderingRange: 5
+  projectileWeapon: {fileID: 1102297850}
+  touchWeapon: {fileID: 2135207500}
 --- !u!1001 &2116110026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88419,7 +88508,7 @@ GameObject:
   - component: {fileID: 2135207499}
   - component: {fileID: 2135207500}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: Necromancer's Touch Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88438,7 +88527,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2095643384}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2135207500
 MonoBehaviour:
@@ -88456,8 +88545,8 @@ MonoBehaviour:
   <Name>k__BackingField: 
   <Range>k__BackingField: 1.2
   <BaseAttackSpeed>k__BackingField: 0.3
-  <BaseDamage>k__BackingField: 5
-  <PushFactor>k__BackingField: 160
+  <BaseDamage>k__BackingField: 3
+  <PushFactor>k__BackingField: 8
   <HitSound>k__BackingField: {fileID: 8300000, guid: 8c96ac97b9e3c9a4ca94d1c7a7823530, type: 3}
 --- !u!1 &2140374112
 GameObject:

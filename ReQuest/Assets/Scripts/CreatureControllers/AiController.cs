@@ -10,7 +10,7 @@ namespace CreatureControllers
     public class AiController : CreatureController
     {
         // Events
-        protected void Start()
+        protected virtual void Start()
         {
             Creature.Hit += OnHit;
         }
@@ -53,9 +53,9 @@ namespace CreatureControllers
         // Abstract Methods
 
         // Private Methods
-        private void MoveViaPathfinding(Creature target)
+        private void MoveViaPathfinding(Vector2 targetPosition)
         {
-            var path = Pathfinding.FindPath(Creature.transform.position, target.transform.position);
+            var path = Pathfinding.FindPath(Creature.transform.position, targetPosition);
             if (path.Count == 0)
             {
                 return;
@@ -75,11 +75,16 @@ namespace CreatureControllers
 
         private void MoveStraightToTarget(Creature target)
         {
-            var direction = (target.transform.position - Creature.transform.position).normalized;
-            Creature.SetMovement(direction);
-            Debug.DrawLine(Creature.transform.position, target.transform.position, Color.green);
+            MoveStraightToTarget(target.transform.position);
         }
 
+        private void MoveStraightToTarget(Vector2 targetPosition)
+        {
+            var direction = (targetPosition - (Vector2)Creature.transform.position).normalized;
+            Creature.SetMovement(direction);
+            Debug.DrawLine(Creature.transform.position, targetPosition, Color.green);
+        }
+        
         private List<Vector3> GetCornerPoints(Vector3 center, float radius)
         {
             List<Vector3> cornerPoints = new List<Vector3>
@@ -124,16 +129,22 @@ namespace CreatureControllers
         // Helper Methods
         protected bool PathClear(Creature target, float radius)
         {
+            return PathClear(target.transform.position, radius);
+
+        }
+        
+        protected bool PathClear(Vector2 targetPosition, float radius)
+        {
             Vector3 creaturePosition = Creature.transform.position;
             List<Vector3> cornerPoints = GetCornerPoints(creaturePosition, radius);
 
             bool pathClear = true;
             foreach (Vector3 corner in cornerPoints)
             {
-                if (!Pathfinding.IsClearPath(corner, target.transform.position))
+                if (!Pathfinding.IsClearPath(corner, targetPosition))
                     pathClear = false;
 
-                Debug.DrawLine(corner, target.transform.position, Color.blue);
+                Debug.DrawLine(corner, targetPosition, Color.blue);
             }
 
             return pathClear;
@@ -147,11 +158,26 @@ namespace CreatureControllers
             if (pathClear)
             {
                 Debug.DrawLine(Creature.transform.position, target.transform.position, Color.yellow);
-                MoveStraightToTarget(target);
+                MoveStraightToTarget(target.transform.position);
                 return;
             }
             
-            MoveViaPathfinding(target);
+            MoveViaPathfinding(target.transform.position);
+        }
+        
+        protected void PerformMovementTowardsPosition(Vector2 position)
+        {
+            float radius = Creature.GetComponent<CircleCollider2D>().radius;
+
+            var pathClear = PathClear(position, radius);
+            if (pathClear)
+            {
+                Debug.DrawLine(Creature.transform.position, position, Color.yellow);
+                MoveStraightToTarget(position);
+                return;
+            }
+            
+            MoveViaPathfinding(position);
         }
 
         protected Creature GetNewTarget()

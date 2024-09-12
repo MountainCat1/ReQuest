@@ -5,7 +5,7 @@ public class CreatureController : MonoBehaviour
 {
     protected Creature Creature;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         Creature = GetComponent<Creature>();
     }
