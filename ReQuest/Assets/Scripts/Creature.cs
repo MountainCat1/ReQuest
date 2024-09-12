@@ -149,7 +149,7 @@ public class Creature : MonoBehaviour
         _rigidbody2D.velocity = change;
     }
 
-    private void Push(Vector2 push)
+    public void Push(Vector2 push)
     {
         _momentum = push;
     }
