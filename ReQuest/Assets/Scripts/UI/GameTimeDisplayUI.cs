@@ -16,7 +16,7 @@ namespace UI
             var gameTime = _timeManager.TimeTillEnd;
             var gameTimeString = gameTime.ToString("F2");
             var split = gameTimeString.Split('.');
-            beforeDotText.text = split[0];
+            beforeDotText.text = int.Parse(split[0]).ToString();
             afterDotText.text = split[1];
         }
     }

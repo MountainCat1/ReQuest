@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnCharacterAttack(AttackContext ctx)
     {
+        if(!playerCreature.Weapon)
+            return;
+        
         playerCreature.Weapon.ContiniousAttack(ctx);
     }
 

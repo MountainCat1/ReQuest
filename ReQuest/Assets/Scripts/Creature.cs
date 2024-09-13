@@ -4,6 +4,7 @@ using System.Linq;
 using Items;
 using Managers;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -12,6 +13,7 @@ public class Creature : MonoBehaviour
     // Events
     public event Action<DeathContext> Death;
     public event Action<HitContext> Hit;
+    public event Action WeaponChanged;
 
     // Injected Dependencies (using Zenject)
     [Inject] private ITeamManager _teamManager;
@@ -26,13 +28,25 @@ public class Creature : MonoBehaviour
 
     // Serialized Private Variables
     [field: Header("Movement")]
-    [field: SerializeField] public float Drag { get; private set; }
+    [field: SerializeField]
+    public float Drag { get; private set; }
+
     [field: SerializeField] public float BaseSpeed { get; private set; }
-    [field: SerializeField] public Weapon Weapon { get; private set; }
 
-    [field: Header("Stats")] 
+    public Weapon Weapon
+    {
+        get => weapon;
+        private set
+        {
+            weapon = value;
+            WeaponChanged?.Invoke();
+        }
+    }
+    [field: SerializeField] private Weapon weapon;
 
-    [field: SerializeField] private RangedValue health;
+    [field: Header("Stats")] [field: SerializeField]
+    private RangedValue health;
+
     [field: SerializeField] public float SightRange { get; private set; } = 13f;
     [field: SerializeField] public int XpAmount { get; private set; }
     [field: SerializeField] private Teams team;
@@ -46,7 +60,7 @@ public class Creature : MonoBehaviour
     private Vector2 _moveDirection;
     private Vector2 _momentum;
     private Creature _lastAttackedBy = null;
-    
+
     private const float MomentumLoss = 2f;
 
     // Properties
@@ -59,7 +73,7 @@ public class Creature : MonoBehaviour
 
         health.ValueChanged += OnHealthChanged;
         health.CurrentValue = health.MaxValue;
-        
+
         Inventory = new Inventory(_rootTransform);
         _diContainer.Inject(Inventory);
     }
@@ -89,13 +103,13 @@ public class Creature : MonoBehaviour
     public void Damage(HitContext ctx)
     {
         ctx.ValidateAndLog();
-        
+
         health.CurrentValue -= ctx.Damage;
         _lastAttackedBy = ctx.Attacker;
 
         if (ctx.Push.magnitude > 0)
             Push(ctx.Push);
-        
+
         Hit?.Invoke(ctx);
     }
 
@@ -103,17 +117,17 @@ public class Creature : MonoBehaviour
     {
         health.CurrentValue += healAmount;
     }
-    
+
     public static bool IsCreature(GameObject go)
     {
         return go.CompareTag("Player") || go.CompareTag("Creature");
     }
-    
+
     public void StartUsingWeapon(Weapon weaponItem)
     {
         Weapon = weaponItem;
     }
-    
+
     public void UseItem(ItemBehaviour item)
     {
         item.Use(new ItemUseContext()
@@ -121,13 +135,13 @@ public class Creature : MonoBehaviour
             Creature = this
         });
     }
-    
+
     public void AwardXp(int amount)
     {
         _levelSystem.AddXp(amount);
     }
-    
-    
+
+
     // Virtual Methods
 
     // Abstract Methods
@@ -135,9 +149,10 @@ public class Creature : MonoBehaviour
     // Private Methods
     private float GetSpeed()
     {
-        return BaseSpeed + _levelSystem.CharacteristicsLevels[Characteristics.Dexterity] * CharacteristicsConsts.SpeedAdditiveMultiplierPerDexterity;
+        return BaseSpeed + _levelSystem.CharacteristicsLevels[Characteristics.Dexterity] *
+            CharacteristicsConsts.SpeedAdditiveMultiplierPerDexterity;
     }
-    
+
     private void UpdateVelocity()
     {
         _momentum -= _momentum * (MomentumLoss * Time.fixedDeltaTime);
@@ -174,7 +189,7 @@ public class Creature : MonoBehaviour
 
         Destroy(gameObject);
     }
-    
+
 
     // Event Handlers
 

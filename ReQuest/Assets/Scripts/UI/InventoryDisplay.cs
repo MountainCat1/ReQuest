@@ -1,4 +1,5 @@
 ﻿using Managers;
+using TMPro;
 using UnityEngine;
 using Zenject;
 
@@ -12,13 +13,27 @@ namespace UI
         [SerializeField] private InventoryEntryDisplay inventoryEntryDisplayPrefab;
         [SerializeField] private Transform inventoryParent;
         
+        [SerializeField] private TextMeshProUGUI currentWeaponText;
+        
         private Creature _creature;
 
         private void Start()
         {
             _creature = _playerCharacterProvider.Get();
             _creature.Inventory.OnChange += UpdateInventory;
+            _creature.WeaponChanged += UpdateWeapon;
             UpdateInventory();
+        }
+
+        private void UpdateWeapon()
+        {
+            if (!_creature.Weapon)
+            {
+                currentWeaponText.text = "No Weapon";
+                return;
+            }
+            
+            currentWeaponText.text = _creature.Weapon.Name;
         }
 
         private void UpdateInventory()
