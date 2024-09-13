@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="added special NecromancerController.cs">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogSentence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogSentence.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DialogUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DialogUI.cs" afterDir="false" />
-    </list>
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +23,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/63/31dca46f/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/ScriptableObject/Dialog/Advertise_UseFrostScroll.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/Creature.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scripts/CreatureControllers/AiController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -36,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/RemovePlayerItemAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/InteractableTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.3.1/Editor/PlasticSCM/Configuration/CredentialsDialog.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -176,15 +175,7 @@
       <workItem from="1725717696255" duration="1997000" />
       <workItem from="1725832093515" duration="157000" />
       <workItem from="1726069181907" duration="14668000" />
-      <workItem from="1726143808147" duration="5192000" />
-    </task>
-    <task id="LOCAL-00044" summary="workspace.xml">
-      <option name="closed" value="true" />
-      <created>1721771134979</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1721771134979</updated>
+      <workItem from="1726143808147" duration="6532000" />
     </task>
     <task id="LOCAL-00045" summary="refactor ai creature controllers">
       <option name="closed" value="true" />
@@ -570,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726154062715</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="add different dialog visuals for different types of DialogSentence.cs">
+      <option name="closed" value="true" />
+      <created>1726154435059</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1726154435059</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +588,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="removed debug items, add potion pickup in secret location" />
     <MESSAGE value="add condition system, add door to the temple" />
     <MESSAGE value="fix normalization of direction in AiController.cs" />
     <MESSAGE value="add pickaxe item" />
@@ -614,7 +612,8 @@
     <MESSAGE value="add speeding up a dialog" />
     <MESSAGE value="add custom behaviour to necromancer's beast" />
     <MESSAGE value="added special NecromancerController.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="added special NecromancerController.cs" />
+    <MESSAGE value="add different dialog visuals for different types of DialogSentence.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add different dialog visuals for different types of DialogSentence.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
