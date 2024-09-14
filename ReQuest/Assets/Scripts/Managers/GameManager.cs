@@ -17,6 +17,16 @@ namespace Managers
         {
             InitializePlayer();  
             _timeManager.TimeRunOut += OnTimeRunOut;
+            _playerCharacterProvider.Get().Death += OnPlayerDeath;
+        }
+
+        private void OnPlayerDeath(DeathContext ctx)
+        {
+            Task.Run(async () =>
+            {
+                await Task.Delay(5000);
+                Application.Quit();
+            });
         }
 
         private void OnTimeRunOut()
