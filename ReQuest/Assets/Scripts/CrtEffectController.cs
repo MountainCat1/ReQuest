@@ -64,6 +64,12 @@ public class CrtEffectController : MonoBehaviour
         if(_playerProvider.PlayerDead)
             return;
         
+        
+        if(phase == -1)
+        {
+            SetLayerWeight(0f);
+        }
+        
         if (phase == 1)
         {
             SetLayerWeight(0f);

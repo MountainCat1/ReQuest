@@ -48,7 +48,6 @@ namespace Managers
         {
             _soundtrackAnimator.SetInteger(Phase, phase);
         }
-        
 
         private void OnPlayerDeath(DeathContext ctx)
         {

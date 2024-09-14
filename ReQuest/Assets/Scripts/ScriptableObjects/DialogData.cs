@@ -5,4 +5,13 @@ using UnityEngine;
 public class DialogData : ScriptableObject
 {
     [field: SerializeField] public List<DialogSentence> Sentences { get; set; }
+    
+    [field: SerializeField] public List<DialogSentenceSignal> Signals { get; set; }
+}
+
+[System.Serializable]
+public class DialogSentenceSignal
+{
+    [field: SerializeField] public string Signal { get; set; }
+    [field: SerializeField] public int SentenceIndex { get; set; }
 }

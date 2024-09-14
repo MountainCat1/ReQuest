@@ -13,6 +13,7 @@ namespace Managers
     public class PhaseManager : MonoBehaviour, IPhaseManager
     {
         [Inject] private ITimeManager _timeManager;
+        [Inject] private IWinManager _winManager;
         
         public event Action<int> PhaseChanged;
 
@@ -29,6 +30,14 @@ namespace Managers
         {
             _timeManager.NewSecond += OnNewSecond;
             _timeManager.TimeRunOut += OnTimeRunOut;
+            
+            _winManager.Won += OnWin;
+        }
+
+        private void OnWin()
+        {
+            CurrentPhase = -1;
+            PhaseChanged?.Invoke(CurrentPhase);
         }
 
         private void OnTimeRunOut()
@@ -40,6 +49,9 @@ namespace Managers
 
         private void OnNewSecond(int seconds)
         {
+            if(CurrentPhase == -1)
+                return;
+            
             if (seconds == firstPhaseTime && CurrentPhase == 0)
             {
                 CurrentPhase = 1;

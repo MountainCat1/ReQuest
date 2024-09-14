@@ -4,21 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="limit the effect of CrtEffect">
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/WinManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/WinManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/WinAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/WinAction.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CRTFilter/Settings/ExampleCRTFilter2DRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CRTFilter/Settings/ExampleCRTFilter2DRenderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/DePixelHalbfett SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/DePixelHalbfett SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/DePixelIllegible SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/DePixelIllegible SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/DePixelSchmal SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/DePixelSchmal SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bandit Fighter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bandit Fighter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bandit Leader.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bandit Leader.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bandit Ranger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bandit Ranger.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Kobold.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Kobold.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ItemEntry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ItemEntry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Soundtrack/Sountrack.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Soundtrack/Sountrack.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreatureControllers/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/PhaseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PhaseManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogSentence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogSentence.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +30,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MountainCat1"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MountainCat1&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MountainCat1/ReQuest.git",
-    "accountId": "fcb8c95a-cc9a-4aec-8a8f-15ea8b16b14b"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MountainCat1/ReQuest.git&quot;,
+    &quot;accountId&quot;: &quot;fcb8c95a-cc9a-4aec-8a8f-15ea8b16b14b&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.universal/Editor/Overrides/TonemappingEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/347e3e2bef8c4deb82c9790c6e198135941800/a4/3ac36f33/SerializedProperty.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,6 +51,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/63/31dca46f/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Prefabs/Bandit Fighter.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,20 +75,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "XThreadsFramesViewSplitterKey": "0.36374846",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.36374846&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\ReQuest.exe" />
@@ -125,10 +124,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28768">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="28768" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -195,15 +194,8 @@
       <workItem from="1725832093515" duration="157000" />
       <workItem from="1726069181907" duration="14668000" />
       <workItem from="1726143808147" duration="6532000" />
-      <workItem from="1726225765723" duration="1116000" />
-    </task>
-    <task id="LOCAL-00046" summary="add basic range enemy">
-      <option name="closed" value="true" />
-      <created>1722086405220</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1722086405220</updated>
+      <workItem from="1726225765723" duration="3641000" />
+      <workItem from="1726271353590" duration="1064000" />
     </task>
     <task id="LOCAL-00047" summary="refactor, changed how sound are being played on hit">
       <option name="closed" value="true" />
@@ -589,7 +581,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726225830192</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="fixes in ui">
+      <option name="closed" value="true" />
+      <created>1726227122994</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1726227122994</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +609,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix normalization of direction in AiController.cs" />
     <MESSAGE value="add pickaxe item" />
     <MESSAGE value="add gold and hidden treasure" />
     <MESSAGE value="add editor markings for locations" />
@@ -634,7 +633,8 @@
     <MESSAGE value="added special NecromancerController.cs" />
     <MESSAGE value="add different dialog visuals for different types of DialogSentence.cs" />
     <MESSAGE value="limit the effect of CrtEffect" />
-    <option name="LAST_COMMIT_MESSAGE" value="limit the effect of CrtEffect" />
+    <MESSAGE value="fixes in ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes in ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
