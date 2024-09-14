@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 using Zenject;
 
@@ -12,6 +13,7 @@ namespace Managers
     public class DialogManager : MonoBehaviour, IDialogManager
     {
         [Inject] private IInputManager _inputManager;
+        [Inject] private ISignalManager _signalManager;
 
         private DialogUI _dialogUI;
         
@@ -73,6 +75,13 @@ namespace Managers
             _dialogUI.ShowDialogPanel();
 
             _dialogUI.ShowSentence(sentence);
+         
+            var sentenceIndex = _currentDialogData.Sentences.IndexOf(sentence);
+            var signals = _currentDialogData.Signals.Where(s => s.SentenceIndex == sentenceIndex).ToList();
+            foreach (var signal in signals)
+            {
+                _signalManager.Signal(signal.Signal);
+            }
         }
     }
 }

@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/WinManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/WinManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/WinAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/WinAction.cs.meta" afterDir="false" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add win logic">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SignalManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SignalManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/CreatureDeadCondition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Conditions/CreatureDeadCondition.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/SignalTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/SignalTrigger.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Soundtrack/Sountrack.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Soundtrack/Sountrack.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Dialog/WinEpilogue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Dialog/WinEpilogue.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/PhaseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PhaseManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/DialogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/DialogManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogSentence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogSentence.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,15 +196,7 @@
       <workItem from="1726069181907" duration="14668000" />
       <workItem from="1726143808147" duration="6532000" />
       <workItem from="1726225765723" duration="3641000" />
-      <workItem from="1726271353590" duration="1064000" />
-    </task>
-    <task id="LOCAL-00047" summary="refactor, changed how sound are being played on hit">
-      <option name="closed" value="true" />
-      <created>1722095383743</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1722095383743</updated>
+      <workItem from="1726271353590" duration="2250000" />
     </task>
     <task id="LOCAL-00048" summary="refactor, changed how sound are being played on hit">
       <option name="closed" value="true" />
@@ -589,7 +582,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726227122994</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="add win logic">
+      <option name="closed" value="true" />
+      <created>1726272754304</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1726272754305</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +610,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add pickaxe item" />
     <MESSAGE value="add gold and hidden treasure" />
     <MESSAGE value="add editor markings for locations" />
     <MESSAGE value="add metchant selling key" />
@@ -634,7 +634,8 @@
     <MESSAGE value="add different dialog visuals for different types of DialogSentence.cs" />
     <MESSAGE value="limit the effect of CrtEffect" />
     <MESSAGE value="fixes in ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes in ui" />
+    <MESSAGE value="add win logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="add win logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
