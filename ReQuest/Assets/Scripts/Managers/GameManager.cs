@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Items;
 using UnityEngine;
@@ -15,10 +16,11 @@ namespace Managers
         
         private void Start()
         {
-            InitializePlayer();  
             _phaseManager.PhaseChanged += OnTimeRunOut;
             _playerCharacterProvider.Get().Death += OnPlayerDeath;
-        }
+            
+            InitializePlayer();  
+        }   
 
         private void OnPlayerDeath(DeathContext ctx)
         {
@@ -44,10 +46,22 @@ namespace Managers
         private void InitializePlayer()
         {
             var player = _playerCharacterProvider.Get();
-            foreach (var item in startingItems)
+
+            foreach (var startingItem in startingItems)
             {
-                player.Inventory.AddItem(item);
+                player.Inventory.AddItem(startingItem);
             }
+            
+            var startingWeapon = player.Inventory.Items.FirstOrDefault(x => x is Weapon) as Weapon;
+            if (!startingWeapon)
+            {
+                Debug.LogError("No starting weapon found");
+                return;
+            }
+            startingWeapon.Use(new ItemUseContext()
+            {
+                Creature = player
+            });
         }
     }
 }

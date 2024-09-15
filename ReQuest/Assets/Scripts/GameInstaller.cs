@@ -12,7 +12,7 @@ public class GameInstaller : MonoInstaller<GameInstaller>
         Container.Bind<IWinManager>().To<WinManager>().FromNew().AsSingle();
         Container.Bind<IPathfinding>().To<Pathfinding>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<IFlagManager>().To<FlagManager>().FromComponentsInHierarchy().AsSingle();
-        Container.Bind<IPlayerCharacterProvider>().To<PlayerCharacterProvider>().FromComponentsInHierarchy().AsSingle();
+        Container.Bind<IPlayerCharacterProvider>().To<PlayerCharacterProvider>().FromComponentsInHierarchy().AsSingle().NonLazy();
         Container.Bind<IDialogManager>().To<DialogManager>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<ISoundPlayer>().To<SoundPlayer>().AsSingle().NonLazy();
         Container.Bind<ITeamManager>().To<TeamManager>().FromComponentsInHierarchy().AsSingle();

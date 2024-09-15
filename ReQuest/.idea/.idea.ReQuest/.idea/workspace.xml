@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="added exchanging vodka for a key with a peasant&#10;changed the merchant in Ironville so that he gives vodka for gold instead of key for gold">
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="fixed bug with phase changing after the win condition is met">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/LoadSceneTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/LoadSceneTrigger.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Better Sword.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Better Sword.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Bow.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Bow.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Starting Sword.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Starting Sword.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDisplay.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +45,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../../../../../../Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.universal/Editor/Overrides/TonemappingEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/06cfd796a56e417bab3ed4200b0661b210fc00/ec/325cb1d5/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/347e3e2bef8c4deb82c9790c6e198135941800/a4/3ac36f33/SerializedProperty.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4050fa1eeb154fde8043e8b1694bf86220a00/a3/f4b39d78/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/28/98b2570e/Debug.cs" root0="SKIP_HIGHLIGHTING" />
@@ -40,8 +53,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/43/da2d9ca1/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b41119cc6741409ea29f63c7f98de938172800/63/31dca46f/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Prefabs/Bandit Fighter.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Mountain Cat/Projects/Unity/.GameDev/ReQuest/ReQuest/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColliderEventProducer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CrtEffectController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Items/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,7 +91,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\ReQuest.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/ReQuest.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest\Builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -113,10 +124,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21344">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="21344" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -185,15 +196,7 @@
       <workItem from="1726143808147" duration="6532000" />
       <workItem from="1726225765723" duration="3641000" />
       <workItem from="1726271353590" duration="2937000" />
-      <workItem from="1726364184018" duration="871000" />
-    </task>
-    <task id="LOCAL-00051" summary="refactor - moved files around">
-      <option name="closed" value="true" />
-      <created>1722095910099</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1722095910100</updated>
+      <workItem from="1726364184018" duration="4783000" />
     </task>
     <task id="LOCAL-00052" summary="add simple consumable items">
       <option name="closed" value="true" />
@@ -579,7 +582,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726364520530</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="fixed bug with phase changing after the win condition is met">
+      <option name="closed" value="true" />
+      <created>1726365299247</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1726365299247</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +610,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="enlarged pathfinding grid map generator bounds" />
     <MESSAGE value="add bandit leader that drops gold" />
     <MESSAGE value="drop lockpick from bandit leader, you can use it to open a temple" />
     <MESSAGE value="add southstream village" />
@@ -624,7 +634,8 @@
     <MESSAGE value="add small win animation, added condition so you need to kill a warlock before you can use the scroll of light" />
     <MESSAGE value="add auto-quit on player's death" />
     <MESSAGE value="added exchanging vodka for a key with a peasant&#10;changed the merchant in Ironville so that he gives vodka for gold instead of key for gold" />
-    <option name="LAST_COMMIT_MESSAGE" value="added exchanging vodka for a key with a peasant&#10;changed the merchant in Ironville so that he gives vodka for gold instead of key for gold" />
+    <MESSAGE value="fixed bug with phase changing after the win condition is met" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with phase changing after the win condition is met" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -656,17 +667,17 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Creature.cs</url>
-          <line>40</line>
-          <properties documentPath="C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest\Assets\Scripts\Creature.cs" containingFunctionPresentation="Property 'Weapon'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/InventoryDisplay.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest\Assets\Scripts\UI\InventoryDisplay.cs" containingFunctionPresentation="Method 'Initialize'">
             <startOffsets>
-              <option value="1125" />
+              <option value="593" />
             </startOffsets>
             <endOffsets>
-              <option value="1140" />
+              <option value="636" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
