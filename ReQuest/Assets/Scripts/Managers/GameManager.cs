@@ -9,14 +9,14 @@ namespace Managers
     public class GameManager : MonoBehaviour
     {
         [Inject] IPlayerCharacterProvider _playerCharacterProvider;
-        [Inject] ITimeManager _timeManager;
+        [Inject] IPhaseManager _phaseManager;
         
         [SerializeField] private List<ItemBehaviour> startingItems;
         
         private void Start()
         {
             InitializePlayer();  
-            _timeManager.TimeRunOut += OnTimeRunOut;
+            _phaseManager.PhaseChanged += OnTimeRunOut;
             _playerCharacterProvider.Get().Death += OnPlayerDeath;
         }
 
@@ -29,8 +29,11 @@ namespace Managers
             });
         }
 
-        private void OnTimeRunOut()
+        private void OnTimeRunOut(int phase)
         {
+            if(phase != IPhaseManager.EndPhase)
+                return;
+            
             Task.Run(async () =>
             {
                 await Task.Delay(5000);

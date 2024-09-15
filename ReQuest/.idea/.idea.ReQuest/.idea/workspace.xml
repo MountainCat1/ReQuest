@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add auto-quit on player's death">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="added exchanging vodka for a key with a peasant&#10;changed the merchant in Ironville so that he gives vodka for gold instead of key for gold">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,14 +185,7 @@
       <workItem from="1726143808147" duration="6532000" />
       <workItem from="1726225765723" duration="3641000" />
       <workItem from="1726271353590" duration="2937000" />
-    </task>
-    <task id="LOCAL-00050" summary="refactor - moving files around">
-      <option name="closed" value="true" />
-      <created>1722095780942</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1722095780943</updated>
+      <workItem from="1726364184018" duration="871000" />
     </task>
     <task id="LOCAL-00051" summary="refactor - moved files around">
       <option name="closed" value="true" />
@@ -578,7 +571,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726274331601</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="added exchanging vodka for a key with a peasant&#10;changed the merchant in Ironville so that he gives vodka for gold instead of key for gold">
+      <option name="closed" value="true" />
+      <created>1726364520530</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1726364520530</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +599,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add metchant selling key" />
     <MESSAGE value="enlarged pathfinding grid map generator bounds" />
     <MESSAGE value="add bandit leader that drops gold" />
     <MESSAGE value="drop lockpick from bandit leader, you can use it to open a temple" />
@@ -623,7 +623,8 @@
     <MESSAGE value="add win logic" />
     <MESSAGE value="add small win animation, added condition so you need to kill a warlock before you can use the scroll of light" />
     <MESSAGE value="add auto-quit on player's death" />
-    <option name="LAST_COMMIT_MESSAGE" value="add auto-quit on player's death" />
+    <MESSAGE value="added exchanging vodka for a key with a peasant&#10;changed the merchant in Ironville so that he gives vodka for gold instead of key for gold" />
+    <option name="LAST_COMMIT_MESSAGE" value="added exchanging vodka for a key with a peasant&#10;changed the merchant in Ironville so that he gives vodka for gold instead of key for gold" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

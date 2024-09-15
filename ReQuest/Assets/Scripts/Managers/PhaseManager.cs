@@ -7,6 +7,9 @@ namespace Managers
     public interface IPhaseManager
     {
         int CurrentPhase { get; }
+
+        static int EndPhase => 6;
+
         event Action<int> PhaseChanged;
     }
 
@@ -42,6 +45,9 @@ namespace Managers
 
         private void OnTimeRunOut()
         {
+            if(CurrentPhase == -1)
+                return;
+            
             CurrentPhase = 6;
             PhaseChanged?.Invoke(CurrentPhase);
             Debug.Log("The end...");
