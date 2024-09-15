@@ -7675,7 +7675,7 @@ GameObject:
   - component: {fileID: 245781559}
   - component: {fileID: 245781560}
   m_Layer: 0
-  m_Name: Dialog Action
+  m_Name: '> First Dialog Action'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7713,7 +7713,7 @@ MonoBehaviour:
   <Conditions>k__BackingField: []
   <FireOnce>k__BackingField: 1
   actionObject: 1
-  range: 2
+  range: 1.5
 --- !u!114 &245781560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8151,6 +8151,113 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344821949}
   m_CullTransparentMesh: 1
+--- !u!1 &347209739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 347209740}
+  - component: {fileID: 347209741}
+  - component: {fileID: 347209742}
+  - component: {fileID: 347209745}
+  - component: {fileID: 347209743}
+  - component: {fileID: 347209744}
+  m_Layer: 0
+  m_Name: '> Has Vodka Action'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &347209740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347209739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2006210719}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &347209741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347209739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d57a899f95750a4f9aff5379caf4674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Actions>k__BackingField: []
+  <Conditions>k__BackingField: []
+  <FireOnce>k__BackingField: 1
+  actionObject: 1
+  range: 1.5
+--- !u!114 &347209742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347209739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a891693515c6461c8f4f850bb9b05fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Negate>k__BackingField: 0
+  item: {fileID: 18060403, guid: 7b5f8c3dae1184e4bb43ce2aafcc74cf, type: 3}
+--- !u!114 &347209743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347209739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cedc2028c2ee4bfb98c2f1f8facd40dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogData: {fileID: 11400000, guid: ab85107cb52992b4f85474c1d1be19be, type: 2}
+--- !u!114 &347209744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347209739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff37742e1dc4bb3856e97b2647739e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 4884500891879946856, guid: d9710a45887ef7841bba636d4f00838c, type: 3}
+--- !u!114 &347209745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347209739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123dbcf829cc4169800662af7ecbacf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Negate>k__BackingField: 0
+  trigger: {fileID: 245781559}
 --- !u!4 &368558035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 24116099463269292, guid: 161c88e9d1cd7f244b4632917d9df7d5, type: 3}
@@ -8599,7 +8706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429873560}
   m_Layer: 0
-  m_Name: World
+  m_Name: =====World=====
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14836,6 +14943,7 @@ GameObject:
   - component: {fileID: 714729727}
   - component: {fileID: 714729726}
   - component: {fileID: 714729725}
+  - component: {fileID: 714729728}
   m_Layer: 0
   m_Name: Trigger Has Gold
   m_TagString: Untagged
@@ -14903,6 +15011,20 @@ MonoBehaviour:
   <FireOnce>k__BackingField: 1
   actionObject: 1
   range: 1.5
+--- !u!114 &714729728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714729723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61aa00776524503ae319710ab6b8f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Negate>k__BackingField: 0
+  flag: 4
 --- !u!1 &718791701
 GameObject:
   m_ObjectHideFlags: 0
@@ -15335,7 +15457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff37742e1dc4bb3856e97b2647739e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 4884500891879946856, guid: d9710a45887ef7841bba636d4f00838c, type: 3}
+  item: {fileID: 18060403, guid: 7b5f8c3dae1184e4bb43ce2aafcc74cf, type: 3}
 --- !u!114 &804678251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15652,6 +15774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 861307656}
   - component: {fileID: 861307657}
+  - component: {fileID: 861307658}
   m_Layer: 0
   m_Name: Action
   m_TagString: Untagged
@@ -15687,6 +15810,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogData: {fileID: 11400000, guid: 2b6ae7e3227b926429481639b1ca4bb0, type: 2}
+--- !u!114 &861307658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861307655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e693a290c94d56802508a10cf2d995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flag: 4
+  value: 1
 --- !u!1 &862030982
 GameObject:
   m_ObjectHideFlags: 0
@@ -92366,7 +92503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1932806946}
   - component: {fileID: 1932806947}
-  - component: {fileID: 1932806949}
+  - component: {fileID: 1932806950}
   - component: {fileID: 1932806948}
   m_Layer: 0
   m_Name: Trigger No Gold
@@ -92405,7 +92542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Actions>k__BackingField: []
   <Conditions>k__BackingField: []
-  <FireOnce>k__BackingField: 0
+  <FireOnce>k__BackingField: 1
   actionObject: 1
   range: 1.5
 --- !u!114 &1932806948
@@ -92421,7 +92558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToRun: {fileID: 861307655}
---- !u!114 &1932806949
+--- !u!114 &1932806950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92430,11 +92567,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1932806945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a891693515c6461c8f4f850bb9b05fbf, type: 3}
+  m_Script: {fileID: 11500000, guid: d61aa00776524503ae319710ab6b8f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <Negate>k__BackingField: 1
-  item: {fileID: 6409840050145272907, guid: 74429333a6c78104b882f0a0dcf705ff, type: 3}
+  flag: 4
 --- !u!1 &1935844509
 GameObject:
   m_ObjectHideFlags: 0
@@ -92955,6 +93092,7 @@ Transform:
   m_Children:
   - {fileID: 1962604788}
   - {fileID: 245781558}
+  - {fileID: 347209740}
   m_Father: {fileID: 1764894115}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

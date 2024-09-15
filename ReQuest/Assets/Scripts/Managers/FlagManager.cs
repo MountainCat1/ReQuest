@@ -8,6 +8,7 @@ public enum GameFlag
     TookALoan,
     FerrymanAdvertized,
     UsePickaxeAdvertized,
+    BuyKeyAdvertized,
 }
 
 public interface IFlagManager

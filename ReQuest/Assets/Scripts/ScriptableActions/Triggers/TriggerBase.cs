@@ -15,7 +15,7 @@ namespace Triggers
         [field: SerializeField] private bool actionObject = true;
         protected bool CanRun => !(FireOnce && HasFired);
         
-        protected bool HasFired { get; private set; }
+        public bool HasFired { get; private set; }
 
         protected virtual void Start()
         {

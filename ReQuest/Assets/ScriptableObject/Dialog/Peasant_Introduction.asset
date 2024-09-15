@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37804311037647599ec1e3ffa8d10107, type: 3}
-  m_Name: First
+  m_Name: Peasant_Introduction
   m_EditorClassIdentifier: 
   <Sentences>k__BackingField:
   - <Text>k__BackingField: 'Hello there! What brings you here? '

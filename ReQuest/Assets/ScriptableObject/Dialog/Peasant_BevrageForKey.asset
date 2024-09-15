@@ -10,15 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37804311037647599ec1e3ffa8d10107, type: 3}
-  m_Name: Merchant_HasGold_GiveKey
+  m_Name: Peasant_BevrageForKey
   m_EditorClassIdentifier: 
   <Sentences>k__BackingField:
   - <Type>k__BackingField: 0
-    <Text>k__BackingField: Hello traveler!
+    <Text>k__BackingField: Greetings! Do you have anything for me?
   - <Type>k__BackingField: 0
-    <Text>k__BackingField: Can i interest you in this DELICIOUS!
+    <Text>k__BackingField: Ay! That's exhactly what I wanted. A bottle of a good
+      old mind bending liquid!
   - <Type>k__BackingField: 0
-    <Text>k__BackingField: Ow... You have some gold?
+    <Text>k__BackingField: Thanks mate! I have something in return for your trouble...
   - <Type>k__BackingField: 0
-    <Text>k__BackingField: Alright! Here you go, bottle of vodka is yours!
+    <Text>k__BackingField: This is a magical key, I heard that it can lead you to
+      an ancient Scroll of Light!
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: Whatever that is heh.. Nonetheless, stay safe and farewell!
   <Signals>k__BackingField: []

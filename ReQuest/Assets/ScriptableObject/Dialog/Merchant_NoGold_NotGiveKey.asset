@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Merchant_NoGold_NotGiveKey
   m_EditorClassIdentifier: 
   <Sentences>k__BackingField:
-  - <Text>k__BackingField: Hello traveler!
-  - <Text>k__BackingField: Can i interest you in this POWERFUL!
-  - <Text>k__BackingField: GOLDEN!!
-  - <Text>k__BackingField: MAGICAL!!!
-  - <Text>k__BackingField: ~KEY~
-  - <Text>k__BackingField: One gold piece and it will be yours!
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: Hello traveler!
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: Can i interest you in this DELICIOUS!
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: SWEET!!
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: MIND BENDING!!!
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: ~vodka~
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: One gold piece and a bottle of this bevrage will be yours!
+  <Signals>k__BackingField: []
