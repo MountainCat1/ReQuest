@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="added new area where you get the bow weapon" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="made sailor require 2 gold coins for his services" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,22 +183,7 @@
       <workItem from="1726225765723" duration="3641000" />
       <workItem from="1726271353590" duration="2937000" />
       <workItem from="1726364184018" duration="5327000" />
-    </task>
-    <task id="LOCAL-00053" summary="add health potion sprite">
-      <option name="closed" value="true" />
-      <created>1722099348219</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1722099348219</updated>
-    </task>
-    <task id="LOCAL-00054" summary="fix typos">
-      <option name="closed" value="true" />
-      <created>1722117650336</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1722117650336</updated>
+      <workItem from="1726599130968" duration="443000" />
     </task>
     <task id="LOCAL-00055" summary="add sight range for creatures, add bandit fighter prefab, add bandit team">
       <option name="closed" value="true" />
@@ -576,7 +561,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726406030909</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="upgraded the level up menu">
+      <option name="closed" value="true" />
+      <created>1726599156593</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1726599156593</updated>
+    </task>
+    <task id="LOCAL-00103" summary="made sailor require 2 gold coins for his services">
+      <option name="closed" value="true" />
+      <created>1726599575407</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1726599575407</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,8 +597,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="drop lockpick from bandit leader, you can use it to open a temple" />
-    <MESSAGE value="add southstream village" />
     <MESSAGE value="add north river and the ferryman" />
     <MESSAGE value="add logic to ferryman so if player has gold he teleports him on the other side of the river" />
     <MESSAGE value="add ferry man interaction" />
@@ -621,7 +620,9 @@
     <MESSAGE value="added exchanging vodka for a key with a peasant&#10;changed the merchant in Ironville so that he gives vodka for gold instead of key for gold" />
     <MESSAGE value="fixed bug with phase changing after the win condition is met" />
     <MESSAGE value="added new area where you get the bow weapon" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new area where you get the bow weapon" />
+    <MESSAGE value="upgraded the level up menu" />
+    <MESSAGE value="made sailor require 2 gold coins for his services" />
+    <option name="LAST_COMMIT_MESSAGE" value="made sailor require 2 gold coins for his services" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

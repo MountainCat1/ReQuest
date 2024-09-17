@@ -15586,7 +15586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Negate>k__BackingField: 1
   item: {fileID: 6409840050145272907, guid: 74429333a6c78104b882f0a0dcf705ff, type: 3}
-  amount: 1
+  amount: 2
 --- !u!114 &804509158
 MonoBehaviour:
   m_ObjectHideFlags: 0
