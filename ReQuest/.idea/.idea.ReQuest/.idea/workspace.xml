@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="fixed bug with phase changing after the win condition is met">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/LoadSceneTrigger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableActions/Triggers/LoadSceneTrigger.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Better Sword.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Better Sword.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Bow.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Bow.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Starting Sword.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Items/Starting Sword.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDisplay.cs" afterDir="false" />
-    </list>
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="added new area where you get the bow weapon" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,15 +182,7 @@
       <workItem from="1726143808147" duration="6532000" />
       <workItem from="1726225765723" duration="3641000" />
       <workItem from="1726271353590" duration="2937000" />
-      <workItem from="1726364184018" duration="4783000" />
-    </task>
-    <task id="LOCAL-00052" summary="add simple consumable items">
-      <option name="closed" value="true" />
-      <created>1722096333572</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1722096333572</updated>
+      <workItem from="1726364184018" duration="5327000" />
     </task>
     <task id="LOCAL-00053" summary="add health potion sprite">
       <option name="closed" value="true" />
@@ -590,7 +568,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726365299247</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="added new area where you get the bow weapon">
+      <option name="closed" value="true" />
+      <created>1726406030909</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1726406030909</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +596,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add bandit leader that drops gold" />
     <MESSAGE value="drop lockpick from bandit leader, you can use it to open a temple" />
     <MESSAGE value="add southstream village" />
     <MESSAGE value="add north river and the ferryman" />
@@ -635,7 +620,8 @@
     <MESSAGE value="add auto-quit on player's death" />
     <MESSAGE value="added exchanging vodka for a key with a peasant&#10;changed the merchant in Ironville so that he gives vodka for gold instead of key for gold" />
     <MESSAGE value="fixed bug with phase changing after the win condition is met" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with phase changing after the win condition is met" />
+    <MESSAGE value="added new area where you get the bow weapon" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new area where you get the bow weapon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,17 +653,17 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/InventoryDisplay.cs</url>
-          <line>22</line>
-          <properties documentPath="C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest\Assets\Scripts\UI\InventoryDisplay.cs" containingFunctionPresentation="Method 'Initialize'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/PlayerCharacterProvider.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest\Assets\Scripts\Managers\PlayerCharacterProvider.cs" containingFunctionPresentation="Method 'Construct'">
             <startOffsets>
-              <option value="593" />
+              <option value="532" />
             </startOffsets>
             <endOffsets>
-              <option value="636" />
+              <option value="652" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
