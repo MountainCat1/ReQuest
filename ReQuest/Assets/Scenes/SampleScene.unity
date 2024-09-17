@@ -14577,6 +14577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingItems:
   - {fileID: 4805038045593491001, guid: 0d4a5f2f29f4eab4184d0bf1d81fd717, type: 3}
+  alreadyWonDialog: {fileID: 11400000, guid: 0d554546c05d3b44ea8ec30e2a04c0f2, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

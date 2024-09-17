@@ -10,22 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37804311037647599ec1e3ffa8d10107, type: 3}
-  m_Name: WinEpilogue
+  m_Name: AlreadyWon
   m_EditorClassIdentifier: 
   <Sentences>k__BackingField:
   - <Type>k__BackingField: 1
-    <Text>k__BackingField: The world is finally safe!
+    <Text>k__BackingField: The world is silent...
   - <Type>k__BackingField: 1
-    <Text>k__BackingField: The crystal of evil has been destroyed and all the evil
-      plans of the necromancer have been stopped.
+    <Text>k__BackingField: No more need for saving...
   - <Type>k__BackingField: 1
-    <Text>k__BackingField: The people of this realm can finally live in peace!
+    <Text>k__BackingField: We live in peace now...
   - <Type>k__BackingField: 1
-    <Text>k__BackingField: Finally <i>I...</i>
+    <Text>k__BackingField: Go away
   - <Type>k__BackingField: 1
-    <Text>k__BackingField: can rest...
-  - <Type>k__BackingField: 1
-    <Text>k__BackingField: forever...
+    <Text>k__BackingField: ...
   <Signals>k__BackingField:
-  - <Signal>k__BackingField: 2
-    <SentenceIndex>k__BackingField: 5
+  - <Signal>k__BackingField: 3
+    <SentenceIndex>k__BackingField: 4

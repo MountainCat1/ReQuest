@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="made sailor require 2 gold coins for his services" />
+    <list default="true" id="23d311b4-a96e-483a-9f7a-ab40f81c7a08" name="Changes" comment="add dialog for the banker if you already took a loan, add dialog when you dont have holy scroll at the crystal, add win epilogue">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameDataManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameDataManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReQuest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObject/Dialog/WinEpilogue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObject/Dialog/WinEpilogue.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Signals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Signals.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +88,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\ReQuest.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/ReQuest.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Mountain Cat\Projects\Unity\.GameDev\ReQuest\ReQuest\Builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -184,14 +195,7 @@
       <workItem from="1726271353590" duration="2937000" />
       <workItem from="1726364184018" duration="5327000" />
       <workItem from="1726599130968" duration="443000" />
-    </task>
-    <task id="LOCAL-00055" summary="add sight range for creatures, add bandit fighter prefab, add bandit team">
-      <option name="closed" value="true" />
-      <created>1722171155510</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1722171155510</updated>
+      <workItem from="1726600050736" duration="2697000" />
     </task>
     <task id="LOCAL-00056" summary="added memory to enemies">
       <option name="closed" value="true" />
@@ -577,7 +581,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726599575407</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="add dialog for the banker if you already took a loan, add dialog when you dont have holy scroll at the crystal, add win epilogue">
+      <option name="closed" value="true" />
+      <created>1726600170263</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1726600170263</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +609,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add north river and the ferryman" />
     <MESSAGE value="add logic to ferryman so if player has gold he teleports him on the other side of the river" />
     <MESSAGE value="add ferry man interaction" />
     <MESSAGE value="add freezing the northern river with spell of frost" />
@@ -622,7 +633,8 @@
     <MESSAGE value="added new area where you get the bow weapon" />
     <MESSAGE value="upgraded the level up menu" />
     <MESSAGE value="made sailor require 2 gold coins for his services" />
-    <option name="LAST_COMMIT_MESSAGE" value="made sailor require 2 gold coins for his services" />
+    <MESSAGE value="add dialog for the banker if you already took a loan, add dialog when you dont have holy scroll at the crystal, add win epilogue" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dialog for the banker if you already took a loan, add dialog when you dont have holy scroll at the crystal, add win epilogue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

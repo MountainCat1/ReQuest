@@ -5,6 +5,7 @@ public class GameInstaller : MonoInstaller<GameInstaller>
 {
     public override void InstallBindings()
     {
+        Container.Bind<IGameDataManager>().To<GameDataManager>().FromNew().AsSingle();
         Container.Bind<ISignalManager>().To<SignalManager>().FromNew().AsSingle().NonLazy();
         Container.Bind<IInputManager>().To<InputManager>().FromComponentsInHierarchy().AsSingle();
         Container.Bind<IInputMapper>().To<InputMapper>().FromComponentsInHierarchy().AsSingle();

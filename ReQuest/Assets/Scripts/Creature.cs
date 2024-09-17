@@ -31,7 +31,7 @@ public class Creature : MonoBehaviour
     [field: SerializeField]
     public float Drag { get; private set; }
 
-    [field: SerializeField] public float BaseSpeed { get; private set; }
+    [field: SerializeField] public float BaseSpeed { get; set; }
 
     public Weapon Weapon
     {

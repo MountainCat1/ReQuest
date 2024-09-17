@@ -4,6 +4,8 @@ public enum Signals
 {
     CristalDestroyed,
     Win,
+    GameOver,
+    CloseGame
 }
 
 public static class SignalExtensions
