@@ -3,6 +3,7 @@
 public enum Signals
 {
     CristalDestroyed,
+    Win,
 }
 
 public static class SignalExtensions
