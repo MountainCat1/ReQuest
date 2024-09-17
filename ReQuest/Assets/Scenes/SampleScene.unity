@@ -8313,6 +8313,7 @@ GameObject:
   - component: {fileID: 347209745}
   - component: {fileID: 347209743}
   - component: {fileID: 347209744}
+  - component: {fileID: 347209746}
   m_Layer: 0
   m_Name: '> Has Vodka Action'
   m_TagString: Untagged
@@ -8366,6 +8367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Negate>k__BackingField: 0
   item: {fileID: 18060403, guid: 7b5f8c3dae1184e4bb43ce2aafcc74cf, type: 3}
+  amount: 1
 --- !u!114 &347209743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8406,6 +8408,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Negate>k__BackingField: 0
   trigger: {fileID: 245781559}
+--- !u!114 &347209746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347209739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb87b30d1e1440d9fd6722a2b543f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 18060403, guid: 7b5f8c3dae1184e4bb43ce2aafcc74cf, type: 3}
 --- !u!4 &368558035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 24116099463269292, guid: 161c88e9d1cd7f244b4632917d9df7d5, type: 3}
@@ -14163,6 +14178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Negate>k__BackingField: 0
   item: {fileID: 7643072709221854858, guid: c319423ee63bbfd45a280296c0eac208, type: 3}
+  amount: 1
 --- !u!114 &477861398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15059,6 +15075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Negate>k__BackingField: 0
   item: {fileID: 4884500891879946856, guid: d9710a45887ef7841bba636d4f00838c, type: 3}
+  amount: 1
 --- !u!1 &674260423
 GameObject:
   m_ObjectHideFlags: 0
@@ -15213,6 +15230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Negate>k__BackingField: 0
   item: {fileID: 6409840050145272907, guid: 74429333a6c78104b882f0a0dcf705ff, type: 3}
+  amount: 1
 --- !u!114 &714729727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15568,6 +15586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Negate>k__BackingField: 1
   item: {fileID: 6409840050145272907, guid: 74429333a6c78104b882f0a0dcf705ff, type: 3}
+  amount: 1
 --- !u!114 &804509158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15717,6 +15736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Negate>k__BackingField: 0
   item: {fileID: 1059199052550856226, guid: e982e7c8ec8adab4b8b154b8f407386a, type: 3}
+  amount: 1
 --- !u!114 &838947847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92070,6 +92090,8 @@ GameObject:
   - component: {fileID: 1892508385}
   - component: {fileID: 1892508387}
   - component: {fileID: 1892508386}
+  - component: {fileID: 1892508389}
+  - component: {fileID: 1892508388}
   m_Layer: 0
   m_Name: Action
   m_TagString: Untagged
@@ -92119,6 +92141,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogData: {fileID: 11400000, guid: 027174b28aa6a94429f6d07903d63d9f, type: 2}
+--- !u!114 &1892508388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892508384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb87b30d1e1440d9fd6722a2b543f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 6409840050145272907, guid: 74429333a6c78104b882f0a0dcf705ff, type: 3}
+--- !u!114 &1892508389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892508384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb87b30d1e1440d9fd6722a2b543f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 6409840050145272907, guid: 74429333a6c78104b882f0a0dcf705ff, type: 3}
 --- !u!1001 &1893664738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92379,6 +92427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Negate>k__BackingField: 0
   item: {fileID: 6409840050145272907, guid: 74429333a6c78104b882f0a0dcf705ff, type: 3}
+  amount: 2
 --- !u!114 &1902202714
 MonoBehaviour:
   m_ObjectHideFlags: 0

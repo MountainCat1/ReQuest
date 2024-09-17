@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: Ferryman_AdvertiseFerrymanService
   m_EditorClassIdentifier: 
   <Sentences>k__BackingField:
-  - <Text>k__BackingField: Greeting mate!
-  - <Text>k__BackingField: I'm the local ferryman and i *do* offer my service~
-  - <Text>k__BackingField: A little gold and I will get your ass on the other side
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: Greeting mate!
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: I'm the local ferryman and I *do* offer my service~
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: Two gold coins and I will get your ass on the other side
       of the Nothern River
-  - <Text>k__BackingField: Get some coin and I'll be at your service mate!
+  - <Type>k__BackingField: 0
+    <Text>k__BackingField: Get some coin and I'll be at your service mate!
+  <Signals>k__BackingField: []

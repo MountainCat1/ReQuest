@@ -12,6 +12,7 @@ namespace ScriptableActions.Conditions
         [Inject] IPlayerCharacterProvider _playerProvider;
 
         [SerializeField] private ItemBehaviour item;
+        [SerializeField] private int amount = 1;
 
         private void Start()
         {
@@ -25,7 +26,13 @@ namespace ScriptableActions.Conditions
 
             Debug.Log($"Checking if player has item {item.GetIdentifier()}");
 
-            return player.Inventory.Items.Any(x => x.GetIdentifier().Equals(item.GetIdentifier()));
+            var itemAmount = player.Inventory.Items
+                .Count(x => x
+                    .GetIdentifier()
+                    .Equals(item.GetIdentifier())
+                );
+            Debug.Log($"Player has {itemAmount} of {item.GetIdentifier()}");
+            return itemAmount >= amount;
         }
     }
 }
