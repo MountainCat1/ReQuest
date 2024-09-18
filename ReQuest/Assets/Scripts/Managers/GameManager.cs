@@ -27,11 +27,9 @@ namespace Managers
             {
                 if (signal == Signals.Win)
                     OnWin();
-
+                
                 if (signal == Signals.CloseGame)
-                {
                     Application.Quit();
-                }
             };
 
             InitializePlayer();
@@ -47,12 +45,6 @@ namespace Managers
         {
             _gameDataManager.GameData.ILiveFinallyInPeace = true;
             _gameDataManager.SaveData();
-
-            Task.Run(async () =>
-            {
-                await Task.Delay(5000);
-                Application.Quit();
-            });
         }
 
         private void OnPlayerDeath(DeathContext ctx)

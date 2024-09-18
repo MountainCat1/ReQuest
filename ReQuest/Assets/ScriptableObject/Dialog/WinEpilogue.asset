@@ -26,6 +26,10 @@ MonoBehaviour:
     <Text>k__BackingField: can rest...
   - <Type>k__BackingField: 1
     <Text>k__BackingField: forever...
+  - <Type>k__BackingField: 1
+    <Text>k__BackingField: ...
   <Signals>k__BackingField:
   - <Signal>k__BackingField: 2
     <SentenceIndex>k__BackingField: 5
+  - <Signal>k__BackingField: 3
+    <SentenceIndex>k__BackingField: 6
